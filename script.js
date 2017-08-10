@@ -60,6 +60,7 @@ var reply_click = function(e)
     }
     move.innerHTML=parseInt(move.innerHTML)+1;
     toggle(input_id)
+    end_game();
     
 }
 
@@ -71,7 +72,7 @@ function toggle(input_id){
     else{
         document.getElementById(input_id.toString()).style.backgroundColor=color;
     }
-    end_game();
+    
 }
 
 function end_game(){
