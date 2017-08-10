@@ -25,3 +25,15 @@ td{
 td:hover{
     cursor: pointer;
 }
+
+@media all and (max-width: 1024px) {
+    
+   table{
+    border: solid 1px black;
+    width: 90%;
+    height: 55%;
+    margin: auto;
+    margin-top: 40px;
+} 
+    
+}
