@@ -36,6 +36,14 @@ h1{
 h2{
     margin: auto;
     display: inline;
+    
+}
+h3{
+    text-align: center;
+}
+h3:hover{
+    cursor: pointer;
+    opacity: 0.4;
 }
 table{
     border: solid 1px black;
