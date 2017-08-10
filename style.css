@@ -108,4 +108,14 @@ td:hover{
         margin: auto;
         padding: auto;
     }
+h1{
+    font-size: 45px;
+}
+h2{
+   
+   font-size: 42px; 
+}
+h3{
+    font-size: 40px;
+}
 }
