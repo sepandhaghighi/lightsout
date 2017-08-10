@@ -15,6 +15,7 @@ function init(){
             random_counter=random_counter+1;
         }
     }
+    random_list=[1,2,6];
     for (i=1;i<26;i++){
         if (random_list.indexOf(i)<0){
             document.getElementById(i.toString()).style.backgroundColor=color;
@@ -54,8 +55,9 @@ var reply_click = function(e)
         toggle(input_id-1);
         toggle(input_id+1);
     }
-    toggle(input_id)
     move.innerHTML=parseInt(move.innerHTML)+1;
+    toggle(input_id)
+    
 }
 
 
@@ -83,6 +85,5 @@ function end_game(){
         init();
     }
 }
-
 
 
