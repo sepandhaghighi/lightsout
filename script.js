@@ -20,13 +20,11 @@ function init(){
         }
     }
     for (i=1;i<26;i++){
-        if (random_list.indexOf(i)<0){
             document.getElementById(i.toString()).style.backgroundColor=color;
-        }
-        else{
-            document.getElementById(i.toString()).style.backgroundColor="white";
-        }
             
+    }
+    for (i=0;i<random_list.length;i++){
+        reply_click(random_list[i].toString());
     }
 
     move.innerHTML=0;
