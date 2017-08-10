@@ -1,5 +1,8 @@
 body{
     width: 100%;
+    overflow-x:hidden;
+    margin-right: 0px;
+    margin-left: 0px;
 }
 #login-footer p{
     vertical-align: center;
@@ -20,9 +23,11 @@ body{
     position:fixed;
     font-size: 17px;
     margin-top: 100px;
+    margin-right: 0px;
     height: auto;
     width: 100%;
-    padding: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 .score{
     margin-top: 30px;
