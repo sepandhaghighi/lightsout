@@ -9,7 +9,7 @@ function init(){
     game_name.style.color=color;
     move=document.getElementById("move");
     random_init=0
-    while(random_init<6){
+    while(random_init<10){
        random_init=Math.floor((Math.random() * 15) + 1); 
     }
     while(random_counter<random_init){
