@@ -2,13 +2,17 @@ var CSS_COLOR_NAMES = ["AliceBlue","AntiqueWhite","Aqua","Aquamarine","Azure","B
 var color
 function init(){
     color=CSS_COLOR_NAMES[Math.floor((Math.random() * CSS_COLOR_NAMES.length) + 1)].toLowerCase();
-    var i,random_number,random_counter,move,game_name;
+    var i,random_number,random_counter,move,game_name,random_init;
     var random_list=[];
     random_counter=0
     game_name=document.getElementById("game_name");
     game_name.style.color=color;
     move=document.getElementById("move");
-    while(random_counter<6){
+    random_init=0
+    while(random_init<6){
+       random_init=Math.floor((Math.random() * 15) + 1); 
+    }
+    while(random_counter<random_init){
         random_number=Math.floor((Math.random() * 25) + 1);
         if (random_list.indexOf(random_number)<0){
             random_list.push(random_number);
