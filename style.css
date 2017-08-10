@@ -25,7 +25,23 @@ td{
 td:hover{
     cursor: pointer;
 }
+.help{
+    width: 80%;
+    margin: auto;
+    font-size: 38px;
+    justify-content:space-between;
+    
+}
 
+#back a{
+    text-decoration: none;
+}
+#help_page a{
+    text-decoration: none;
+}
+#back a:hover{
+    cursor: pointer;
+}
 @media all and (max-width: 1024px) {
     
    table{
@@ -35,5 +51,9 @@ td:hover{
     margin: auto;
     margin-top: 40px;
 } 
-    
+  .help{
+    width:95%;
+
+    font-size: 45px;
+}  
 }
