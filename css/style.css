@@ -9,8 +9,7 @@ body{
     margin:auto;
     color: white;
 }
-#login-footer a{
-    text-decoration: none;
+#login-footer p{
     color: navajowhite;
 }
 
@@ -86,10 +85,8 @@ td:hover{
     
 }
 
-#back a{
-    text-decoration: none;
-}
-#help_page a{
+
+a{
     text-decoration: none;
 }
 #back a:hover{
