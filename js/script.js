@@ -74,7 +74,7 @@ function toggle(input_id){
 }
 
 function end_game(){
-    var i,on_lamp;
+    var i,on_lamp,win;
     on_lamp=0;
     for (i=1;i<26;i++){
         if (document.getElementById(i.toString()).style.backgroundColor=="white"){
@@ -84,6 +84,8 @@ function end_game(){
     }
     if (on_lamp==0){
         alert("You Win!!")
+        win=document.getElementById("win");
+        win.innerHTML=parseInt(win.innerHTML)+1;
         init();
     }
 }
