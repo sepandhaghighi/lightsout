@@ -1,4 +1,9 @@
+@font-face {
+    font-family: "ubuntu";
+    src:url("fonts/Ubuntu-R.ttf");
+}
 body{
+    font-family: "arial";
     width: 100%;
     overflow-x:hidden;
     margin-right: 0px;
