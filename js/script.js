@@ -5,6 +5,7 @@ var lamp_awsome='<i class="fa fa-lightbulb-o fa-3x" aria-hidden="true"></i>';
 var spinner='<i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>';
 var first_init=0;
 function init(flag=1){
+    first_init=1;
     color=CSS_COLOR_NAMES[Math.floor((Math.random() * CSS_COLOR_NAMES.length) + 1)].toLowerCase();
     var i,random_number,random_counter,move,game_name,random_init,reset;
     var random_list=[];
@@ -37,7 +38,7 @@ function init(flag=1){
     }
 
     move.innerHTML=0;
-    first_init=1;
+    
 }
 
 
@@ -48,7 +49,7 @@ var reply_click = function(e)
    var input_id,ele,move;
     move=document.getElementById("move");
     input_id=parseInt(e);
-    
+    if (first_init==1){
     if ((input_id+5)<=25){
         toggle(input_id+5);
     }
@@ -68,7 +69,7 @@ var reply_click = function(e)
     }
     move.innerHTML=parseInt(move.innerHTML)+1;
     toggle(input_id)
-    if (first_init==1){
+    
     end_game();
     }
     
