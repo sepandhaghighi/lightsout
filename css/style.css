@@ -87,6 +87,11 @@ td{
 .score td{
     padding: 20px;
 }
+.lightsout tr td{
+    width: 20%;
+    height: 20%;
+    text-align: center;
+}
 .lightsout td:hover{
     cursor: pointer;
     opacity: 0.5;
@@ -123,7 +128,8 @@ a{
     
     
     #login-footer{
-        font-size: 38px;
+        display: none;
+        font-size: 30px;
         height: auto;
     }
 
@@ -132,11 +138,11 @@ a{
         padding: auto;
     }
 h1{
-    font-size: 45px;
+    font-size: 40px;
 }
 h2{
    
-   font-size: 42px; 
+   font-size: 38px; 
 }
 .reset{
     font-size: 40px;
