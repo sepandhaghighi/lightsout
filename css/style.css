@@ -3,6 +3,8 @@ body{
     overflow-x:hidden;
     margin-right: 0px;
     margin-left: 0px;
+    margin: 0px;
+    padding: 0px;
 }
 #login-footer p{
     vertical-align: center;
@@ -20,7 +22,7 @@ body{
     bottom: 0;
     text-align: center;
     background-color: #4FC3F7;
-    position:fixed;
+    position:relative;
     font-size: 17px;
     margin-top: 100px;
     margin-right: 0px;
@@ -43,24 +45,72 @@ h2{
     display: inline;
     
 }
-.reset{
-    
-    text-align: center;
-    border: 1px solid black;
-    border-radius: 20px;
-    padding: 10px;
-    width: 10%;
-    margin: auto;
-    margin-top: 10px;
-    margin-bottom: 100px;
-    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
-    font-size: 26px;
-    background-color: #4FC3F7;
+
+button {
+  margin:auto;
+  display: block;
+  position: relative;
+  height: 45px;
+  width: 150px;
+  padding: 5px 5px;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 2px;
+  color: #383736;
+  border: 2px #383736 solid;
+  border-radius: 4px;
+  text-transform: uppercase;
+  outline: 0;
+  overflow:hidden;
+  background: none;
+  z-index: 1;
+  cursor: pointer;
+  transition:         0.08s ease-in;
+  -o-transition:      0.08s ease-in;
+  -ms-transition:     0.08s ease-in;
+  -moz-transition:    0.08s ease-in;
+  -webkit-transition: 0.08s ease-in;
 }
-.reset:hover{
-    cursor: pointer;
-    opacity: 0.4;
+
+.svg{
+  -webkit-transition: all 150ms cubic-bezier(0.445, 0.050, 0.550, 0.950); 
 }
+
+.svg:before{
+  position:absolute;  
+  content:"";
+  background: url(https://f.cl.ly/items/3H3A0D1N281a2T280F3o/heist.svg) no-repeat center center;
+  width:100%;
+  height:100%;
+  top:0;
+  left:0;
+  z-index:-1;
+  opacity:0;
+  -webkit-transition: all 250ms cubic-bezier(0.230, 1.000, 0.320, 1.000);
+}
+
+.svg:after {
+  content: "";
+  position: absolute;
+  background: #202026;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 100%;
+  z-index: -2;
+  -webkit-transition: all 250ms cubic-bezier(0.230, 1.000, 0.320, 1.000); 
+}
+.svg:hover{
+  color:white;
+  border: 0px #202026 solid;
+}
+.svg:hover:before {
+  opacity: .8;
+}
+.svg:hover:after {
+  top: 0;
+}
+
 table{
     border: solid 1px black;
     width: 550px;
@@ -132,3 +182,4 @@ h2{
     width: 90%;
 }
 }
+
