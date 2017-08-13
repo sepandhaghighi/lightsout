@@ -2,6 +2,8 @@ var CSS_COLOR_NAMES = ["AliceBlue","AntiqueWhite","Aqua","Aquamarine","Azure","B
 var color
 var reset_counter=0;
 var lamp_awsome='<i class="fa fa-lightbulb-o fa-3x" aria-hidden="true"></i>';
+var spinner='<i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>';
+var first_init=0;
 function init(flag=1){
     color=CSS_COLOR_NAMES[Math.floor((Math.random() * CSS_COLOR_NAMES.length) + 1)].toLowerCase();
     var i,random_number,random_counter,move,game_name,random_init,reset;
@@ -35,6 +37,7 @@ function init(flag=1){
     }
 
     move.innerHTML=0;
+    first_init=1;
 }
 
 
@@ -65,7 +68,9 @@ var reply_click = function(e)
     }
     move.innerHTML=parseInt(move.innerHTML)+1;
     toggle(input_id)
+    if (first_init==1){
     end_game();
+    }
     
 }
 
