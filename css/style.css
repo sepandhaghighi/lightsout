@@ -75,7 +75,8 @@ h2{
 .score{
     border: solid 1px black;
     margin: auto;
-    margin-top: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
     width: 550px;
     text-align: center;
 }
@@ -122,7 +123,7 @@ a{
     
     
     #login-footer{
-        font-size: 45px;
+        font-size: 38px;
         height: auto;
     }
 
@@ -142,9 +143,13 @@ h2{
     width: 90%;
 }
     .score{
-        font-size: 40px;
+        font-size: 30px;
         margin-bottom: 40px;
         margin-top: 40px;
         width: 90%;
+    }
+    .score td{
+        padding-right: 0px;
+        padding-left: 0px;
     }
 }
