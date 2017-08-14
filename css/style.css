@@ -126,6 +126,10 @@ a {
         padding-right: 0px;
         padding-left: 0px;
     }
+    .button {
+        width: 200px;
+    }
+
 }
 button {
     display: block;
