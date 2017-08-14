@@ -85,7 +85,9 @@ td {
     width: 80%;
     margin: auto;
     font-size: 38px;
-    justify-content: space-between;
+    text-align:justify;
+    font-size-adjust: auto;
+    
 }
 a {
     text-decoration: none;
@@ -132,7 +134,8 @@ button {
     }
     .help {
         width: 95%;
-        font-size: 45px;
+        font-size: 40px;
+        font-size-adjust: auto;
     }
     #login-footer {
         display: none;
