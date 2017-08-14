@@ -9,6 +9,7 @@ body {
     overflow-x: hidden;
     margin-right: 0px;
     margin-left: 0px;
+    font-family: 'Julius Sans One', sans-serif;
 }
 #login-footer p {
     vertical-align: center;
@@ -16,14 +17,14 @@ body {
     color: white;
 }
 #login-footer p {
-    color: navajowhite;
+    color: #202026;
 }
 #login-footer {
     color: black;
     width: 100%;
     bottom: 0;
     text-align: center;
-    background-color: #4FC3F7;
+    background-color: #FAFAFA;
     position: relative;
     font-size: 17px;
     margin-right: 0px;
@@ -32,6 +33,8 @@ body {
     margin-top: 25px;
     padding-top: 10px;
     padding-bottom: 10px;
+    font-family: 'Sacramento', cursive;
+    font-size: 25px;
 }
 h1 {
     margin: auto;
