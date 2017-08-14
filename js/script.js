@@ -14,7 +14,7 @@ function init(flag = 1) {
     game_name.style.color = color;
     game_name.innerHTML = "Lights Out Game";
     move = document.getElementById("move");
-    reset = document.getElementsByClassName("reset")[0];
+    reset = document.getElementById("reset");
     random_init = 0
     if (flag == 2) {
         reset_counter = reset_counter + 1;
