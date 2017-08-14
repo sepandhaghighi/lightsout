@@ -1,15 +1,19 @@
 @font-face {
-    font-family: "ubuntu";
-    src: url("fonts/Ubuntu-R.ttf");
+    font-family: "julius";
+    src: url("../fonts/JuliusSansOne-Regular.ttf");
 }
+@font-face {
+    font-family: "sacramento";
+    src: url("../fonts/Sacramento-Regular.ttf");
+}
+
 body {
     margin: 0px;
-    font-family: "arial";
     width: 100%;
     overflow-x: hidden;
     margin-right: 0px;
     margin-left: 0px;
-    font-family: 'Julius Sans One', sans-serif;
+    font-family: 'julius';
 }
 #login-footer p {
     vertical-align: center;
@@ -33,7 +37,7 @@ body {
     margin-top: 25px;
     padding-top: 10px;
     padding-bottom: 10px;
-    font-family: 'Sacramento', cursive;
+    font-family: "sacramento";
     font-size: 25px;
 }
 h1 {
