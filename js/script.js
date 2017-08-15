@@ -4,6 +4,16 @@ var reset_counter = 0;
 var lamp_awsome = '<i class="fa fa-lightbulb-o fa-3x" aria-hidden="true"></i>';
 var spinner = '<i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>';
 var first_init = 0;
+var player_name=null;
+var score=0;
+function close(){
+    return "Write something clever here...";
+}
+function getname(){
+    while(player_name==null||player_name.length<1){
+    player_name=prompt("Please Enter Your Name ;-)");
+    }
+}
 function init(flag = 1) {
     first_init = 1;
     color = CSS_COLOR_NAMES[Math.floor((Math.random() * CSS_COLOR_NAMES.length) + 1)].toLowerCase();
@@ -100,20 +110,23 @@ function end_game() {
         }
     }
     if (on_lamp == 0) {
+        score=score+1
         alert("You Win!!")
         win = document.getElementById("win");
         win.innerHTML = parseInt(win.innerHTML) + 1;
+        saveToFirebase(player_name,score);
         init();
     }
 }
 
 
-function saveToFirebase(email) {
-    var emailObject = {
-        email: email
+function saveToFirebase(name,score) {
+    var scoreObject = {
+        name: name,
+        score: score
     };
 
-    firebase.database().ref('subscription-entries').push().set(emailObject)
+    firebase.database().ref('subscription-entries').push().set(scoreObject)
         .then(function(snapshot) {
             success(); // some success method
         }, function(error) {
