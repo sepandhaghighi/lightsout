@@ -7,8 +7,8 @@ var first_init = 0;
 var player_name=null;
 var score=0;
 function getname(){
-    while(player_name==null||player_name.length<1){
-    player_name=prompt("Please Enter Your Name ;-)");
+    while(player_name==null||player_name.length<1||player_name.length>10){
+    player_name=prompt("Please Enter Your Name ;-)\n(1-10 Character)");
     }
 }
 function init(flag = 1) {
@@ -116,13 +116,27 @@ function end_game() {
 }
 
 function savescore(){
-    var submit_button
-    submit_button=document.getElementById("submit_button");
     saveToFirebase(player_name,score);
-    submit_button.style.display="none";
-    alert("Your Score Saved ;-)")
+    
+    
+}
+
+function get_data(){
+    var leadsRef = firebase.database().ref('subscription-entries').orderByChild("score").limitToLast(10); 
+    var counter=0;
+leadsRef.on('value', function(snapshot) {
+    snapshot.forEach(function(childSnapshot) {
+      var name = childSnapshot.val().name;
+      var score= childSnapshot.val().score;
+      document.getElementById("N"+(10-counter).toString()).innerHTML=name;
+      document.getElementById("S"+(10-counter).toString()).innerHTML=score;
+     counter=counter+1;
+    });
+});
 }
 function saveToFirebase(name,score) {
+    var submit_button
+    submit_button=document.getElementById("submit_button");
     var scoreObject = {
         name: name,
         score: score
@@ -130,9 +144,10 @@ function saveToFirebase(name,score) {
 
     firebase.database().ref('subscription-entries').push().set(scoreObject)
         .then(function(snapshot) {
-            success(); // some success method
+            alert("Your Score Saved :-)")
+            submit_button.style.display="none";
         }, function(error) {
             console.log('error' + error);
-            error(); // some error method
+            alert("Error In Score Submit :-(");
         });
 }
