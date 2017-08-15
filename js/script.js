@@ -6,9 +6,6 @@ var spinner = '<i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>';
 var first_init = 0;
 var player_name=null;
 var score=0;
-function close(){
-    return "Write something clever here...";
-}
 function getname(){
     while(player_name==null||player_name.length<1){
     player_name=prompt("Please Enter Your Name ;-)");
@@ -114,12 +111,17 @@ function end_game() {
         alert("You Win!!")
         win = document.getElementById("win");
         win.innerHTML = parseInt(win.innerHTML) + 1;
-        saveToFirebase(player_name,score);
         init();
     }
 }
 
-
+function savescore(){
+    var submit_button
+    submit_button=document.getElementById("submit_button");
+    saveToFirebase(player_name,score);
+    submit_button.style.display="none";
+    alert("Your Score Saved ;-)")
+}
 function saveToFirebase(name,score) {
     var scoreObject = {
         name: name,

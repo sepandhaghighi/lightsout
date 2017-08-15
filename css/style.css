@@ -98,6 +98,7 @@ a {
 button {
     display: block;
     margin: auto;
+    margin-bottom: 5px;
     position: relative;
     height: 45px;
     width: 150px;
