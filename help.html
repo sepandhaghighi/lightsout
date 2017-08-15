@@ -1,4 +1,4 @@
-<html>
+<html lang=en-US>
     
     
     <head>
@@ -22,12 +22,56 @@
         <div class="header">
             <h1 id="back"><a href="index.html">Back To Game</a></h1>
         </div>
-        
+        <div align="center">
+        <img src="images/help.gif" alt="Lights Out Animation" class="help_image">
+        </div>
         <div class="help">
         <p>The game consists of a 5 by 5 grid of lights. When the game starts, a random number or a stored pattern of these lights is switched on. Pressing any of the lights will toggle it and the four adjacent lights. The goal of the puzzle is to switch all the lights off, preferably in as few button presses as possible.
 
 If a light is on, it must be toggled an odd number of times to be turned off. If a light is off, it must be toggled an even number of times (including none at all) for it to remain off. Several conclusions are used for the game's strategy. Firstly, the order in which the lights are pressed does not matter, as the result will be the same. Secondly, in a minimal solution, each light needs to be pressed no more than once, because pressing a light twice is equivalent to not pressing it at all.</p>
-        
+        <h3>Light chasing  </h3>
+        <hr/>
+        <p>"Light chasing" is a method similar to Gaussian elimination which always solves the puzzle (if a solution exists), although with the possibility of many redundant steps. In this approach, rows are manipulated one at a time starting with the top row. All the lights are disabled in the row by toggling the adjacent lights in the row directly below. The same method is then used on the consecutive rows up to the last one. The last row is solved separately, depending on its active lights. Corresponding lights (see table below) in the top row are toggled and the initial algorithm is run again, resulting in a solution</p>
+        <h3>Hint Table </h3>
+            <hr/>
+        <table class="hint_table">
+            <tr>
+                <th >Bottom</th>
+                <th >Top</th>
+            </tr>
+            <tr>
+                <td>O---O</td>
+                <td>OO---</td>
+            </tr>
+            <tr>
+                <td>-O-O-</td>
+                <td>O--O-</td>
+            </tr>
+            <tr>
+                <td>OOO--</td>
+                <td>-O---</td>
+            </tr>
+            <tr>
+                <td>--OOO</td>
+                <td>---O-</td>
+            </tr>
+            <tr>
+                <td>O-OO-</td>
+                <td>----O</td>
+            </tr>
+            <tr>
+                <td>-OO-O</td>
+                <td>O----</td>
+            </tr>
+            <tr>
+                <td>OO-OO</td>
+                <td>--O--</td>
+            </tr>
+        </table>
+        <h3>Reference
+            <hr/>
+        <a href="https://en.wikipedia.org/wiki/Lights_Out_(game)">[Wikipedia]</a>
+        </h3>
         </div>
        <div id="login-footer">
             <p >&nbsp; Designed With  ❤️ </p>

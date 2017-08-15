@@ -6,6 +6,21 @@
     font-family: "sacramento";
     src: url("../fonts/Sacramento-Regular.ttf");
 }
+
+.hint_table{
+    margin: auto;
+    text-align: center;
+    font-size: 37px;
+    margin-bottom: 15px;
+}
+.help_image{
+    text-align: center;
+    margin: auto;
+    padding: auto;
+    width: 550px;
+    height: 550px;
+    
+}
 #submit_button{
     display: none;
 }
@@ -105,10 +120,14 @@ td {
 .help {
     width: 80%;
     margin: auto;
-    font-size: 38px;
-    text-align:justify;
+    font-size: 37px;
+    text-align: justify;
     font-size-adjust: auto;
+    hyphens: auto;
     
+}
+.help h3{
+    text-align: center;
 }
 a {
     text-decoration: none;
@@ -160,7 +179,8 @@ button {
     .help {
         width: 95%;
         font-size: 40px;
-        font-size-adjust: auto;
+        text-align: center;
+        hyphens: auto;
     }
     #login-footer {
         display: none;
@@ -190,6 +210,14 @@ button {
     .button {
         width: 200px;
     }
+    .help_image{
+    width: 90%;
+        height: 55%;
+    
+}
+    .hint_table{
+    width: 90%;
+}
 
 }
 
