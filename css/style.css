@@ -6,6 +6,9 @@
     font-family: "sacramento";
     src: url("../fonts/Sacramento-Regular.ttf");
 }
+#submit_button{
+    display: none;
+}
 .header{
     text-align: center;
 }
@@ -62,7 +65,7 @@ h2 {
 .score_table{
     border: solid 1px black;
     height: 550px;
-    width: 100px;
+    width: 40%;
     margin: auto;
     margin-top: 40px;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
@@ -116,8 +119,11 @@ a {
 #back a:hover {
     cursor: pointer;
 }
+.button_section{
+    text-align: center;
+}
 button {
-    display: block;
+    display: inline;
     margin: auto;
     margin-bottom: 5px;
     position: relative;

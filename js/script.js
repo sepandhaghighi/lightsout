@@ -107,6 +107,9 @@ function end_game() {
         }
     }
     if (on_lamp == 0) {
+        var submit_button
+        submit_button=document.getElementById("submit_button");
+        submit_button.style.display="block";
         score=score+1
         alert("You Win!!")
         win = document.getElementById("win");
@@ -116,6 +119,7 @@ function end_game() {
 }
 
 function savescore(){
+    getname();
     saveToFirebase(player_name,score);
     
     
@@ -134,6 +138,7 @@ leadsRef.on('value', function(snapshot) {
     });
 });
 }
+
 function saveToFirebase(name,score) {
     var submit_button
     submit_button=document.getElementById("submit_button");
@@ -141,7 +146,7 @@ function saveToFirebase(name,score) {
         name: name,
         score: score
     };
-
+    try{
     firebase.database().ref('subscription-entries').push().set(scoreObject)
         .then(function(snapshot) {
             alert("Your Score Saved :-)")
@@ -150,4 +155,8 @@ function saveToFirebase(name,score) {
             console.log('error' + error);
             alert("Error In Score Submit :-(");
         });
+    }
+    catch(e){
+        alert("Error In Score Submit :-(");
+    }
 }
