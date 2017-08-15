@@ -107,9 +107,6 @@ function end_game() {
         }
     }
     if (on_lamp == 0) {
-        var submit_button
-        submit_button=document.getElementById("submit_button");
-        submit_button.style.display="block";
         score=score+1
         alert("You Win!!")
         win = document.getElementById("win");
