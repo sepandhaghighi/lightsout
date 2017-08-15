@@ -15,9 +15,6 @@
 .header h1{
     display: inline-block;
     margin-right: 10px;
-    border: 1px solid black;
-    border-radius: 35px;
-    padding: 5px;
 }
 body {
     margin: 0px;
