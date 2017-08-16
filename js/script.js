@@ -167,7 +167,9 @@ function saveToFirebase(name,score) {
     }
 }
 function restart_game(){
+    if (first_move==false){
     restart_flag=1;
+    }
 }
 function startTimer(duration, display) {
     var timer = duration, minutes, seconds;
@@ -181,7 +183,8 @@ function startTimer(duration, display) {
         display.textContent = minutes + ":" + seconds;
 
         if (--timer < 0||restart_flag==1) {
-            alert("Time is up\n\n Score : "+score.toString()+"\n Reset : "+reset_counter.toString()+"\n Total Move : "+total_move.toString());
+            if (restart_flag==0){
+            alert("Time is up\n\n Score : "+score.toString()+"\n Reset : "+reset_counter.toString()+"\n Total Move : "+total_move.toString());}
             timer = duration;
             display.textContent = "07" + ":" + "00";
             win = document.getElementById("win");
