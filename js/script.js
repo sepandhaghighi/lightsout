@@ -191,7 +191,7 @@ function startTimer(duration, display) {
             win.innerHTML = 0;
             score=0;
             reset = document.getElementById("reset");
-            reset.innerHTML = "Reset"
+            reset.innerHTML = "Reset!"
             first_move=true;
             restart_flag=0;
             init(1);
