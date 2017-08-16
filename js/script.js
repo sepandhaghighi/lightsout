@@ -183,7 +183,9 @@ function startTimer(duration, display) {
             win = document.getElementById("win");
             win.innerHTML = 0;
             score=0;
-            init();
+            reset = document.getElementById("reset");
+            reset.innerHTML = "Reset"
+            init(1);
             clearInterval(interval_id);
         }
     }, 1000);
