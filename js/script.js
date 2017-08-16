@@ -8,6 +8,7 @@ var player_name=null;
 var score=0;
 var first_move=true;
 var init_flag=false;
+var total_move=0;
 function getname(){
     while(player_name==null||player_name.length<1||player_name.length>10){
     player_name=prompt("Please Enter Your Name ;-)\n(1-10 Character)");
@@ -83,6 +84,7 @@ var reply_click = function (e) {
             toggle(input_id + 1);
         }
         move.innerHTML = parseInt(move.innerHTML) + 1;
+        total_move=total_move+1;
         toggle(input_id)
 
         end_game();
@@ -177,7 +179,7 @@ function startTimer(duration, display) {
         display.textContent = minutes + ":" + seconds;
 
         if (--timer < 0) {
-            alert("Time is up\n Score:"+score.toString()+"\n Reset:"+reset_counter.toString());
+            alert("Time is up\n Score : "+score.toString()+"\n Reset : "+reset_counter.toString()+"\n Total Move : "+total_move.toString());
             timer = duration;
             display.textContent = 7 + ":" + "00";
             win = document.getElementById("win");
