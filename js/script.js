@@ -166,7 +166,9 @@ function saveToFirebase(name,score) {
         alert("Error In Score Submit :-(");
     }
 }
-
+function restart_game(){
+    restart_flag=1;
+}
 function startTimer(duration, display) {
     var timer = duration, minutes, seconds;
     var interval_id=setInterval(function () {
@@ -178,7 +180,7 @@ function startTimer(duration, display) {
 
         display.textContent = minutes + ":" + seconds;
 
-        if (--timer < 0) {
+        if (--timer < 0||restart_flag==1) {
             alert("Time is up\n\n Score : "+score.toString()+"\n Reset : "+reset_counter.toString()+"\n Total Move : "+total_move.toString());
             timer = duration;
             display.textContent = "07" + ":" + "00";
@@ -188,6 +190,7 @@ function startTimer(duration, display) {
             reset = document.getElementById("reset");
             reset.innerHTML = "Reset"
             first_move=true;
+            restart_flag=0;
             init(1);
             clearInterval(interval_id);
         }
