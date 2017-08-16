@@ -260,3 +260,8 @@ button {
     width: 90%;
     margin-bottom: 10px;
 }
+
+#particles-js {
+    width: 200px;
+    height: 200px;
+}
