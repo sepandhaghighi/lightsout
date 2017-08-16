@@ -48,7 +48,7 @@ function init(flag) {
     for (i = 0; i < random_list.length; i++) {
         reply_click(random_list[i].toString(),true);
     }
-
+    total_move=0;
     move.innerHTML = 0;
     init_flag=false;
 }
@@ -179,9 +179,9 @@ function startTimer(duration, display) {
         display.textContent = minutes + ":" + seconds;
 
         if (--timer < 0) {
-            alert("Time is up\n Score : "+score.toString()+"\n Reset : "+reset_counter.toString()+"\n Total Move : "+total_move.toString());
+            alert("Time is up\n\n Score : "+score.toString()+"\n Reset : "+reset_counter.toString()+"\n Total Move : "+total_move.toString());
             timer = duration;
-            display.textContent = 7 + ":" + "00";
+            display.textContent = "07" + ":" + "00";
             win = document.getElementById("win");
             win.innerHTML = 0;
             score=0;
