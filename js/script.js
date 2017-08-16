@@ -185,6 +185,7 @@ function startTimer(duration, display) {
             score=0;
             reset = document.getElementById("reset");
             reset.innerHTML = "Reset"
+            first_move=true;
             init(1);
             clearInterval(interval_id);
         }
