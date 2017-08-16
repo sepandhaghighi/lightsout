@@ -7,6 +7,7 @@ var first_init = 0;
 var player_name=null;
 var score=0;
 var first_move=true;
+var init_flag=false;
 function getname(){
     while(player_name==null||player_name.length<1||player_name.length>10){
     player_name=prompt("Please Enter Your Name ;-)\n(1-10 Character)");
@@ -24,6 +25,7 @@ function init(flag) {
     move = document.getElementById("move");
     reset = document.getElementById("reset");
     random_init = 0;
+    init_flag=true;
     if (flag == 2) {
         reset_counter = reset_counter + 1;
         reset.innerHTML = "Reset" + " (" + reset_counter + ")";
@@ -47,18 +49,18 @@ function init(flag) {
     }
 
     move.innerHTML = 0;
-
+    init_flag=false;
 }
 
 
 
 
-var reply_click = function (e,init_flag=false) {
+var reply_click = function (e) {
     var input_id, ele, move;
     move = document.getElementById("move");
     if (first_move==true&&init_flag==false){
                 display = document.querySelector('#time');
-                startTimer(60, display);
+                startTimer(7*60, display);
         first_move=false;
     }
     input_id = parseInt(e);
@@ -177,7 +179,7 @@ function startTimer(duration, display) {
         if (--timer < 0) {
             alert("Time is up\n Score:"+score.toString()+"\n Reset:"+reset_counter.toString());
             timer = duration;
-            display.textContent = 10 + ":" + "00";
+            display.textContent = 7 + ":" + "00";
             win = document.getElementById("win");
             win.innerHTML = 0;
             score=0;
