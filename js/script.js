@@ -11,7 +11,7 @@ function getname(){
     player_name=prompt("Please Enter Your Name ;-)\n(1-10 Character)");
     }
 }
-function init(flag = 1) {
+function init(flag) {
     first_init = 1;
     color = CSS_COLOR_NAMES[Math.floor((Math.random() * CSS_COLOR_NAMES.length) + 1)].toLowerCase();
     var i, random_number, random_counter, move, game_name, random_init, reset;
