@@ -6,7 +6,11 @@
     font-family: "sacramento";
     src: url("../fonts/Sacramento-Regular.ttf");
 }
-
+.timer{
+    text-align: center;
+    font-size: 40px;
+    font-weight: 300;
+}
 .hint_table{
     margin: auto;
     text-align: center;

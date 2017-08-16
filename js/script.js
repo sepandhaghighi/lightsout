@@ -6,6 +6,7 @@ var spinner = '<i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>';
 var first_init = 0;
 var player_name=null;
 var score=0;
+var first_move=true;
 function getname(){
     while(player_name==null||player_name.length<1||player_name.length>10){
     player_name=prompt("Please Enter Your Name ;-)\n(1-10 Character)");
@@ -42,7 +43,7 @@ function init(flag) {
         document.getElementById(i.toString()).innerHTML = "";
     }
     for (i = 0; i < random_list.length; i++) {
-        reply_click(random_list[i].toString());
+        reply_click(random_list[i].toString(),true);
     }
 
     move.innerHTML = 0;
@@ -52,9 +53,14 @@ function init(flag) {
 
 
 
-var reply_click = function (e) {
+var reply_click = function (e,init_flag=false) {
     var input_id, ele, move;
     move = document.getElementById("move");
+    if (first_move==true&&init_flag==false){
+                display = document.querySelector('#time');
+                startTimer(60, display);
+        first_move=false;
+    }
     input_id = parseInt(e);
     if (first_init == 1) {
         if ((input_id + 5) <= 25) {
@@ -108,7 +114,6 @@ function end_game() {
     }
     if (on_lamp == 0) {
         score=score+1
-        alert("You Win!!")
         win = document.getElementById("win");
         win.innerHTML = parseInt(win.innerHTML) + 1;
         init();
@@ -157,3 +162,29 @@ function saveToFirebase(name,score) {
         alert("Error In Score Submit :-(");
     }
 }
+
+function startTimer(duration, display) {
+    var timer = duration, minutes, seconds;
+    var interval_id=setInterval(function () {
+        minutes = parseInt(timer / 60, 10)
+        seconds = parseInt(timer % 60, 10);
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.textContent = minutes + ":" + seconds;
+
+        if (--timer < 0) {
+            alert("Time is up\n Score:"+score.toString()+"\n Reset:"+reset_counter.toString());
+            timer = duration;
+            display.textContent = 10 + ":" + "00";
+            win = document.getElementById("win");
+            win.innerHTML = 0;
+            score=0;
+            init();
+            clearInterval(interval_id);
+        }
+    }, 1000);
+}
+
+
