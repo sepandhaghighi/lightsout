@@ -6,6 +6,10 @@
     font-family: "sacramento";
     src: url("../fonts/Sacramento-Regular.ttf");
 }
+.donate_image{
+    width: 80%;
+    height: auto;
+}
 .timer{
     text-align: center;
     font-size: 40px;
@@ -34,6 +38,9 @@
 .header h1{
     display: inline-block;
     margin-right: 10px;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 40px;
 }
 body {
     margin: 0px;
@@ -178,6 +185,11 @@ button {
     -webkit-transition: 0.08s ease-in;
 }
 @media all and (max-width: 1024px) {
+    .donate_image{
+    width: 90%;
+    height: auto;
+}
+    
     button{
         width: 90%;
         margin-bottom: 20px;

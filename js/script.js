@@ -14,8 +14,25 @@ var hr = (new Date()).getHours();
 if (hr>=19||hr<6){
     lamp_awsome='<i class="fa fa-lightbulb-o fa-3x" aria-hidden="true" style="color:gold"></i>';
 }
-function saythanks(){
-    window.open("https://saythanks.io/to/lightsout");
+function redirect(flag){
+    switch(flag){
+        case 1:
+            window.open("https://saythanks.io/to/lightsout");
+            break;
+        case 2:
+            alert("Bitocin Wallet : 1XGr9qbZjBpUQJJSB6WtgBQbDTgrhPLPA");
+            break;
+        case 3:
+            window.open("https://beerpay.io/sepandhaghighi/lightsout");
+            break;
+        case 4:
+            window.open("https://www.payping.ir/sepandhaghighi");
+            break;
+        default:
+            window.open("https://saythanks.io/to/lightsout");
+            
+    }
+    
 }
 function getname(){
     while(player_name==null||player_name.length<1||player_name.length>10){
@@ -213,5 +230,6 @@ function startTimer(duration, display) {
         }
     }, 1000);
 }
+
 
 
