@@ -52,7 +52,7 @@ body {
     color: #fafafa;
 }
 #login-footer {
-    color: black;
+    background: transparent;
     width: 100%;
     bottom: 0;
     text-align: center;
@@ -69,17 +69,20 @@ body {
     font-size: 25px;
 }
 h1 {
+    color: #fafafa;
     margin: auto;
     text-align: center;
     margin-bottom: 10px;
     margin-top: 30px;
 }
 h2 {
+    color: #fafafa;
     margin: auto;
     display: inline;
 }
 .score_table{
-    border: solid 1px black;
+    border-radius: 4px;
+    border: solid 1px #fafafa;
     height: 550px;
     width: 40%;
     margin: auto;
@@ -88,6 +91,7 @@ h2 {
 }
 .score_table td,th{
     text-align: center;
+    color: #fafafa;
     
 }
 .lightsout {
@@ -100,6 +104,7 @@ h2 {
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
 }
 .score {
+    border-radius: 4px;
     border: solid 1px black;
     margin: auto;
     margin-top: 15px;
@@ -108,7 +113,7 @@ h2 {
     text-align: center;
 }
 td {
-    border: solid 1px black;
+    border: solid 1px #fafafa;
 }
 .score td {
     padding: 20px;
@@ -117,6 +122,7 @@ td {
     width: 20%;
     height: 20%;
     text-align: center;
+    
 }
 .lightsout td:hover {
     cursor: pointer;
@@ -203,12 +209,14 @@ button {
         font-size: 38px;
     }
     .score {
+        color: #fafafa;
         font-size: 30px;
         margin-bottom: 40px;
         margin-top: 40px;
         width: 90%;
     }
     .score td {
+        color: #fafafa;
         padding-right: 0px;
         padding-left: 0px;
     }
@@ -270,7 +278,7 @@ button {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: #202026;
+    background-color: white;
     background-image: url('');
     background-size: cover; 
     background-repeat: no-repeat;
@@ -279,6 +287,7 @@ button {
 
 .siteWrapper {
     position: absolute;
-    height: 99%;
-    width: 99%;
+    height: 100%;
+    width: 100%;
 }
+
