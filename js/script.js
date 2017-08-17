@@ -182,12 +182,17 @@ function startTimer(duration, display) {
         seconds = seconds < 10 ? "0" + seconds : seconds;
 
         display.textContent = minutes + ":" + seconds;
-
+        if (timer==(duration/2)){
+            display.style.color="orange";
+        }
+        else if (timer==60){
+            display.style.color="red";
+        }
         if (--timer < 0||restart_flag==1) {
             if (restart_flag==0){
             alert("Time is up\n\n Score : "+score.toString()+"\n Reset : "+reset_counter.toString()+"\n Total Move : "+total_move.toString());}
             timer = duration;
-            display.textContent = "07" + ":" + "00";
+            display.textContent = "TI" + ":" + "ME";
             win = document.getElementById("win");
             win.innerHTML = 0;
             score=0;
@@ -195,6 +200,7 @@ function startTimer(duration, display) {
             reset.innerHTML = "Reset!"
             first_move=true;
             restart_flag=0;
+            display.style.color="black";
             init(1);
             clearInterval(interval_id);
         }
