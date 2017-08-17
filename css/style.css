@@ -82,7 +82,7 @@ h2 {
 }
 .score_table{
     border-radius: 4px;
-    border: solid 1px #fafafa;
+    border: solid 1px #202026;
     height: 550px;
     width: 40%;
     margin: auto;
@@ -91,10 +91,11 @@ h2 {
 }
 .score_table td,th{
     text-align: center;
-    color: #fafafa;
+    color: #202026;
     
 }
 .lightsout {
+    border-radius: 4px;
     z-index: +1;
     border: solid 1px black;
     width: 550px;
@@ -113,7 +114,8 @@ h2 {
     text-align: center;
 }
 td {
-    border: solid 1px #fafafa;
+    border-radius: 4px;
+    border: solid 1px #202026;
 }
 .score td {
     padding: 20px;
@@ -209,14 +211,12 @@ button {
         font-size: 38px;
     }
     .score {
-        color: #fafafa;
         font-size: 30px;
         margin-bottom: 40px;
         margin-top: 40px;
         width: 90%;
     }
     .score td {
-        color: #fafafa;
         padding-right: 0px;
         padding-left: 0px;
     }
