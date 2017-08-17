@@ -1,7 +1,6 @@
 # Lights Out
 
 ----------
-<div align="center">
 <style>
 button {
     display: inline;
@@ -69,9 +68,11 @@ a:hover{
 text-decoration:none;
 };
 </style>
+<div align="center">
 <button class="reset"><a href="http://www.lightsout.ir">LETS PLAY!</a></button>
 <button class="reset"><a href="http://www.lightsout.ir/help.html">HELP</a></button>
 <button class="reset"><a href="http://www.lightsout.ir/donate.html">SUPPORT</a></button>
+</div>
 <p align="center">
   <img src="http://www.lightsout.ir/images/help.gif" alt="Lights Out Animation">
 </p>
