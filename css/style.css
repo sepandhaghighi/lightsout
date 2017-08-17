@@ -287,7 +287,8 @@ button {
 
 
 .siteWrapper {
-    position: absolute;
+    position: fixed;
+    overflow: auto;
     width: 100%;
     height: 100%;
 }

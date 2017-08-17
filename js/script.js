@@ -9,6 +9,7 @@ var score=0;
 var first_move=true;
 var init_flag=false;
 var total_move=0;
+var restart_flag=0;
 function getname(){
     while(player_name==null||player_name.length<1||player_name.length>10){
     player_name=prompt("Please Enter Your Name ;-)\n(1-10 Character)");
