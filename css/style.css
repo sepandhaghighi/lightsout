@@ -267,8 +267,6 @@ button {
 
 /* Particleground */
 #particleOuter {
-    width: 99%;
-    height: 99%;
     overflow: hidden;
   }
   
