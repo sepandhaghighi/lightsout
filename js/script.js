@@ -10,7 +10,7 @@ var first_move=true;
 var init_flag=false;
 var total_move=0;
 function getname(){
-    while(player_name==null||player_name.length<1||player_name.length>10){
+    while(player_name==null||player_0name.length<1||player_name.length>10){
     player_name=prompt("Please Enter Your Name ;-)\n(1-10 Character)");
     }
 }
@@ -166,14 +166,14 @@ function saveToFirebase(name,score) {
         alert("Error In Score Submit :-(");
     }
 }
-function restart_game(){
-    if (first_move==false){
-    restart_flag=1;
+function restart_game() {
+    if (first_move == false) {
+    restart_flag = 1;
     }
 }
 function startTimer(duration, display) {
     var timer = duration, minutes, seconds;
-    var interval_id=setInterval(function () {
+    var interval_id = setInterval(function () {
         minutes = parseInt(timer / 60, 10)
         seconds = parseInt(timer % 60, 10);
 
@@ -182,18 +182,23 @@ function startTimer(duration, display) {
 
         display.textContent = minutes + ":" + seconds;
 
-        if (--timer < 0||restart_flag==1) {
-            if (restart_flag==0){
-            alert("Time is up\n\n Score : "+score.toString()+"\n Reset : "+reset_counter.toString()+"\n Total Move : "+total_move.toString());}
+        if (--timer < 0 || restart_flag == 1) {
+            if (restart_flag == 0) {
+            alert("Time is up\n\n Score : "
+            + score.toString() + "\n Reset : "
+            + reset_counter.toString()
+            + "\n Total Move : "
+            + total_move.toString());}
+
             timer = duration;
             display.textContent = "07" + ":" + "00";
             win = document.getElementById("win");
             win.innerHTML = 0;
-            score=0;
+            score = 0;
             reset = document.getElementById("reset");
             reset.innerHTML = "Reset!"
-            first_move=true;
-            restart_flag=0;
+            first_move = true;
+            restart_flag = 0;
             init(1);
             clearInterval(interval_id);
         }
