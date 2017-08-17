@@ -4,14 +4,14 @@ var reset_counter = 0;
 var lamp_awsome = '<i class="fa fa-lightbulb-o fa-3x" aria-hidden="true"></i>';
 var spinner = '<i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>';
 var first_init = 0;
-var player_name = null;
-var score = 0;
-var first_move = true;
-var init_flag = false;
-var total_move = 0;
+var player_name=null;
+var score=0;
+var first_move=true;
+var init_flag=false;
+var total_move=0;
 function getname(){
-    while(player_name == null || player_0name.length < 1 || player_name.length > 10){
-    player_name = prompt("Please Enter Your Name ;-)\n(1-10 Character)");
+    while(player_name==null||player_name.length<1||player_name.length>10){
+    player_name=prompt("Please Enter Your Name ;-)\n(1-10 Character)");
     }
 }
 function init(flag) {
@@ -26,7 +26,7 @@ function init(flag) {
     move = document.getElementById("move");
     reset = document.getElementById("reset");
     random_init = 0;
-    init_flag = true;
+    init_flag=true;
     if (flag == 2) {
         reset_counter = reset_counter + 1;
         reset.innerHTML = "Reset" + " (" + reset_counter + ")";
@@ -48,9 +48,9 @@ function init(flag) {
     for (i = 0; i < random_list.length; i++) {
         reply_click(random_list[i].toString(),true);
     }
-    total_move = 0;
+    total_move=0;
     move.innerHTML = 0;
-    init_flag = false;
+    init_flag=false;
 }
 
 
@@ -59,10 +59,10 @@ function init(flag) {
 var reply_click = function (e) {
     var input_id, ele, move;
     move = document.getElementById("move");
-    if (first_move == true && init_flag == false){
+    if (first_move==true&&init_flag==false){
                 display = document.querySelector('#time');
                 startTimer(7*60, display);
-        first_move = false;
+        first_move=false;
     }
     input_id = parseInt(e);
     if (first_init == 1) {
@@ -117,7 +117,7 @@ function end_game() {
         }
     }
     if (on_lamp == 0) {
-        score = score+1
+        score=score+1
         win = document.getElementById("win");
         win.innerHTML = parseInt(win.innerHTML) + 1;
         init();
@@ -133,21 +133,21 @@ function savescore(){
 
 function get_data(){
     var leadsRef = firebase.database().ref('subscription-entries').orderByChild("score").limitToLast(10); 
-    var counter = 0;
+    var counter=0;
 leadsRef.on('value', function(snapshot) {
     snapshot.forEach(function(childSnapshot) {
       var name = childSnapshot.val().name;
-      var score = childSnapshot.val().score;
-      document.getElementById("N"+(10-counter).toString()).innerHTML = name;
-      document.getElementById("S"+(10-counter).toString()).innerHTML = score;
-     counter = counter+1;
+      var score= childSnapshot.val().score;
+      document.getElementById("N"+(10-counter).toString()).innerHTML=name;
+      document.getElementById("S"+(10-counter).toString()).innerHTML=score;
+     counter=counter+1;
     });
 });
 }
 
 function saveToFirebase(name,score) {
     var submit_button
-    submit_button = document.getElementById("submit_button");
+    submit_button=document.getElementById("submit_button");
     var scoreObject = {
         name: name,
         score: score
@@ -166,14 +166,14 @@ function saveToFirebase(name,score) {
         alert("Error In Score Submit :-(");
     }
 }
-function restart_game() {
-    if (first_move == false) {
-    restart_flag = 1;
+function restart_game(){
+    if (first_move==false){
+    restart_flag=1;
     }
 }
 function startTimer(duration, display) {
     var timer = duration, minutes, seconds;
-    var interval_id = setInterval(function () {
+    var interval_id=setInterval(function () {
         minutes = parseInt(timer / 60, 10)
         seconds = parseInt(timer % 60, 10);
 
@@ -182,23 +182,18 @@ function startTimer(duration, display) {
 
         display.textContent = minutes + ":" + seconds;
 
-        if (--timer < 0 || restart_flag == 1) {
-            if (restart_flag == 0) {
-            alert("Time is up\n\n Score : "
-            + score.toString() + "\n Reset : "
-            + reset_counter.toString()
-            + "\n Total Move : "
-            + total_move.toString());}
-
+        if (--timer < 0||restart_flag==1) {
+            if (restart_flag==0){
+            alert("Time is up\n\n Score : "+score.toString()+"\n Reset : "+reset_counter.toString()+"\n Total Move : "+total_move.toString());}
             timer = duration;
             display.textContent = "07" + ":" + "00";
             win = document.getElementById("win");
             win.innerHTML = 0;
-            score = 0;
+            score=0;
             reset = document.getElementById("reset");
             reset.innerHTML = "Reset!"
-            first_move = true;
-            restart_flag = 0;
+            first_move=true;
+            restart_flag=0;
             init(1);
             clearInterval(interval_id);
         }
