@@ -10,6 +10,10 @@ var first_move=true;
 var init_flag=false;
 var total_move=0;
 var restart_flag=0;
+var hr = (new Date()).getHours(); 
+if (hr>=19||hr<6){
+    lamp_awsome='<i class="fa fa-lightbulb-o fa-3x" aria-hidden="true" style="color:gold"></i>';
+}
 function saythanks(){
     window.open("https://saythanks.io/to/lightsout");
 }
