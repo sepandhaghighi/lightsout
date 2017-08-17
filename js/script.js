@@ -49,7 +49,6 @@ function init(flag) {
     for (i = 0; i < random_list.length; i++) {
         reply_click(random_list[i].toString(),true);
     }
-    total_move=0;
     move.innerHTML = 0;
     init_flag=false;
 }
@@ -201,6 +200,7 @@ function startTimer(duration, display) {
             first_move=true;
             restart_flag=0;
             display.style.color="black";
+            total_move=0;
             init(1);
             clearInterval(interval_id);
         }
