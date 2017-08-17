@@ -266,17 +266,18 @@ button {
     margin-bottom: 10px;
 }
 
-/* Particleground */
-#particleOuter {
-    overflow: hidden;
-    z-index: -1;
+#particles-js{
+    position: relative;
+    z-index: +1;
+    width: 100%;
+    height: 100%;
+    background-color: #b61924;
+    background-image: url('');
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
   }
+
+
   
-#particleInner {
-    z-index: -3;
-    left: 0;
-    top: 0;
-    height: 99%;
-    width: 99%;
-    text-align: center;
-  }
+  
