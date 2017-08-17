@@ -1,6 +1,9 @@
 # Lights Out
 
-----------
+----------		
+
+<html>
+<body>
 <style>
 button {
     display: inline;
@@ -79,3 +82,5 @@ text-decoration:none;
 <p align="center">
    Simple Game Just For Fun :bowtie::see_no_evil:
 </p>
+</body>
+</html>
