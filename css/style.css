@@ -153,11 +153,11 @@ a {
 }
 button {
     display: inline;
-    margin: auto;
+    margin: 7px;
     margin-bottom: 5px;
     position: relative;
     height: 45px;
-    width: 150px;
+    width: 170px;
     padding: 5px 5px;
     font-weight: 700;
     font-size: 15px;
