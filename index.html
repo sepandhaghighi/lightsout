@@ -29,6 +29,11 @@
         <h1 id="help_page"><a href="help.html">Help</a></h1>
     </div>
     <div class="timer"><i class="fa fa-clock-o" aria-hidden="true"></i>&nbsp;<span id="time">07:00</span>&nbsp;<i class="fa fa-clock-o" aria-hidden="true"></i></div>
+    <div id="particleOuter">
+        <div id="particleInner">
+
+        </div>
+    </div>
     <table class="lightsout">
         <tr>
             <td id="1" onclick="reply_click(this.id)"><i class="fa fa-spinner fa-spin fa-3x fa-fw"></i></td>
@@ -80,9 +85,6 @@
         </tr>
     </table>
 
-    <div id="particles-js">
-        </div>
-
     <div class="button_section">
         <button onclick="init(2);" class="reset" id="reset">Reset!</button>
         <button onclick="restart_game();" class="reset">Restart</button>
@@ -93,11 +95,11 @@
     </div>
 
     <script>
-        particlesJS.load('particles-js', 'particles.json', function () {
-            console.log('callback - particles.js config loaded');
-        });
         init(1);
     </script>
+    <script src="./js/jqeury.particleground.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <script src="./js/jqeury.particleground.min.js"></script>
     <!-- Go to www.addthis.com/dashboard to customize your tools -->
     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-598f3dae1c76cb2c&async=1&domready=1"
         async="async"></script>

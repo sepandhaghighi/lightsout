@@ -265,7 +265,18 @@ button {
     margin-bottom: 10px;
 }
 
-#particles-js {
-    width: 200px;
-    height: 200px;
-}
+/* Particleground */
+#particleOuter {
+    width: 99%;
+    height: 99%;
+    overflow: hidden;
+  }
+  
+  #particleInner {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 99%;
+    text-align: center;
+  }
