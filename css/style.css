@@ -267,8 +267,7 @@ button {
 }
 
 #particles-js{
-    position: relative;
-    z-index: +1;
+    position: absolute;
     width: 100%;
     height: 100%;
     background-color: #b61924;
@@ -279,5 +278,7 @@ button {
   }
 
 
-  
-  
+.siteWrapper {
+    position: absolute;
+	transform: translate(50%,-50%);
+}
