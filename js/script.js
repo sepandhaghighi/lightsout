@@ -4,12 +4,12 @@ var reset_counter = 0;
 var lamp_awsome = '<i class="fa fa-lightbulb-o fa-3x" aria-hidden="true"></i>';
 var spinner = '<i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>';
 var first_init = 0;
-var player_name=null;
-var score=0;
-var first_move=true;
-var init_flag=false;
-var total_move=0;
-var restart_flag=0;
+var player_name = null;
+var score = 0;
+var first_move = true;
+var init_flag = false;
+var total_move = 0;
+var restart_flag = 0;
 var hr = (new Date()).getHours(); 
 if (hr>=19||hr<6){
     lamp_awsome='<i class="fa fa-lightbulb-o fa-3x" aria-hidden="true" style="color:gold"></i>';
@@ -140,7 +140,7 @@ function savescore(){
 
 function get_data(){
     var leadsRef = firebase.database().ref('subscription-entries').orderByChild("score").limitToLast(10); 
-    var counter=0;
+    var counter = 0;
 leadsRef.on('value', function(snapshot) {
     snapshot.forEach(function(childSnapshot) {
       var name = childSnapshot.val().name;
@@ -180,7 +180,7 @@ function restart_game(){
 }
 function startTimer(duration, display) {
     var timer = duration, minutes, seconds;
-    var interval_id=setInterval(function () {
+    var interval_id = setInterval(function () {
         minutes = parseInt(timer / 60, 10)
         seconds = parseInt(timer % 60, 10);
 
