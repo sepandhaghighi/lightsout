@@ -91,6 +91,7 @@ h2 {
     
 }
 .lightsout {
+    z-index: +1;
     border: solid 1px black;
     width: 550px;
     height: 550px;
@@ -268,13 +269,14 @@ button {
 /* Particleground */
 #particleOuter {
     overflow: hidden;
+    z-index: -1;
   }
   
-  #particleInner {
-    position: absolute;
-    z-index: -1;
+#particleInner {
+    z-index: -3;
     left: 0;
     top: 0;
+    height: 99%;
     width: 99%;
     text-align: center;
   }
