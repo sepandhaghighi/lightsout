@@ -10,13 +10,19 @@ particlesJS.load('particles-js', 'particles.json', function() {
 */
 
 /* Otherwise just put the config content (json): */
-
+var shape_control="circle";
+var size=35;
+var hr = (new Date()).getHours(); 
+if (hr>=20||hr<6){
+    shape_control="star";
+    size=15;
+}
 particlesJS('particles-js',
   
   {
     "particles": {
       "number": {
-        "value": 20,
+        "value": 30,
         "density": {
           "enable": true,
           "value_area": 1000
@@ -26,9 +32,9 @@ particlesJS('particles-js',
         "value": "#202026"
       },
       "shape": {
-        "type": "circle",
+        "type": shape_control,
         "stroke": {
-          "width": 35,
+          "width": size,
           "color": "#202026"
         },
         "polygon": {
