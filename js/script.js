@@ -194,6 +194,11 @@ function restart_game(){
     if (first_move==false){
     restart_flag=1;
     }
+    else{
+            reset = document.getElementById("reset");
+            reset.innerHTML = "Reset!";
+            reset_counter=0;
+    }
 }
 function startTimer(duration, display) {
     var timer = duration, minutes, seconds;
@@ -215,21 +220,26 @@ function startTimer(duration, display) {
             if (restart_flag==0){
             alert("Time is up\n\n Score : "+score.toString()+"\n Reset : "+reset_counter.toString()+"\n Total Move : "+total_move.toString());}
             timer = duration;
-            display.textContent = "TI" + ":" + "ME";
-            win = document.getElementById("win");
-            win.innerHTML = 0;
-            score=0;
-            reset = document.getElementById("reset");
-            reset.innerHTML = "Reset!"
-            first_move=true;
-            restart_flag=0;
-            display.style.color="black";
-            total_move=0;
-            init(1);
+            restart_config(display);
             clearInterval(interval_id);
         }
     }, 1000);
 }
 
+function restart_config(display){
+     display.textContent = "TI" + ":" + "ME";
+    total_move=0;
+    display.style.color="black";
+    win = document.getElementById("win");
+            win.innerHTML = 0;
+    score=0;
+    reset = document.getElementById("reset");
+            reset.innerHTML = "Reset!";
+            reset_counter=0;
+     first_move=true;
+            restart_flag=0;
+    init(1);
+    
+}
 
 
