@@ -108,8 +108,10 @@ var reply_click = function (e) {
             toggle(input_id - 1);
             toggle(input_id + 1);
         }
+        if (init_flag==false){
         move.innerHTML = parseInt(move.innerHTML) + 1;
         total_move=total_move+1;
+        }
         toggle(input_id)
 
         end_game();
@@ -171,25 +173,21 @@ leadsRef.on('value', function(snapshot) {
 });
 }
 
-function saveToFirebase(name,score) {
-    var submit_button
-    submit_button=document.getElementById("submit_button");
+function saveToFirebase(name,score,total_move,player_reset) {
     var scoreObject = {
         name: name,
-        score: score
+        score: score,
+        reset: player_reset,
+        move:total_move
     };
     try{
     firebase.database().ref('subscription-entries').push().set(scoreObject)
         .then(function(snapshot) {
-            alert("Your Score Saved :-)")
-            submit_button.style.display="none";
         }, function(error) {
             console.log('error' + error);
-            alert("Error In Score Submit :-(");
         });
     }
     catch(e){
-        alert("Error In Score Submit :-(");
     }
 }
 function restart_game(){
@@ -225,7 +223,8 @@ function startTimer(duration, display) {
         }
         if (--timer < 0||restart_flag==1) {
             if (restart_flag==0){
-            alert("Time is up\n\n Score : "+score.toString()+"\n Reset : "+reset_counter.toString()+"\n Total Move : "+total_move.toString());}
+                saveToFirebase(player_name,score.toString(),total_move.toString(),reset_counter.toString())
+            alert("Time is up\n\n Player Name : "+player_name+"\n Score : "+score.toString()+"\n Reset : "+reset_counter.toString()+"\n Total Move : "+total_move.toString());}
             timer = duration;
             restart_config(display);
             clearInterval(interval_id);
