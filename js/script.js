@@ -36,9 +36,11 @@ function redirect(flag){
     
 }
 function getname(){
-    while(player_name==null||player_name.length<1||player_name.length>10){
     player_name=prompt("Please Enter Your Name ;-)\n(1-10 Character)");
+    if(player_name==null||player_name.length<1){
+        player_name="Guest";
     }
+    alert(player_name);
 }
 function init(flag) {
     first_init = 1;
