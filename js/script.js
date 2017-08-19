@@ -38,7 +38,10 @@ function redirect(flag){
 function getname(){
     player_name=prompt("Please Enter Your Name ;-)\n(1-10 Character)");
     if(player_name==null||player_name.length<1){
-        player_name="Guest";
+        player_name="Guest-"+(Math.floor(Math.random()*3000+1)).toString();
+    }
+    else if (player_name.length>10){
+        player_name=player_name.substring(0,10);
     }
 }
 function init(flag) {
