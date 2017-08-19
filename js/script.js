@@ -10,6 +10,7 @@ var first_move = true;
 var init_flag = false;
 var total_move = 0;
 var restart_flag = 0;
+var no_move_counter=0;
 var hr = (new Date()).getHours(); 
 if (hr>=19||hr<6){
     lamp_awsome='<i class="fa fa-lightbulb-o fa-3x" aria-hidden="true" style="color:gold"></i>';
@@ -113,6 +114,7 @@ var reply_click = function (e) {
 
         end_game();
     }
+    no_move_counter=0;
 
 }
 
@@ -210,11 +212,16 @@ function startTimer(duration, display) {
         seconds = seconds < 10 ? "0" + seconds : seconds;
 
         display.textContent = minutes + ":" + seconds;
+        no_move_counter+=1;
         if (timer==(duration/2)){
             display.style.color="orange";
         }
         else if (timer==60){
             display.style.color="red";
+        }
+        if (no_move_counter>=60&&timer>100){
+            alert("Move!!!")
+            no_move_counter=0;
         }
         if (--timer < 0||restart_flag==1) {
             if (restart_flag==0){
