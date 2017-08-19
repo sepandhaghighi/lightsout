@@ -21,7 +21,7 @@ function redirect(flag){
             window.open("https://saythanks.io/to/lightsout");
             break;
         case 2:
-            alert("Bitocin Wallet : 1XGr9qbZjBpUQJJSB6WtgBQbDTgrhPLPA");
+            swal("Bitocin Wallet","1XGr9qbZjBpUQJJSB6WtgBQbDTgrhPLPA");
             break;
         case 3:
             window.open("https://beerpay.io/sepandhaghighi/lightsout");
@@ -36,13 +36,31 @@ function redirect(flag){
     
 }
 function getname(){
-    player_name=prompt("Please Enter Your Name ;-)\n(1-10 Character)");
-    if(player_name==null||player_name.length<1){
-        player_name="Guest-"+(Math.floor(Math.random()*3000+1)).toString();
-    }
-    else if (player_name.length>10){
-        player_name=player_name.substring(0,10);
-    }
+    swal({
+  title: "Enter Your Name",
+  text: "1-10 Character",
+  type: "input",
+  showCancelButton: true,
+  closeOnConfirm: false,
+  animation: "slide-from-top",
+  inputPlaceholder: "Player Name"
+},
+function(inputValue){
+  if (inputValue === false){
+      player_name="Guest-"+Math.floor(Math.random()*400+1).toString();
+      return false;
+  }
+  
+  if (inputValue === "") {
+    swal.showInputError("Enter Your Name!");
+    return false
+  }
+    player_name=inputValue;
+  if (inputValue.length>10){
+      player_name=player_name.substring(0,10);
+  }
+  swal("Welcome!","Lights Out, Linear Algebra Game");
+});
 }
 function init(flag) {
     first_init = 1;
@@ -222,13 +240,13 @@ function startTimer(duration, display) {
             display.style.color="red";
         }
         if (no_move_counter>=60&&timer>100){
-            alert("Move!!!")
+            swal("Move!!!");
             no_move_counter=0;
         }
         if (--timer < 0||restart_flag==1) {
             if (restart_flag==0){
                 saveToFirebase(player_name,score.toString(),total_move.toString(),reset_counter.toString())
-            alert("Time is up\n\n Player Name : "+player_name+"\n Score : "+score.toString()+"\n Reset : "+reset_counter.toString()+"\n Total Move : "+total_move.toString());}
+            swal("Time is up!!","Player Name : "+player_name+"\nScore : "+score.toString()+"\nReset : "+reset_counter.toString()+"\nTotal Move : "+total_move.toString());}
             timer = duration;
             restart_config(display);
             clearInterval(interval_id);
