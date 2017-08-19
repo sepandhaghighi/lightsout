@@ -40,7 +40,6 @@ function getname(){
     if(player_name==null||player_name.length<1){
         player_name="Guest";
     }
-    alert(player_name);
 }
 function init(flag) {
     first_init = 1;
