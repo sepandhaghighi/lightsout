@@ -108,7 +108,7 @@ var reply_click = function (e) {
     move = document.getElementById("move");
     if (first_move==true&&init_flag==false){
                 display = document.querySelector('#time');
-                startTimer(7*60, display);
+                startTimer(60*7, display);
         first_move=false;
     }
     input_id = parseInt(e);
@@ -213,6 +213,18 @@ function saveToFirebase(name,score,total_move,player_reset) {
     }
 }
 function restart_game(){
+    swal({
+  title: "Are you sure?",
+  type: "warning",
+  showCancelButton: true,
+  confirmButtonColor: "#DD6B55",
+  confirmButtonText: "Yes",
+  cancelButtonText: "No",
+  closeOnConfirm: true,
+  closeOnCancel: true
+},
+function(isConfirm){
+  if (isConfirm) {
     if (first_move==false){
     restart_flag=1;
     }
@@ -221,6 +233,10 @@ function restart_game(){
             reset.innerHTML = "Reset!";
             reset_counter=0;
     }
+  } else {
+  }
+});
+    
 }
 function startTimer(duration, display) {
     var timer = duration, minutes, seconds;
@@ -240,13 +256,20 @@ function startTimer(duration, display) {
             display.style.color="red";
         }
         if (no_move_counter>=60&&timer>100){
-            swal("Move!!!");
+            swal({
+            title: "Hurry Up!!!",
+            imageUrl: "images/hurry.png"
+            });
             no_move_counter=0;
         }
         if (--timer < 0||restart_flag==1) {
             if (restart_flag==0){
-                saveToFirebase(player_name,score.toString(),total_move.toString(),reset_counter.toString())
-            swal("Time is up!!","Player Name : "+player_name+"\nScore : "+score.toString()+"\nReset : "+reset_counter.toString()+"\nTotal Move : "+total_move.toString());}
+                saveToFirebase(player_name,score.toString(),total_move.toString(),reset_counter.toString());
+                swal({
+                    title:"Time's Up",
+                    text: "Player Name : "+player_name+"\nScore : "+score.toString()+"\nReset : "+reset_counter.toString()+"\nTotal Move : "+total_move.toString(),
+                    imageUrl: "images/timeup.png"
+                    });}
             timer = duration;
             restart_config(display);
             clearInterval(interval_id);
