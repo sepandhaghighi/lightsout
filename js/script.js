@@ -94,7 +94,7 @@ function init(flag) {
         document.getElementById(i.toString()).innerHTML = "";
     }
     for (i = 0; i < random_list.length; i++) {
-        reply_click(random_list[i].toString(),true);
+        reply_click(random_list[i].toString());
     }
     move.innerHTML = 0;
     init_flag=false;
@@ -106,7 +106,7 @@ function init(flag) {
 var reply_click = function (e) {
     var input_id, ele, move;
     move = document.getElementById("move");
-    if (first_move==true&&init_flag==false){
+    if ((first_move==true)&&(init_flag==false)){
                 display = document.querySelector('#time');
                 startTimer(60*7, display);
         first_move=false;
@@ -130,13 +130,15 @@ var reply_click = function (e) {
             toggle(input_id - 1);
             toggle(input_id + 1);
         }
+        toggle(input_id);
         if (init_flag==false){
         move.innerHTML = parseInt(move.innerHTML) + 1;
         total_move=total_move+1;
-        }
-        toggle(input_id)
-
         end_game();
+        }
+        
+        
+        
     }
     no_move_counter=0;
 
@@ -170,7 +172,7 @@ function end_game() {
         score=score+1
         win = document.getElementById("win");
         win.innerHTML = parseInt(win.innerHTML) + 1;
-        init();
+        init(1);
     }
 }
 
