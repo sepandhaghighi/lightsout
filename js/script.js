@@ -67,7 +67,7 @@ function reply_click(e) {
     var input_id, ele, move;
     move = document.getElementById("move");
     if ((first_move==true)&&(init_flag==false)){
-                document.getElementById("win")=0;
+                document.getElementById("win").innerHTML=0;
                 display = document.querySelector('#time');
                 startTimer(60*7, display);
         first_move=false;
