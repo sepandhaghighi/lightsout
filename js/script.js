@@ -67,6 +67,7 @@ function reply_click(e) {
     var input_id, ele, move;
     move = document.getElementById("move");
     if ((first_move==true)&&(init_flag==false)){
+                document.getElementById("win")=0;
                 display = document.querySelector('#time');
                 startTimer(60*7, display);
         first_move=false;
@@ -90,11 +91,12 @@ function reply_click(e) {
             toggle(input_id - 1);
             toggle(input_id + 1);
         }
-        toggle(input_id);
+        
         if (init_flag==false){
         move.innerHTML = parseInt(move.innerHTML) + 1;
         total_move=total_move+1;
         }
+        toggle(input_id);
         end_game();
         
         
