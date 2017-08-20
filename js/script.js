@@ -134,9 +134,8 @@ function reply_click(e) {
         if (init_flag==false){
         move.innerHTML = parseInt(move.innerHTML) + 1;
         total_move=total_move+1;
-        end_game();
         }
-        
+        end_game();
         
         
     }
