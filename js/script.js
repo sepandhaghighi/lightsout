@@ -103,7 +103,7 @@ function init(flag) {
 
 
 
-var reply_click = function (e) {
+function reply_click(e) {
     var input_id, ele, move;
     move = document.getElementById("move");
     if ((first_move==true)&&(init_flag==false)){
