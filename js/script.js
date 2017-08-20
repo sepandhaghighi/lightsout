@@ -62,6 +62,47 @@ function(inputValue){
   swal("Welcome!","Lights Out, Linear Algebra Game");
 });
 }
+
+function reply_click(e) {
+    var input_id, ele, move;
+    move = document.getElementById("move");
+    if ((first_move==true)&&(init_flag==false)){
+                display = document.querySelector('#time');
+                startTimer(60*7, display);
+        first_move=false;
+    }
+    input_id = parseInt(e);
+    if (first_init == 1) {
+        if ((input_id + 5) <= 25) {
+            toggle(input_id + 5);
+        }
+        if ((input_id - 5) >= 1) {
+            toggle(input_id - 5);
+        }
+        if (((input_id - 1) % 5) == 0) {
+            toggle(input_id + 1);
+        }
+        else if ((input_id % 5) == 0) {
+            toggle(input_id - 1);
+
+        }
+        else {
+            toggle(input_id - 1);
+            toggle(input_id + 1);
+        }
+        toggle(input_id);
+        if (init_flag==false){
+        move.innerHTML = parseInt(move.innerHTML) + 1;
+        total_move=total_move+1;
+        }
+        end_game();
+        
+        
+    }
+    no_move_counter=0;
+
+}
+
 function init(flag) {
     first_init = 1;
     color = CSS_COLOR_NAMES[Math.floor((Math.random() * CSS_COLOR_NAMES.length) + 1)].toLowerCase();
@@ -103,45 +144,7 @@ function init(flag) {
 
 
 
-function reply_click(e) {
-    var input_id, ele, move;
-    move = document.getElementById("move");
-    if ((first_move==true)&&(init_flag==false)){
-                display = document.querySelector('#time');
-                startTimer(60*7, display);
-        first_move=false;
-    }
-    input_id = parseInt(e);
-    if (first_init == 1) {
-        if ((input_id + 5) <= 25) {
-            toggle(input_id + 5);
-        }
-        if ((input_id - 5) >= 1) {
-            toggle(input_id - 5);
-        }
-        if (((input_id - 1) % 5) == 0) {
-            toggle(input_id + 1);
-        }
-        else if ((input_id % 5) == 0) {
-            toggle(input_id - 1);
 
-        }
-        else {
-            toggle(input_id - 1);
-            toggle(input_id + 1);
-        }
-        toggle(input_id);
-        if (init_flag==false){
-        move.innerHTML = parseInt(move.innerHTML) + 1;
-        total_move=total_move+1;
-        }
-        end_game();
-        
-        
-    }
-    no_move_counter=0;
-
-}
 
 
 function toggle(input_id) {
