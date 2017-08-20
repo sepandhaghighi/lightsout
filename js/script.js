@@ -61,6 +61,8 @@ function(inputValue){
   }
   swal("Welcome!","Lights Out, Linear Algebra Game");
 });
+    
+        init(1);
 }
 function init(flag) {
     first_init = 1;
