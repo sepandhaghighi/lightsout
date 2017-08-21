@@ -298,7 +298,8 @@ function download_app(){
     swal({
   title: "Download Android App",
   text: '<a href="https://s3.amazonaws.com/gonativeio/static/599acefa8b37db16397249d5/app-release.apk">Download</a>',
-  imageUrl: "images/Android.png"
+  imageUrl: "images/Android.png",
+  html: true
 });
       
 }
