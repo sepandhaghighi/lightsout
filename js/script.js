@@ -66,7 +66,7 @@ function(inputValue){
 }
 function init(flag) {
     first_init = 1;
-    color = CSS_COLOR_NAMES[Math.floor((Math.random() * CSS_COLOR_NAMES.length) + 1)].toLowerCase();
+    color = CSS_COLOR_NAMES[Math.floor((Math.random() * CSS_COLOR_NAMES.length))].toLowerCase();
     var i, random_number, random_counter, move, game_name, random_init, reset;
     var random_list = [];
     random_counter = 0;
@@ -105,7 +105,7 @@ function init(flag) {
 
 
 
-var reply_click = function (e) {
+function reply_click(e) {
     var input_id, ele, move;
     move = document.getElementById("move");
     if (first_move==true&&init_flag==false){
