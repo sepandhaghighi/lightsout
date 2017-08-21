@@ -294,5 +294,27 @@ function restart_config(display){
     init(1);
     
 }
+function download_app(){
+    swal({
+  title: "Download Android App",
+  text: '<a href="https://s3.amazonaws.com/gonativeio/static/599acefa8b37db16397249d5/app-release.apk">Download</a>',
+  imageUrl: "images/Android.png"
+});
+      
+}
+function getMobileOperatingSystem() {
+  var userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
+      // Windows Phone must come first because its UA also contains "Android"
+    if (/windows phone/i.test(userAgent)) {
+    }
 
+    if (/android/i.test(userAgent)) {
+        download_app();
+    }
+
+    // iOS detection from: http://stackoverflow.com/a/9039885/177710
+    if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+    }
+
+}
