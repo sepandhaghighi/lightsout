@@ -178,6 +178,7 @@ function end_game() {
         score=score+1
         win = document.getElementById("win");
         win.innerHTML = parseInt(win.innerHTML) + 1;
+        console.log("WIN");
         init(1);
     }
 }
