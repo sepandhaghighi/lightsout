@@ -91,12 +91,10 @@ function init(flag) {
             random_counter = random_counter + 1;
         }
     }
-    console.log(random_init);
     for (i = 1; i < 26; i++) {
         document.getElementById(i.toString()).style.backgroundColor = color;
         document.getElementById(i.toString()).innerHTML = "";
     }
-    console.log(first_init);
     for (i = 0; i < random_list.length; i++) {
         reply_click(random_list[i].toString());
     }
@@ -119,19 +117,15 @@ function reply_click(e) {
     if (first_init == 1) {
         if ((input_id + 5) <= 25) {
             toggle(input_id + 5);
-             console.log("Toggle 1");
         }
         if ((input_id - 5) >= 1) {
             toggle(input_id - 5);
-            console.log("Toggle 2");
         }
         if (((input_id - 1) % 5) == 0) {
             toggle(input_id + 1);
-            console.log("Toggle 3");
         }
         else if ((input_id % 5) == 0) {
             toggle(input_id - 1);
-            console.log("Toggle 4");
 
         }
         else {
@@ -178,7 +172,6 @@ function end_game() {
         score=score+1
         win = document.getElementById("win");
         win.innerHTML = parseInt(win.innerHTML) + 1;
-        console.log("WIN");
         init(1);
     }
 }
