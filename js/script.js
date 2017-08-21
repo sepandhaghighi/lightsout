@@ -296,8 +296,8 @@ function restart_config(display){
 }
 function download_app(){
     swal({
-  title: "Download Android App",
-  text: '<a href="https://s3.amazonaws.com/gonativeio/static/599acefa8b37db16397249d5/app-release.apk">Download</a>',
+  title: "Android App",
+  text: '<h1><a href="https://s3.amazonaws.com/gonativeio/static/599acefa8b37db16397249d5/app-release.apk">Download</a></h1>',
   imageUrl: "images/Android.png",
   html: true
 });
