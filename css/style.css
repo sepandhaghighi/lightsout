@@ -6,6 +6,96 @@
     font-family: "sacramento";
     src: url("../fonts/Sacramento-Regular.ttf");
 }
+.smartbanner {
+    display: none;
+    left:0;top:0;
+    width:100%;
+    height:78px;
+    font-family: "julius";
+    background:#fff;
+    overflow:hidden;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+    -webkit-font-smoothing:antialiased;
+    -webkit-text-size-adjust:none;
+}
+.smartbanner-container {
+    margin:0 auto;
+}
+.smartbanner-close {
+    position:absolute;
+    left:7px;top:7px;
+    display:block;
+    font-family:"sacramento";
+    font-size:15px;
+    text-align:center;
+    text-decoration:none;
+    border-radius:14px;
+    -webkit-font-smoothing:subpixel-antialiased;
+    border:0;
+    width:17px;
+    height:17px;
+    line-height:17px;
+    color:#b1b1b3;
+    background:#efefef;
+}
+.smartbanner-close:active,.smartbanner-close:hover {
+    color:#333;
+}
+.smartbanner-icon{
+    position:absolute;
+    left:30px;
+    top:10px;
+    display:block;
+    width:57px;
+    height:57px;
+    background-color: #fff;
+    background-size:cover;
+    background-image: url("http://www.lightsout.ir/images/og-icon.png");
+}
+.smartbanner-info{
+    position:absolute;
+    left:98px;
+    top:15px;
+    width:44%;
+    font-size:12px;
+    line-height:1.2em;
+    font-weight:bold;
+    color:#999;
+}
+.smartbanner-title {
+    font-size:15px;
+    line-height:17px;
+    color:#000;
+    font-weight:bold;
+}
+.smartbanner-button{
+    position:absolute;
+    right:20px;
+    top:24px;
+    border-bottom:3px solid #b3c833;
+    padding:0 10px;
+    min-width:12%;
+    height:24px;
+    font-size:14px;
+    line-height:24px;
+    text-align:center;
+    font-weight:bold;
+    color:#fff;
+    background-color:#b3c833;
+    text-decoration:none;
+    border-radius:5px;
+}
+.smartbanner-button:hover {
+    background-color: #c1d739;
+    border-bottom:3px solid #8c9c29;
+}
+.smartbanner-button-text {
+    text-align:center;
+    display:block;
+    padding:0 5px;
+}
+
 .donate_image{
     width: 80%;
     height: auto;

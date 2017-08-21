@@ -2,11 +2,11 @@
 <html>
 <head>
     <link href="css/awsome/css/font-awesome.min.css" rel=stylesheet>
-    <link href="css/style.min.css" rel=stylesheet type="text/css">
+    <link href="css/style.css" rel=stylesheet type="text/css">
     <script src="js/sweetalert.min.js"></script>
     <link rel="stylesheet" href="css/themes/google/google.css">
     <link rel="stylesheet" type="text/css" href="css/sweetalert.css">
-    <script src="js/script.min.js" type="text/javascript"></script>
+    <script src="js/script.js" type="text/javascript"></script>
     <title>Lights Out Game</title>
     <meta name="description" content="Lights Out, Linear Algebra Game ;-), The goal of the puzzle is to switch all the lights off, preferably in as few button presses as possible" />
     <meta property="og:title" content="Lights Out" />
@@ -20,6 +20,20 @@
 
 
 <body>
+    <div class="smartbanner" id="smartabanner">
+    <div class="smartbanner-container">
+        <a href="#" id="smb-close" class="smartbanner-close" onclick="close_banner();">&times;</a>
+        <span class="smartbanner-icon"></span>
+        <div class="smartbanner-info">
+            <div class="smartbanner-title">Lights Out</div>
+            <div>Lights Out</div>
+            <span>Free &ndash; GoNative</span>
+        </div>
+        <a href="https://s3.amazonaws.com/gonativeio/static/599acefa8b37db16397249d5/app-release.apk" target="_blank" class="smartbanner-button">
+            <span class="smartbanner-button-text">Get it</span>
+        </a>
+    </div>
+</div>
     <div id="particles-js">
         <div class="siteWrapper">
             <a href="index.html">

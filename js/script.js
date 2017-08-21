@@ -11,7 +11,6 @@ var init_flag = false;
 var total_move = 0;
 var restart_flag = 0;
 var no_move_counter=0;
-var downloadapp_modal=true;
 var hr = (new Date()).getHours(); 
 if (hr>=19||hr<6){
     lamp_awsome='<i class="fa fa-lightbulb-o fa-3x" aria-hidden="true" style="color:gold"></i>';
@@ -37,6 +36,7 @@ function redirect(flag){
     
 }
 function getname(){
+    getMobileOperatingSystem();
     swal({
   title: "Enter Your Name",
   text: "1-10 Character",
@@ -60,7 +60,7 @@ function(inputValue){
   if (inputValue.length>10){
       player_name=player_name.substring(0,10);
   }
-  swal("Welcome!","Lights Out, Linear Algebra Game");
+swal("Welcome!","Lights Out, Linear Algebra Game");
 });
     
         init(1);
@@ -110,10 +110,6 @@ function reply_click(e) {
     var input_id, ele, move;
     move = document.getElementById("move");
     if (first_move==true&&init_flag==false){
-        if(downloadapp_modal==true){
-            getMobileOperatingSystem();
-            downloadapp_modal=false;
-        }
                 display = document.querySelector('#time');
                 startTimer(60*7, display);
         first_move=false;
@@ -299,15 +295,8 @@ function restart_config(display){
     init(1);
     
 }
-function download_app(){
-    swal({
-  title: "Android App",
-  text: '<h2><a href="https://s3.amazonaws.com/gonativeio/static/599acefa8b37db16397249d5/app-release.apk">Download</a></h2>',
-  imageUrl: "images/Android.png",
-  html: true
-});
-      
-}
+
+
 function getMobileOperatingSystem() {
   var userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
@@ -316,11 +305,14 @@ function getMobileOperatingSystem() {
     }
 
     if (/android/i.test(userAgent)) {
-        download_app();
+        document.getElementById("smartabanner").style.display="block";
     }
 
     // iOS detection from: http://stackoverflow.com/a/9039885/177710
     if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
     }
 
+}
+function close_banner(){
+    document.getElementById("smartabanner").style.display="none";
 }
