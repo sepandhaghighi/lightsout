@@ -169,8 +169,7 @@ function end_game() {
     var i, on_lamp, win;
     on_lamp = 0;
     for (i = 1; i < 26; i++) {
-        console.log(document.getElementById(i.toString()).style.backgroundColor);
-        if (document.getElementById(i.toString()).style.backgroundColor != "white") {
+        if (document.getElementById(i.toString()).innerHTML != "") {
             on_lamp = on_lamp + 1;
             break;
         }
