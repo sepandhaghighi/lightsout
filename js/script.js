@@ -91,10 +91,12 @@ function init(flag) {
             random_counter = random_counter + 1;
         }
     }
+    console.log(random_init);
     for (i = 1; i < 26; i++) {
         document.getElementById(i.toString()).style.backgroundColor = color;
         document.getElementById(i.toString()).innerHTML = "";
     }
+    console.log(first_init);
     for (i = 0; i < random_list.length; i++) {
         reply_click(random_list[i].toString());
     }
