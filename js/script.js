@@ -154,7 +154,7 @@ function reply_click(e) {
 function toggle(input_id) {
     var press_button;
     press_button = document.getElementById(input_id.toString());
-    if (press_button.style.backgroundColor == color) {
+    if (press_button.style.backgroundColor != "white") {
         press_button.style.backgroundColor = "white";
         press_button.innerHTML = lamp_awsome;
     }
@@ -170,7 +170,7 @@ function end_game() {
     on_lamp = 0;
     for (i = 1; i < 26; i++) {
         console.log(document.getElementById(i.toString()).style.backgroundColor);
-        if (document.getElementById(i.toString()).style.backgroundColor == "white") {
+        if (document.getElementById(i.toString()).style.backgroundColor != "white") {
             on_lamp = on_lamp + 1;
             break;
         }
