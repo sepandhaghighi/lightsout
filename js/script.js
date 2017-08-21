@@ -216,6 +216,10 @@ function saveToFirebase(name,score,total_move,player_reset) {
     }
 }
 function restart_game(){
+    if (reset_counter==0&&first_move==true){
+        swal("Restart???!!!");
+    }
+    else{
     swal({
   title: "Are you sure?",
   type: "warning",
@@ -239,7 +243,7 @@ function(isConfirm){
   } else {
   }
 });
-    
+    }
 }
 function startTimer(duration, display) {
     var timer = duration, minutes, seconds;
