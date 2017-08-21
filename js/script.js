@@ -11,6 +11,7 @@ var init_flag = false;
 var total_move = 0;
 var restart_flag = 0;
 var no_move_counter=0;
+var downloadapp_modal=true;
 var hr = (new Date()).getHours(); 
 if (hr>=19||hr<6){
     lamp_awsome='<i class="fa fa-lightbulb-o fa-3x" aria-hidden="true" style="color:gold"></i>';
@@ -48,7 +49,6 @@ function getname(){
 function(inputValue){
   if (inputValue === false){
       player_name="Guest-"+Math.floor(Math.random()*400+1).toString();
-      getMobileOperatingSystem();
       return false;
   }
   
@@ -61,7 +61,6 @@ function(inputValue){
       player_name=player_name.substring(0,10);
   }
   swal("Welcome!","Lights Out, Linear Algebra Game");
-  getMobileOperatingSystem();
 });
     
         init(1);
@@ -111,6 +110,10 @@ function reply_click(e) {
     var input_id, ele, move;
     move = document.getElementById("move");
     if (first_move==true&&init_flag==false){
+        if(downloadapp_modal==true){
+            getMobileOperatingSystem();
+            downloadapp_modal=false;
+        }
                 display = document.querySelector('#time');
                 startTimer(60*7, display);
         first_move=false;
