@@ -48,6 +48,7 @@ function getname(){
 function(inputValue){
   if (inputValue === false){
       player_name="Guest-"+Math.floor(Math.random()*400+1).toString();
+      getMobileOperatingSystem();
       return false;
   }
   
@@ -60,6 +61,7 @@ function(inputValue){
       player_name=player_name.substring(0,10);
   }
   swal("Welcome!","Lights Out, Linear Algebra Game");
+  getMobileOperatingSystem();
 });
     
         init(1);
@@ -297,7 +299,7 @@ function restart_config(display){
 function download_app(){
     swal({
   title: "Android App",
-  text: '<h1><a href="https://s3.amazonaws.com/gonativeio/static/599acefa8b37db16397249d5/app-release.apk">Download</a></h1>',
+  text: '<h2><a href="https://s3.amazonaws.com/gonativeio/static/599acefa8b37db16397249d5/app-release.apk">Download</a></h2>',
   imageUrl: "images/Android.png",
   html: true
 });
