@@ -53,7 +53,7 @@ function(inputValue){
   
   if (inputValue === "") {
     swal.showInputError("Enter Your Name!");
-    return false
+    return false;
   }
     player_name=inputValue;
   if (inputValue.length>10){
