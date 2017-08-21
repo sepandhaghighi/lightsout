@@ -119,15 +119,19 @@ function reply_click(e) {
     if (first_init == 1) {
         if ((input_id + 5) <= 25) {
             toggle(input_id + 5);
+             console.log("Toggle 1");
         }
         if ((input_id - 5) >= 1) {
             toggle(input_id - 5);
+            console.log("Toggle 2");
         }
         if (((input_id - 1) % 5) == 0) {
             toggle(input_id + 1);
+            console.log("Toggle 3");
         }
         else if ((input_id % 5) == 0) {
             toggle(input_id - 1);
+            console.log("Toggle 4");
 
         }
         else {
