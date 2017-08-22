@@ -275,6 +275,9 @@ button {
     -webkit-transition: 0.08s ease-in;
 }
 @media all and (max-width: 1024px) {
+    #saythanks{
+        margin-bottom: 93px;
+    }
     .donate_image{
     width: 90%;
     height: 50%;
