@@ -11,7 +11,16 @@ var init_flag = false;
 var total_move = 0;
 var restart_flag = 0;
 var no_move_counter=0;
-var hr = (new Date()).getHours(); 
+var hr = (new Date()).getHours();
+var config = {
+    apiKey: "AIzaSyCpXbAwzFbnVtsL-YS1K80fWB1puHYuSxY",
+    authDomain: "lightsout-d1728.firebaseapp.com",
+    databaseURL: "https://lightsout-d1728.firebaseio.com",
+    projectId: "lightsout-d1728",
+    storageBucket: "lightsout-d1728.appspot.com",
+    messagingSenderId: "778988693702"
+  };
+firebase.initializeApp(config); 
 if (hr>=19||hr<6){
     lamp_awsome='<i class="fa fa-lightbulb-o fa-3x" aria-hidden="true" style="color:gold"></i>';
 }
@@ -111,7 +120,7 @@ function reply_click(e) {
     move = document.getElementById("move");
     if (first_move==true&&init_flag==false){
                 display = document.querySelector('#time');
-                startTimer(60*7, display);
+                startTimer(60*5, display);
         first_move=false;
     }
     input_id = parseInt(e);
@@ -176,14 +185,6 @@ function end_game() {
         init(1);
     }
 }
-
-function savescore(){
-    getname();
-    saveToFirebase(player_name,score);
-    
-    
-}
-
 function get_data(){
     var leadsRef = firebase.database().ref('subscription-entries').orderByChild("score").limitToLast(10); 
     var counter = 0;
@@ -269,9 +270,9 @@ function startTimer(duration, display) {
             });
             no_move_counter=0;
         }
-        if (--timer < 0||restart_flag==1) {
+        if ((--timer < 0)||(restart_flag==1)) {
             if (restart_flag==0){
-                saveToFirebase(player_name,score.toString(),total_move.toString(),reset_counter.toString());
+                saveToFirebase(player_name,score,total_move,reset_counter);
                 swal({
                     title:"Time's Up",
                     text: "Player Name : "+player_name+"\nScore : "+score.toString()+"\nReset : "+reset_counter.toString()+"\nTotal Move : "+total_move.toString(),
@@ -280,6 +281,7 @@ function startTimer(duration, display) {
             timer = duration;
             restart_config(display);
             clearInterval(interval_id);
+            
         }
     }, 1000);
 }
