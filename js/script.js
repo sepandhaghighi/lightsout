@@ -50,17 +50,11 @@ function getname(){
   title: "Enter Your Name",
   text: "1-10 Character",
   type: "input",
-  showCancelButton: true,
   closeOnConfirm: false,
   animation: "slide-from-top",
   inputPlaceholder: "Player Name"
 },
 function(inputValue){
-  if (inputValue === false){
-      player_name="Guest-"+Math.floor(Math.random()*400+1).toString();
-      return false;
-  }
-  
   if (inputValue === "") {
     swal.showInputError("Enter Your Name!");
     return false;
