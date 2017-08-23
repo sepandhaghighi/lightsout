@@ -10,11 +10,11 @@ particlesJS.load('particles-js', 'particles.json', function() {
 */
 
 /* Otherwise just put the config content (json): */
-var shape_control="circle";
+var shape_control="images/sun.png";
 var size=35;
 var hr = (new Date()).getHours(); 
 if (hr>=20||hr<6){
-    shape_control="star";
+    shape_control="images/star.png";
     size=15;
 }
 particlesJS('particles-js',
@@ -32,18 +32,18 @@ particlesJS('particles-js',
         "value": "#202026"
       },
       "shape": {
-        "type": shape_control,
+        "type": "image",
         "stroke": {
-          "width": size,
+          "width": 15,
           "color": "#202026"
         },
         "polygon": {
           "nb_sides": 5
         },
         "image": {
-          "src": "img/github.svg",
-          "width": 100,
-          "height": 100
+          "src": shape_control,
+          "width": 35,
+          "height": 35
         }
       },
       "opacity": {
@@ -57,12 +57,12 @@ particlesJS('particles-js',
         }
       },
       "size": {
-        "value": 5,
+        "value": 28,
         "random": true,
         "anim": {
-          "enable": false,
+          "enable": true,
           "speed": 40,
-          "size_min": 0.1,
+          "size_min": 15,
           "sync": false
         }
       },
