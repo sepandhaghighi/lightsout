@@ -7,7 +7,7 @@
     src: url("../fonts/Sacramento-Regular.ttf");
 }
 .swal-wide{
-    top: 150px !important;
+    top: 25% !important;
 }
 .smartbanner {
     display: none;
