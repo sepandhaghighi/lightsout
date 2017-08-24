@@ -6,6 +6,9 @@
     font-family: "sacramento";
     src: url("../fonts/Sacramento-Regular.ttf");
 }
+.swal-wide{
+    top: 150px !important;
+}
 .smartbanner {
     display: none;
     left:0;top:0;
