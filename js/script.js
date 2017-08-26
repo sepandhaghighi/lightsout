@@ -11,6 +11,7 @@ var init_flag = false;
 var total_move = 0;
 var restart_flag = 0;
 var no_move_counter=0;
+var random_init=1;
 var hr = (new Date()).getHours();
 var config = {
     apiKey: "AIzaSyCpXbAwzFbnVtsL-YS1K80fWB1puHYuSxY",
@@ -76,7 +77,7 @@ swal({
 function init(flag) {
     first_init = 1;
     color = CSS_COLOR_NAMES[Math.floor((Math.random() * CSS_COLOR_NAMES.length))].toLowerCase();
-    var i, random_number, random_counter, move, game_name, random_init, reset;
+    var i, random_number, random_counter, move, game_name, reset;
     var random_list = [];
     random_counter = 0;
     game_name = document.getElementById("game_name");
@@ -84,14 +85,10 @@ function init(flag) {
     game_name.innerHTML = "Lights Out Game";
     move = document.getElementById("move");
     reset = document.getElementById("reset");
-    random_init = 0;
     init_flag=true;
     if (flag == 2) {
         reset_counter = reset_counter + 1;
         reset.innerHTML = "Reset" + " (" + reset_counter + ")";
-    }
-    while (random_init < 10) {
-        random_init = Math.floor((Math.random() * 15) + 1);
     }
     while (random_counter < random_init) {
         random_number = Math.floor((Math.random() * 25) + 1);
@@ -181,6 +178,7 @@ function end_game() {
         score=score+1
         win = document.getElementById("win");
         win.innerHTML = parseInt(win.innerHTML) + 1;
+        random_init=Math.min(random_init+1,15);
         init(1);
     }
 }
@@ -288,6 +286,7 @@ function startTimer(duration, display) {
 function restart_config(display){
      display.textContent = "TI" + ":" + "ME";
     total_move=0;
+    random_init=1;
     display.style.color="black";
     win = document.getElementById("win");
             win.innerHTML = 0;
