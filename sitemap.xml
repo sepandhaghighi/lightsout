@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+<url>
+  <loc>http://www.lightsout.ir/</loc>
+  <lastmod>2017-08-31T06:55:10+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>http://www.lightsout.ir/help.html</loc>
+  <lastmod>2017-08-31T06:55:10+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.lightsout.ir/donate.html</loc>
+  <lastmod>2017-08-31T06:55:10+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.lightsout.ir/index.html</loc>
+  <lastmod>2017-08-31T06:55:10+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.lightsout.ir/files/olson-paper-revised.pdf</loc>
+  <lastmod>2017-08-31T06:55:10+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+</urlset>
