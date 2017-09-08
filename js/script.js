@@ -17,19 +17,7 @@ var rythm = new Rythm();
     rythm.setMusic("files/rythmD.mp3");
 rythm.addRythm('lightsout', 'pulse', 0, 10, {
               min: 0.7,
-              max: 1
-            })
-rythm.addRythm('header', 'pulse', 0, 10, {
-              min: 0.7,
-              max: 1
-            })
-rythm.addRythm('timer', 'pulse', 0, 10, {
-              min: 0.7,
-              max: 1
-            })
-rythm.addRythm('score', 'pulse', 0, 10, {
-              min: 0.7,
-              max: 1
+              max: 1.4
             })
     rythm.start();
 var config = {
@@ -137,9 +125,6 @@ function reply_click(e) {
                 display = document.querySelector('#time');
                 rythm.stop();
                 document.getElementById("lightsout").style=null;
-                document.getElementById("score").style=null;
-                document.getElementById("timer").style=null;
-                document.getElementById("header").style=null;
                 startTimer(60*5, display);
         first_move=false;
     }
