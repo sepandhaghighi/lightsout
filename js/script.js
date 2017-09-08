@@ -13,6 +13,25 @@ var restart_flag = 0;
 var no_move_counter=0;
 var random_init=1;
 var hr = (new Date()).getHours();
+var rythm = new Rythm();
+    rythm.setMusic("files/rythmD.mp3");
+rythm.addRythm('lightsout', 'pulse', 0, 10, {
+              min: 0.7,
+              max: 1
+            })
+rythm.addRythm('header', 'pulse', 0, 10, {
+              min: 0.7,
+              max: 1
+            })
+rythm.addRythm('timer', 'pulse', 0, 10, {
+              min: 0.7,
+              max: 1
+            })
+rythm.addRythm('score', 'pulse', 0, 10, {
+              min: 0.7,
+              max: 1
+            })
+    rythm.start();
 var config = {
     apiKey: "AIzaSyCpXbAwzFbnVtsL-YS1K80fWB1puHYuSxY",
     authDomain: "lightsout-d1728.firebaseapp.com",
@@ -116,6 +135,11 @@ function reply_click(e) {
     move = document.getElementById("move");
     if (first_move==true&&init_flag==false){
                 display = document.querySelector('#time');
+                rythm.stop();
+                document.getElementById("lightsout").style=null;
+                document.getElementById("score").style=null;
+                document.getElementById("timer").style=null;
+                document.getElementById("header").style=null;
                 startTimer(60*5, display);
         first_move=false;
     }

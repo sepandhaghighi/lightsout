@@ -6,6 +6,10 @@
     font-family: "sacramento";
     src: url("../fonts/Sacramento-Regular.ttf");
 }
+body{
+    overflow-x: hidden;
+    margin: 0px;
+}
 .swal-wide{
     top: 25% !important;
 }

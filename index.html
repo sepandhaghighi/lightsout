@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/themes/google/google.css">
     <link rel="stylesheet" type="text/css" href="css/sweetalert.css">
     <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+    <script src="js/rythm.min.js"></script>
     <script src="js/script.min.js" type="text/javascript"></script>
     <title>Lights Out Game</title>
     <meta name="description" content="Lights Out, Linear Algebra Game ;-), The goal of the puzzle is to switch all the lights off, preferably in as few button presses as possible" />
@@ -38,14 +39,14 @@
 </div>
     <div id="particles-js">
         <div class="siteWrapper">
-                <h1 id="game_name">Loading ...</h1>
-            <div class="header">
+                <h1 id="game_name" class="get_name">Loading ...</h1>
+            <div class="header" id="header" >
                 <h1 id="help_page"><a href="help.html" title="Help Page">Help</a></h1>
                 <h1 id="help_page"><a href="donate.html" title="Support Page">Support</a></h1>
             </div>
-            <div class="timer"><i class="fa fa-clock-o" aria-hidden="true"></i>&nbsp;<span id="time">TI:ME</span>&nbsp;<i class="fa fa-clock-o"
+            <div class="timer" id="timer"><i class="fa fa-clock-o" aria-hidden="true"></i>&nbsp;<span id="time">TI:ME</span>&nbsp;<i class="fa fa-clock-o"
                     aria-hidden="true"></i></div>
-            <table class="lightsout">
+            <table class="lightsout" id="lightsout">
                 <tr>
                     <td id="1" onclick="reply_click(this.id)"><i class="fa fa-spinner fa-spin fa-3x fa-fw"></i></td>
                     <td id="2" onclick="reply_click(this.id)"><i class="fa fa-spinner fa-spin fa-3x fa-fw"></i></td>
@@ -85,7 +86,7 @@
 
             </table>
 
-            <table class="score">
+            <table class="score" id="score">
                 <tr>
                     <td>Move</td>
                     <td id="move">0</td>
