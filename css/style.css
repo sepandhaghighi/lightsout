@@ -10,6 +10,14 @@ body{
     overflow-x: hidden;
     margin: 0px;
 }
+.music_control{
+    float: left;
+    position: fixed;
+    margin-left: 5px;
+}
+.music_control:hover{
+    cursor: pointer;
+}
 .swal-wide{
     top: 25% !important;
 }

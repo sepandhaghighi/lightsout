@@ -3,6 +3,8 @@ var color;
 var reset_counter = 0;
 var lamp_awsome = '<i class="fa fa-lightbulb-o fa-3x" aria-hidden="true"></i>';
 var spinner = '<i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>';
+var sound_on='<i class="fa fa-volume-up fa-3x" aria-hidden="true" ></i>';
+var sound_off='<i class="fa fa-volume-off fa-3x" aria-hidden="true"></i>'
 var first_init = 0;
 var player_name = null;
 var score = 0;
@@ -13,6 +15,12 @@ var restart_flag = 0;
 var no_move_counter=0;
 var random_init=1;
 var hr = (new Date()).getHours();
+var music_list=["files/bensound-anewbeginning.mp3","files/bensound-happiness.mp3"];
+var music_random=Math.round(Math.random());
+var audio = new Audio(music_list[music_random]);
+var play_status=true;
+audio.loop=true;
+audio.play();
 // var rythm = new Rythm();
     // rythm.setMusic("files/rythmD.mp3");
 // rythm.addRythm('lightsout', 'pulse', 0, 10, {
@@ -20,6 +28,7 @@ var hr = (new Date()).getHours();
              //  max: 1.4
             // })
    //  rythm.start();
+
 var config = {
     apiKey: "AIzaSyCpXbAwzFbnVtsL-YS1K80fWB1puHYuSxY",
     authDomain: "lightsout-d1728.firebaseapp.com",
@@ -31,6 +40,18 @@ var config = {
 firebase.initializeApp(config); 
 if (hr>=19||hr<6){
     lamp_awsome='<i class="fa fa-lightbulb-o fa-3x" aria-hidden="true" style="color:gold"></i>';
+}
+function audio_control(){
+    if (play_status==true){
+        audio.pause();
+        play_status=false;
+        document.getElementById("sound_on_off").innerHTML=sound_off;
+    }
+    else{
+        audio.play();
+        play_status=true;
+        document.getElementById("sound_on_off").innerHTML=sound_on;
+    }
 }
 function redirect(flag){
     switch(flag){
