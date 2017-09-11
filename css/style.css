@@ -355,6 +355,9 @@ button {
     .hint_table{
     width: 90%;
 }
+    .siteWrapper{
+        background-color: white;
+    }
 }
 
 .reset {

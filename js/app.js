@@ -13,10 +13,24 @@ particlesJS.load('particles-js', 'particles.json', function() {
 var shape_control="images/sun.png";
 var size=35;
 var hr = (new Date()).getHours(); 
-if (hr>=20||hr<6){
+var back_link_color="#ffffff";
+function detectmob() {
+   if(window.innerWidth <= 1024) {
+     return true;
+   } else {
+     return false;
+   }
+}
+if (hr>=19||hr<6){
     shape_control="images/star.png";
     size=15;
+    back_link_color="#9f9999"
+    document.getElementById("particles-js").style.backgroundColor=back_link_color;
+    if (detectmob()==true){
+        document.getElementById("siteWrapper").style.backgroundColor=back_link_color;
+    }
 }
+
 particlesJS('particles-js',
   
   {
@@ -69,7 +83,7 @@ particlesJS('particles-js',
       "line_linked": {
         "enable": true,
         "distance": 150,
-        "color": "#ffffff",
+        "color": back_link_color,
         "opacity": 0.4,
         "width": 1
       },
