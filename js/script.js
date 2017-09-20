@@ -2,13 +2,17 @@ var CSS_COLOR_NAMES = ["AliceBlue","AntiqueWhite","Aqua","Aquamarine","Azure","B
 var color
 function init(){
     color=CSS_COLOR_NAMES[Math.floor((Math.random() * CSS_COLOR_NAMES.length) + 1)].toLowerCase();
-    var i,random_number,random_counter,move,game_name;
+    var i,random_number,random_counter,move,game_name,random_init;
     var random_list=[];
     random_counter=0
     game_name=document.getElementById("game_name");
     game_name.style.color=color;
     move=document.getElementById("move");
-    while(random_counter<6){
+    random_init=0
+    while(random_init<10){
+       random_init=Math.floor((Math.random() * 15) + 1); 
+    }
+    while(random_counter<random_init){
         random_number=Math.floor((Math.random() * 25) + 1);
         if (random_list.indexOf(random_number)<0){
             random_list.push(random_number);
@@ -16,13 +20,11 @@ function init(){
         }
     }
     for (i=1;i<26;i++){
-        if (random_list.indexOf(i)<0){
             document.getElementById(i.toString()).style.backgroundColor=color;
-        }
-        else{
-            document.getElementById(i.toString()).style.backgroundColor="white";
-        }
             
+    }
+    for (i=0;i<random_list.length;i++){
+        reply_click(random_list[i].toString());
     }
 
     move.innerHTML=0;
@@ -56,6 +58,7 @@ var reply_click = function(e)
     }
     move.innerHTML=parseInt(move.innerHTML)+1;
     toggle(input_id)
+    end_game();
     
 }
 
@@ -67,7 +70,7 @@ function toggle(input_id){
     else{
         document.getElementById(input_id.toString()).style.backgroundColor=color;
     }
-    end_game();
+    
 }
 
 function end_game(){
