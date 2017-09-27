@@ -15,12 +15,11 @@ var restart_flag = 0;
 var no_move_counter=0;
 var random_init=1;
 var hr = (new Date()).getHours();
-var music_list=["files/bensound-anewbeginning.mp3","files/bensound-happiness.mp3"];
-var music_random=Math.round(Math.random());
+var music_list=["files/bensound-anewbeginning.mp3","files/bensound-happiness.mp3","files/bensound-tenderness.mp3","files/bensound-cute.mp3","files/bensound-buddy.mp3"];
+var music_random=Math.floor(Math.random()*music_list.length);
 var audio = new Audio(music_list[music_random]);
-var play_status=true;
+var play_status=false;
 audio.loop=true;
-audio.play();
 // var rythm = new Rythm();
     // rythm.setMusic("files/rythmD.mp3");
 // rythm.addRythm('lightsout', 'pulse', 0, 10, {

@@ -290,9 +290,6 @@ button {
     -webkit-transition: 0.08s ease-in;
 }
 @media all and (max-width: 1024px) {
-    .music_control{
-    display: none;
-}
     #saythanks{
         margin-bottom: 93px;
     }
