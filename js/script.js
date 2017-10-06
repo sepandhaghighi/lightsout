@@ -66,6 +66,15 @@ function redirect(flag){
         case 4:
             window.open("https://www.payping.ir/sepandhaghighi");
             break;
+        case 5:
+            window.open("help.html","_self")
+            break;
+        case 6:
+            window.open("donate.html","_self")
+            break;
+        case 7:
+            window.open("index.html","__self")
+            break;
         default:
             window.open("https://saythanks.io/to/lightsout");
             
