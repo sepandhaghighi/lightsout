@@ -201,6 +201,7 @@ h2 {
     
 }
 .lightsout {
+    table-layout: fixed;
     border-radius: 4px;
     z-index: +1;
     border: solid 1px black;
@@ -227,6 +228,7 @@ td {
     padding: 20px;
 }
 .lightsout tr td {
+    table-layout: fixed:
     width: 20%;
     height: 20%;
     text-align: center;
@@ -300,6 +302,9 @@ button {
         border: solid 1px black;
         width: 90%;
         height: 55%;
+        min-height: 320px;
+        min-width: 320px;
+        table-layout: fixed;
         margin: auto;
         margin-top: 40px;
     }
@@ -348,6 +353,13 @@ button {
 }
     .siteWrapper{
         background-color: white;
+    }
+}
+@media screen and (orientation:landscape){
+    .lightsout{
+        
+        width: 55%;
+        height: 90%;
     }
 }
 
