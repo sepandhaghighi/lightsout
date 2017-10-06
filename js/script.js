@@ -19,7 +19,12 @@ var music_list=["files/bensound-anewbeginning.mp3","files/bensound-happiness.mp3
 var music_random=Math.floor(Math.random()*music_list.length);
 var audio = new Audio(music_list[music_random]);
 var play_status=false;
-audio.loop=true;
+audio.onended = function(){
+    music_random=Math.floor(Math.random()*music_list.length);
+    audio.src=music_list[music_random];
+    audio.load();
+    audio.play();
+};
 // var rythm = new Rythm();
     // rythm.setMusic("files/rythmD.mp3");
 // rythm.addRythm('lightsout', 'pulse', 0, 10, {
