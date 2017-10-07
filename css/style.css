@@ -302,8 +302,8 @@ button {
         border: solid 1px black;
         width: 90%;
         height: 55%;
-        min-height: 320px;
-        min-width: 320px;
+        min-height: 300px;
+        min-width: 300px;
         table-layout: fixed;
         margin: auto;
         margin-top: 40px;
@@ -355,7 +355,7 @@ button {
         background-color: white;
     }
 }
-@media screen and (orientation:landscape){
+@media all and (max-width: 1024px)  and (orientation:landscape){
     .lightsout{
         
         width: 55%;
