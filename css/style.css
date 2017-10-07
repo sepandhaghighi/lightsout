@@ -351,9 +351,6 @@ button {
     .hint_table{
     width: 90%;
 }
-    .siteWrapper{
-        background-color: white;
-    }
 }
 @media all and (max-width: 1024px)  and (orientation:landscape){
     .lightsout{
@@ -404,7 +401,7 @@ button {
 }
 
 #particles-js{
-    position: relative;
+    position: absolute;
     width: 100%;
     height: 100%;
     background-color: white;

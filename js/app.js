@@ -26,9 +26,6 @@ if (hr>=19||hr<6){
     size=15;
     back_link_color="#9f9999"
     document.getElementById("particles-js").style.backgroundColor=back_link_color;
-    if (detectmob()==true){
-        document.getElementById("siteWrapper").style.backgroundColor=back_link_color;
-    }
 }
 
 particlesJS('particles-js',
