@@ -9,6 +9,7 @@
 body{
     overflow-x: hidden;
     margin: 0px;
+    overflow-y: hidden;
 }
 .music_control{
     float: left;
