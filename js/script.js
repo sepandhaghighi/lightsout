@@ -114,7 +114,7 @@ function(inputValue){
   }
 swal({
     title: "Help",
-    text: '<p style="text-align:justify">The game consists of a 5 by 5 grid of lights. When the game starts, a random number or a stored pattern of these lights is switched on. Pressing any of the lights will toggle it and the four adjacent lights. The goal of the puzzle is to switch all the lights off, preferably in as few button presses as possible. After first touch you have 5 minutes to win as many as possible ;-)</p>',
+    text: '<p style="text-align:justify">The game consists of a 5 by 5 grid of lights. When the game starts, a random number or a stored pattern of these lights is switched on. Pressing any of the lights will toggle it and the four adjacent lights. The goal of the puzzle is to switch all the lights off, preferably in as few button presses as possible. After first touch you have 3 minutes to win as many as possible ;-)</p>',
     html: true,
     customClass: 'swal-wide'
 });
@@ -166,7 +166,7 @@ function reply_click(e) {
                 display = document.querySelector('#time');
                 // rythm.stop();
                 // document.getElementById("lightsout").style=null;
-                startTimer(60*5, display);
+                startTimer(60*3, display);
         first_move=false;
     }
     input_id = parseInt(e);
