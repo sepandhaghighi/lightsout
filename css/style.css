@@ -19,7 +19,7 @@ body{
     cursor: pointer;
 }
 .swal-wide{
-    top: 25% !important;
+    top: 20% !important;
 }
 .smartbanner {
     display: none;
