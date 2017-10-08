@@ -80,6 +80,13 @@ function redirect(flag){
         case 7:
             window.open("index.html","_self")
             break;
+        case 8:
+                        swal({
+    title: "Hint",
+    text: '<table align="center" style="font-size:37px"><tr><th >Bottom</th><th >Top</th></tr><tr><td>O---O</td><td>OO---</td></tr><tr><td>-O-O-</td><td>O--O-</td></tr><tr><td>OOO--</td><td>-O---</td></tr><tr><td>--OOO</td><td>---O-</td></tr><tr><td>O-OO-</td><td>----O</td></tr><tr><td>-OO-O</td><td>O----</td></tr><tr><td>OO-OO</td><td>--O--</td> </tr></table>',
+    html: true
+});
+            break;
         default:
             window.open("https://saythanks.io/to/lightsout");
             
