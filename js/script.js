@@ -78,7 +78,7 @@ function redirect(flag){
             window.open("donate.html","_self")
             break;
         case 7:
-            window.open("index.html","__self")
+            window.open("index.html","_self")
             break;
         default:
             window.open("https://saythanks.io/to/lightsout");
