@@ -20,7 +20,7 @@ body{
     cursor: pointer;
 }
 .swal-wide{
-    top: 20% !important;
+    top: 25% !important;
 }
 .smartbanner {
     display: none;
@@ -187,6 +187,9 @@ h2 {
     margin: auto;
     display: inline;
 }
+h3{
+    text-align: center;
+}
 .score_table{
     border-radius: 4px;
     border: solid 1px #202026;
@@ -288,6 +291,9 @@ button {
 }
 @media all and (max-width: 1024px) {
     #saythanks{
+        margin-bottom: 93px;
+    }
+    #Hint{
         margin-bottom: 93px;
     }
     .donate_image{

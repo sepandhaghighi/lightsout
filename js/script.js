@@ -19,6 +19,7 @@ var music_list=["files/bensound-anewbeginning.mp3","files/bensound-happiness.mp3
 var music_random=Math.floor(Math.random()*music_list.length);
 var audio = new Audio(music_list[music_random]);
 var play_status=false;
+var player_name_object;
 audio.onended = function(){
     music_random=Math.floor(Math.random()*music_list.length);
     audio.src=music_list[music_random];
@@ -83,7 +84,7 @@ function redirect(flag){
         case 8:
                         swal({
     title: "Hint",
-    text: '<table align="center" style="font-size:37px"><tr><th >Bottom</th><th >Top</th></tr><tr><td>O---O</td><td>OO---</td></tr><tr><td>-O-O-</td><td>O--O-</td></tr><tr><td>OOO--</td><td>-O---</td></tr><tr><td>--OOO</td><td>---O-</td></tr><tr><td>O-OO-</td><td>----O</td></tr><tr><td>-OO-O</td><td>O----</td></tr><tr><td>OO-OO</td><td>--O--</td> </tr></table>',
+    text: '<table align="center" style="font-size:30px"><tr style="font-size:31px"><th >Bottom</th><th >Top</th></tr><tr><td>O---O</td><td>OO---</td></tr><tr><td>-O-O-</td><td>O--O-</td></tr><tr><td>OOO--</td><td>-O---</td></tr><tr><td>--OOO</td><td>---O-</td></tr><tr><td>O-OO-</td><td>----O</td></tr><tr><td>-OO-O</td><td>O----</td></tr><tr><td>OO-OO</td><td>--O--</td> </tr></table>',
     html: true
 });
             break;
@@ -112,6 +113,9 @@ function(inputValue){
   if (inputValue.length>10){
       player_name=player_name.substring(0,10);
   }
+  player_name_object=document.getElementById("player_name");
+  player_name_object.innerHTML=player_name;
+  player_name_object.style.color=color;
 swal({
     title: "Help",
     text: '<p style="text-align:justify">The game consists of a 5 by 5 grid of lights. When the game starts, a random number or a stored pattern of these lights is switched on. Pressing any of the lights will toggle it and the four adjacent lights. The goal of the puzzle is to switch all the lights off, preferably in as few button presses as possible. After first touch you have 3 minutes to win as many as possible ;-)</p>',
@@ -128,6 +132,7 @@ function init(flag) {
     var i, random_number, random_counter, move, game_name, reset;
     var random_list = [];
     random_counter = 0;
+    document.getElementById("player_name").style.color=color;
     game_name = document.getElementById("game_name");
     game_name.style.color = color;
     game_name.innerHTML = "Lights Out Game";
