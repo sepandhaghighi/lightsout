@@ -11,6 +11,9 @@ body{
     margin: 0px;
     overflow-y: hidden;
 }
+#score_button{
+    display: none;
+}
 .music_control{
     float: left;
     position: fixed;

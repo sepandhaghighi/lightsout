@@ -8,12 +8,16 @@ var sound_off='<i class="fa fa-volume-off fa-3x" aria-hidden="true"></i>'
 var first_init = 0;
 var player_name = null;
 var score = 0;
+var best_score=0;
 var first_move = true;
 var init_flag = false;
 var total_move = 0;
+var overall_move=0;
 var restart_flag = 0;
+var overall_reset=0;
 var no_move_counter=0;
 var random_init=1;
+var complete_game=0;
 var hr = (new Date()).getHours();
 var music_list=["files/bensound-anewbeginning.mp3","files/bensound-happiness.mp3","files/bensound-tenderness.mp3","files/bensound-cute.mp3","files/bensound-buddy.mp3"];
 var music_random=Math.floor(Math.random()*music_list.length);
@@ -34,15 +38,15 @@ audio.onended = function(){
             // })
    //  rythm.start();
 
-var config = {
-    apiKey: "AIzaSyCpXbAwzFbnVtsL-YS1K80fWB1puHYuSxY",
-    authDomain: "lightsout-d1728.firebaseapp.com",
-    databaseURL: "https://lightsout-d1728.firebaseio.com",
-    projectId: "lightsout-d1728",
-    storageBucket: "lightsout-d1728.appspot.com",
-    messagingSenderId: "778988693702"
-  };
-firebase.initializeApp(config); 
+//var config = {
+  //  apiKey: "AIzaSyCpXbAwzFbnVtsL-YS1K80fWB1puHYuSxY",
+//    authDomain: "lightsout-d1728.firebaseapp.com",
+  //  databaseURL: "https://lightsout-d1728.firebaseio.com",
+//    projectId: "lightsout-d1728",
+  //  storageBucket: "lightsout-d1728.appspot.com",
+//    messagingSenderId: "778988693702"
+//  };
+//firebase.initializeApp(config); 
 if (hr>=19||hr<6){
     lamp_awsome='<i class="fa fa-lightbulb-o fa-3x" aria-hidden="true" style="color:gold"></i>';
 }
@@ -88,6 +92,14 @@ function redirect(flag){
     html: true
 });
             break;
+        case 9:
+            if (complete_game>0){
+            swal({
+                    title:"Score",
+                    text: "Player Name : "+player_name+"\nBest Score : "+best_score.toString()+"\nGame : "+complete_game.toString()+"\nTotal Move : "+overall_move.toString()+"\nTotal Reset : "+overall_reset.toString()
+                    });
+            }
+                    break;
         default:
             window.open("https://saythanks.io/to/lightsout");
             
@@ -141,6 +153,7 @@ function init(flag) {
     init_flag=true;
     if (flag == 2) {
         reset_counter = reset_counter + 1;
+        overall_reset = overall_reset + 1;
         reset.innerHTML = "Reset" + " (" + reset_counter + ")";
     }
     while (random_counter < random_init) {
@@ -196,6 +209,7 @@ function reply_click(e) {
         if (init_flag==false){
         move.innerHTML = parseInt(move.innerHTML) + 1;
         total_move=total_move+1;
+        overall_move=overall_move+1;
         }
         toggle(input_id);
 
@@ -237,37 +251,37 @@ function end_game() {
         init(1);
     }
 }
-function get_data(){
-    var leadsRef = firebase.database().ref('subscription-entries').orderByChild("score").limitToLast(10); 
-    var counter = 0;
-leadsRef.on('value', function(snapshot) {
-    snapshot.forEach(function(childSnapshot) {
-      var name = childSnapshot.val().name;
-      var score= childSnapshot.val().score;
-      document.getElementById("N"+(10-counter).toString()).innerHTML=name;
-      document.getElementById("S"+(10-counter).toString()).innerHTML=score;
-     counter=counter+1;
-    });
-});
-}
+//function get_data(){
+  //  var leadsRef = firebase.database().ref('subscription-entries').orderByChild("score").limitToLast(10); 
+//    var counter = 0;
+//leadsRef.on('value', function(snapshot) {
+  //  snapshot.forEach(function(childSnapshot) {
+    //  var name = childSnapshot.val().name;
+    //  var score= childSnapshot.val().score;
+    //  document.getElementById("N"+(10-counter).toString()).innerHTML=name;
+    //  document.getElementById("S"+(10-counter).toString()).innerHTML=score;
+    // counter=counter+1;
+//    });
+//});
+//}
 
-function saveToFirebase(name,score,total_move,player_reset) {
-    var scoreObject = {
-        name: name,
-        score: score,
-        reset: player_reset,
-        move:total_move
-    };
-    try{
-    firebase.database().ref('subscription-entries').push().set(scoreObject)
-        .then(function(snapshot) {
-        }, function(error) {
-            console.log('error' + error);
-        });
-    }
-    catch(e){
-    }
-}
+//function saveToFirebase(name,score,total_move,player_reset) {
+//    var scoreObject = {
+  //      name: name,
+//        score: score,
+//        reset: player_reset,
+//        move:total_move
+//    };
+//    try{
+//    firebase.database().ref('subscription-entries').push().set(scoreObject)
+//        .then(function(snapshot) {
+//        }, function(error) {
+//            console.log('error' + error);
+//        });
+//    }
+//    catch(e){
+//    }
+//}
 function restart_game(){
     if (reset_counter==0&&first_move==true){
         swal("Restart???!!!");
@@ -324,7 +338,14 @@ function startTimer(duration, display) {
         }
         if ((--timer < 0)||(restart_flag==1)) {
             if (restart_flag==0){
-                saveToFirebase(player_name,score,total_move,reset_counter);
+                //saveToFirebase(player_name,score,total_move,reset_counter);
+                if (best_score<score){
+                    best_score=score;
+                }
+                complete_game=complete_game+1;
+                if (complete_game==1){
+                    document.getElementById("score_button").style.display="inline";
+                }
                 swal({
                     title:"Time's Up",
                     text: "Player Name : "+player_name+"\nScore : "+score.toString()+"\nReset : "+reset_counter.toString()+"\nTotal Move : "+total_move.toString(),
@@ -339,7 +360,7 @@ function startTimer(duration, display) {
 }
 
 function restart_config(display){
-     display.textContent = "TI" + ":" + "ME";
+    display.textContent = "TI" + ":" + "ME";
     total_move=0;
     random_init=1;
     display.style.color="black";
