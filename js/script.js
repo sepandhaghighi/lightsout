@@ -96,7 +96,7 @@ function redirect(flag){
             if (complete_game>0){
             swal({
                     title:"Score",
-                    text: "Player Name : "+player_name+"\nBest Score : "+best_score.toString()+"\nGame : "+complete_game.toString()+"\nTotal Move : "+overall_move.toString()+"\nTotal Reset : "+overall_reset.toString()
+                    text: "Best Score : "+best_score.toString()+"\nGame : "+complete_game.toString()+"\nTotal Move : "+overall_move.toString()+"\nTotal Reset : "+overall_reset.toString()
                     });
             }
                     break;
@@ -108,33 +108,33 @@ function redirect(flag){
 }
 function getname(){
     getMobileOperatingSystem();
-    swal({
-  title: "Enter Your Name",
-  text: "1-10 Character",
-  type: "input",
-  closeOnConfirm: false,
-  animation: "slide-from-top",
-  inputPlaceholder: "Player Name"
-},
-function(inputValue){
-  if (inputValue === "") {
-    swal.showInputError("Enter Your Name!");
-    return false;
-  }
-    player_name=inputValue;
-  if (inputValue.length>10){
-      player_name=player_name.substring(0,10);
-  }
-  player_name_object=document.getElementById("player_name");
-  player_name_object.innerHTML=player_name;
-  player_name_object.style.color=color;
+   // swal({
+ // title: "Enter Your Name",
+  //text: "1-10 Character",
+  //type: "input",
+  //closeOnConfirm: false,
+  //animation: "slide-from-top",
+ // inputPlaceholder: "Player Name"
+//},
+//function(inputValue){
+ // if (inputValue === "") {
+  //  swal.showInputError("Enter Your Name!");
+  //  return false;
+ // }
+  //  player_name=inputValue;
+  //if (inputValue.length>10){
+  //    player_name=player_name.substring(0,10);
+  //}
+  //player_name_object=document.getElementById("player_name");
+  //player_name_object.innerHTML=player_name;
+  //player_name_object.style.color=color;
 swal({
     title: "Help",
     text: '<p style="text-align:justify">The game consists of a 5 by 5 grid of lights. When the game starts, a random number or a stored pattern of these lights is switched on. Pressing any of the lights will toggle it and the four adjacent lights. The goal of the puzzle is to switch all the lights off, preferably in as few button presses as possible. After first touch you have 3 minutes to win as many as possible ;-)</p>',
     html: true,
     customClass: 'swal-wide'
 });
-});
+//});
     
         init(1);
 }
@@ -144,7 +144,7 @@ function init(flag) {
     var i, random_number, random_counter, move, game_name, reset;
     var random_list = [];
     random_counter = 0;
-    document.getElementById("player_name").style.color=color;
+    //document.getElementById("player_name").style.color=color;
     game_name = document.getElementById("game_name");
     game_name.style.color = color;
     game_name.innerHTML = "Lights Out Game";
@@ -348,7 +348,7 @@ function startTimer(duration, display) {
                 }
                 swal({
                     title:"Time's Up",
-                    text: "Player Name : "+player_name+"\nScore : "+score.toString()+"\nReset : "+reset_counter.toString()+"\nTotal Move : "+total_move.toString(),
+                    text: "Score : "+score.toString()+"\nReset : "+reset_counter.toString()+"\nTotal Move : "+total_move.toString(),
                     imageUrl: "images/timeup.png"
                     });}
             timer = duration;
