@@ -18,5 +18,27 @@
 <p align="center">
    Simple Game Just For Fun :bowtie::see_no_evil:
 </p>
-</body>
-</html>
+
+## Contributors
+
+- [Sepand Haghighi](https://github.com/sepandhaghighi "Sepand Haghighi")
+- [Ali Gholami](https://github.com/aligholamee "Ali Gholami")
+
+## Contributing
+
+Changes and improvements are more than welcome! Feel free to fork and open a pull request. Please make your changes in a specific branch and request to pull into `master`! If you can, please make sure the game fully works before sending the PR, as that will help speed up the process.
+
+# Donations
+
+If you do like our game and we hope that you do, can you please support us? Our game is not and is never going to be working for profit. We need the money just so we can continue doing what we do ;-) .				
+
+<h3>Bitcoin :</h3>					
+
+```1XGr9qbZjBpUQJJSB6WtgBQbDTgrhPLPA```			
+
+
+
+<h3>Payping (For Iranian citizens) :</h3>
+
+<a href="http://www.payping.net/sepandhaghighi" target="__blank"><img src="http://www.qpage.ir/images/payping.png" height=100px width=100px></a>
+
