@@ -81,7 +81,7 @@ function local_save(s,m,r,c,h){
 function local_load(){
      if (typeof(Storage) !== "undefined") {
         complete_game=parseInt(localStorage.getItem("complete"));
-        if (!complete_game){
+        if (complete_game){
             best_score=parseInt(localStorage.getItem("score"));
             if (best_score==NaN){
                 best_score=0;
