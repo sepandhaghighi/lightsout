@@ -107,7 +107,7 @@ function redirect(flag){
     
 }
 function getname(){
-    getMobileOperatingSystem();
+    //getMobileOperatingSystem();
    // swal({
  // title: "Enter Your Name",
   //text: "1-10 Character",
@@ -385,7 +385,7 @@ function getMobileOperatingSystem() {
     }
 
     if (/android/i.test(userAgent)) {
-        document.getElementById("smartabanner").style.display="block";
+        //document.getElementById("smartabanner").style.display="block";
     }
 
     // iOS detection from: http://stackoverflow.com/a/9039885/177710

@@ -251,7 +251,7 @@ td {
 .help {
     width: 80%;
     margin: auto;
-    font-size: 37px;
+    font-size: 32px;
     text-align: justify;
     font-size-adjust: auto;
     hyphens: auto;
@@ -295,7 +295,7 @@ button {
     -moz-transition: 0.08s ease-in;
     -webkit-transition: 0.08s ease-in;
 }
-@media all and (max-width: 1024px) {
+@media all and (max-width: 512px) {
     #saythanks{
         margin-bottom: 93px;
     }
@@ -308,22 +308,20 @@ button {
 }
     
     button{
-        width: 90%;
+        width: 300px;
         margin-bottom: 20px;
     }
     .lightsout {
         border: solid 1px black;
-        width: 90%;
-        height: 55%;
-        min-height: 300px;
-        min-width: 300px;
+        height: 300px;
+        width: 300px;
         table-layout: fixed;
         margin: auto;
         margin-top: 40px;
     }
     .help {
         width: 95%;
-        font-size: 40px;
+        font-size: 34px;
         text-align: center;
         hyphens: auto;
     }
@@ -338,16 +336,16 @@ button {
         padding: auto;
     }
     h1 {
-        font-size: 40px;
+        font-size: 37px;
     }
     h2 {
-        font-size: 38px;
+        font-size: 36px;
     }
     .score {
-        font-size: 30px;
+        font-size: 20px;
         margin-bottom: 40px;
         margin-top: 40px;
-        width: 90%;
+        width: 300px;
     }
     .score td {
         padding-right: 0px;
@@ -357,24 +355,24 @@ button {
         width: 200px;
     }
     .help_image{
-    width: 90%;
-        height: 55%;
+    width: 300px;
+    height: 300px;
     
 }
     .hint_table{
     width: 90%;
 }
 }
-@media all and (max-width: 1024px)  and (orientation:landscape){
+@media all and (max-width: 512px)  and (orientation:landscape){
     .lightsout{
         
-        width: 55%;
-        height: 90%;
+        width: 550px;
+        height: 550px;
     }
     
         .help_image{
-    width: 55%;
-        height: 90%;
+    width: 550px;
+        height: 550px;
     
 }
 }
