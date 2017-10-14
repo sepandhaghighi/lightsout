@@ -113,7 +113,12 @@ function redirect(flag){
             window.open("https://saythanks.io/to/lightsout");
             break;
         case 2:
-            swal("Bitocin Wallet","1XGr9qbZjBpUQJJSB6WtgBQbDTgrhPLPA");
+            swal({
+                
+            title:"Bitocin Wallet",
+            text:"1XGr9qbZjBpUQJJSB6WtgBQbDTgrhPLPA",
+            customClass: 'swal-bitcoin'
+            });
             break;
         case 3:
             window.open("https://beerpay.io/sepandhaghighi/lightsout");

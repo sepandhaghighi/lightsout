@@ -6,6 +6,9 @@
     font-family: "sacramento";
     src: url("../fonts/Sacramento-Regular.ttf");
 }
+
+
+
 body{
     overflow-x: hidden;
     margin: 0px;
@@ -24,6 +27,7 @@ body{
 }
 .swal-wide{
     top: 25% !important;
+    text-align: center;
 }
 .smartbanner {
     display: none;
@@ -218,6 +222,7 @@ h4{
     width: 550px;
     height: 550px;
     margin: auto;
+    padding: 2px;
     margin-top: 40px;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
 }
@@ -296,10 +301,16 @@ button {
     -webkit-transition: 0.08s ease-in;
 }
 @media all and (max-width: 512px) {
+    .swal-bitcoin p{
+        font-size: 13px !important;
+    }
+    .sweet-alert p{
+        font-size-adjust: auto !important;
+    }
     #saythanks{
         margin-bottom: 93px;
     }
-    #Hint{
+    #Restart{
         margin-bottom: 93px;
     }
     .donate_image{
@@ -307,7 +318,11 @@ button {
     height: 50%;
 }
     
-    button{
+    .header button{
+        width: 300px;
+        margin-bottom: 20px;
+    }
+    .button_section button{
         width: 300px;
         margin-bottom: 20px;
     }
@@ -364,6 +379,7 @@ button {
 }
 }
 @media all and (max-width: 512px)  and (orientation:landscape){
+    
     .lightsout{
         
         width: 550px;
@@ -375,6 +391,7 @@ button {
         height: 550px;
     
 }
+
 }
 
 .reset {
