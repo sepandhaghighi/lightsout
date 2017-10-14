@@ -19,6 +19,7 @@ var hint_counter=0;
 var total_hint_counter=0;
 var no_move_counter=0;
 var random_init=1;
+var music_temp=[];
 var complete_game=0;
 var hr = (new Date()).getHours();
 var music_list=["files/bensound-anewbeginning.mp3","files/bensound-happiness.mp3","files/bensound-tenderness.mp3","files/bensound-cute.mp3","files/bensound-buddy.mp3"];
@@ -29,9 +30,16 @@ var player_name_object;
 
 
 audio.onended = function(){
+    music_temp.push(music_list.splice(music_random,1));
+    alert(music_temp);
     music_random=Math.floor(Math.random()*music_list.length);
+    alert(music_list);
     audio.src=music_list[music_random];
     audio.load();
+    if(music_list.length==1){
+       music_list.push.apply(music_list,music_temp);
+        music_temp=[];
+    } 
     audio.play();
 };
 
