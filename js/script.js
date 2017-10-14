@@ -31,9 +31,7 @@ var player_name_object;
 
 audio.onended = function(){
     music_temp.push(music_list.splice(music_random,1));
-    alert(music_temp);
     music_random=Math.floor(Math.random()*music_list.length);
-    alert(music_list);
     audio.src=music_list[music_random];
     audio.load();
     if(music_list.length==1){
