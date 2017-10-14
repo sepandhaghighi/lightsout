@@ -98,6 +98,7 @@ function local_load(){
             if (isNaN(total_hint_counter)){
                 total_hint_counter=0;
             }
+            document.getElementById("score_button").innerHTML="SCORE("+best_score.toString()+")";
             document.getElementById("score_button").style.display="inline";
         }
          else{
@@ -399,6 +400,7 @@ function startTimer(duration, display) {
                     best_score=score;
                 }
                 complete_game=complete_game+1;
+                document.getElementById("score_button").innerHTML="SCORE("+best_score.toString()+")";
                 local_save(best_score,overall_move,overall_reset,complete_game,total_hint_counter);
                 if (complete_game==1){
                     document.getElementById("score_button").style.display="inline";
