@@ -156,7 +156,7 @@ function redirect(flag){
             if (complete_game>0){
             swal({
                     title:"Score",
-                    text: "Best Score : "+best_score.toString()+"\nGame : "+complete_game.toString()+"\nTotal Move : "+overall_move.toString()+"\nTotal Reset : "+overall_reset.toString()+"\nTotal Hint Usage : "+total_hint_counter.toString()
+                    text: "Best Score : "+best_score.toString()+"\nGame : "+complete_game.toString()+"\nTotal Move : "+overall_move.toString()+"\nTotal Reset : "+overall_reset.toString()+"\nTotal Hint: "+total_hint_counter.toString()
                     });
             }
                     break;
