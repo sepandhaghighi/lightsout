@@ -29,8 +29,12 @@ background-color: rgba(204, 229, 135, 0.94) !important;
 
 }
 .swal-score td{
-    
+    padding: auto;
     text-align: center !important;
+}
+.swal-score table{
+    border: 1px black solid;
+    border-collapse: collapse;
 }
 body{
     overflow-x: hidden;

@@ -417,7 +417,9 @@ function startTimer(duration, display) {
                 }
                 swal({
                     title:"Time's Up",
-                    text: "Score : "+score.toString()+"\nReset : "+reset_counter.toString()+"\nMove : "+total_move.toString(),
+                    text: '<table align="center" style="font-size:26px"><tr><td>Score</td><td>'+score.toString()+'</td></tr><tr><td>Reset</td><td>'+reset_counter.toString()+'</td></tr><tr><td>Move</td><td>'+total_move.toString()+'</td></tr><tr><td>Hint</td><td>'+hint_counter.toString()+'</td></tr></table>',
+                    html: true,
+                    customClass: 'swal-score',
                     imageUrl: "images/timeup.png"
                     });}
             else{
