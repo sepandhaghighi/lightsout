@@ -417,6 +417,11 @@ function startTimer(duration, display) {
                     text: "Score : "+score.toString()+"\nReset : "+reset_counter.toString()+"\nMove : "+total_move.toString(),
                     imageUrl: "images/timeup.png"
                     });}
+            else{
+                overall_move=overall_move-total_move;
+                overall_reset=overall_reset-reset_counter;
+                total_hint_counter=total_hint_counter-hint_counter;
+            }
             timer = duration;
             restart_config(display);
             clearInterval(interval_id);
