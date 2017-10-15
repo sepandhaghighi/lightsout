@@ -28,9 +28,9 @@ background-color: rgba(204, 229, 135, 0.94) !important;
    font-family: "julius";
 
 }
-.swal-score p{
+.swal-score td{
     
-    text-align: justify !important;
+    text-align: center !important;
 }
 body{
     overflow-x: hidden;

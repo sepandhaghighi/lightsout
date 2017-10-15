@@ -156,7 +156,8 @@ function redirect(flag){
             if (complete_game>0){
             swal({
                     title:"Score!",
-                    text: "Best Score : "+best_score.toString()+"\nGame : "+complete_game.toString()+"\nTotal Move : "+overall_move.toString()+"\nTotal Reset : "+overall_reset.toString()+"\nTotal Hint: "+total_hint_counter.toString(),
+                    text: '<table align="center" style="font-size:26px"><tr><td>Best Score</td><td>'+best_score.toString()+'</td></tr><tr><td>Game</td><td>'+complete_game.toString()+'</td></tr><tr><td>Total Move</td><td>'+overall_move.toString()+'</td></tr><tr><td>Total Reset</td><td>'+overall_reset.toString()+'</td></tr><tr><td>Total Hint</td><td>'+total_hint_counter.toString()+'</td></tr></table>',
+                    html: true,
                     customClass: 'swal-score'
                     });
             }
