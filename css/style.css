@@ -330,6 +330,9 @@ button {
     -webkit-transition: 0.08s ease-in;
 }
 @media all and (max-width: 1024px) {
+    .lightsout td:hover {
+    cursor: pointer;
+}
     #help,#support{
         display: none;
     }
