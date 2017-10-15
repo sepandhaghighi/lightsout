@@ -6,7 +6,9 @@
     font-family: "sacramento";
     src: url("../fonts/Sacramento-Regular.ttf");
 }
-
+#help2,#support2{
+    display: none;
+}
 .sweet-overlay {
   background-color: rgba(44, 41, 41, 0.6)!important;
 }
@@ -328,6 +330,12 @@ button {
     -webkit-transition: 0.08s ease-in;
 }
 @media all and (max-width: 1024px) {
+    #help,#support{
+        display: none;
+    }
+    #help2,#support2{
+        display: inline;
+    }
     .swal-bitcoin p{
         font-size: 13px !important;
     }
@@ -337,7 +345,7 @@ button {
     #saythanks{
         margin-bottom: 93px;
     }
-    #Restart{
+    #support2{
         margin-bottom: 93px;
     }
     .donate_image{
