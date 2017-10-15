@@ -7,8 +7,27 @@
     src: url("../fonts/Sacramento-Regular.ttf");
 }
 
+.sweet-overlay {
+  background-color: rgba(44, 41, 41, 0.6)!important;
+}
 
+.sweet-alert p{
+    color: black !important;
+}
+.sweet-alert{
+background-color: rgba(204, 229, 135, 0.94) !important;
+  border: 3px solid white !important;
+}
+.sweet-alert h2{
+  color: black !important;
+  margin: 0px;
+  font-size: 16px;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.21);
+  margin-bottom: 28px;
+
+}
 .swal-score p{
+    
     text-align: justify !important;
 }
 body{
