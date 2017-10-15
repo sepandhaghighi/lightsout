@@ -332,6 +332,7 @@ button {
 @media all and (max-width: 1024px) {
     .lightsout td:hover {
     cursor: pointer;
+        opacity: 1;
 }
     #help,#support{
         display: none;
