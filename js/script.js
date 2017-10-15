@@ -368,6 +368,8 @@ function(isConfirm){
             reset = document.getElementById("reset");
             reset.innerHTML = "Reset!";
             document.getElementById("Hint").innerHTML = "Hint";
+            overall_reset=overall_reset-reset_counter;
+            total_hint_counter=total_hint_counter-hint_counter;
             reset_counter=0;
             hint_counter=0;
     }
