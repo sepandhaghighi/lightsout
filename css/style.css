@@ -219,7 +219,6 @@ h1 {
     margin-top: 30px;
 }
 h2 {
-    color: #fafafa;
     margin: auto;
     display: inline;
 }
@@ -285,14 +284,16 @@ td {
 .help {
     width: 80%;
     margin: auto;
-    font-size: 32px;
     text-align: justify;
     font-size-adjust: auto;
+    font-size: 32px;
     hyphens: auto;
     
+    
 }
-.help h3{
-    text-align: center;
+
+.help h2{
+   font-size: 32px; 
 }
 a {
     text-decoration: none;
