@@ -58,9 +58,9 @@ audio.onended = function(){
 //    messagingSenderId: "778988693702"
 //  };
 //firebase.initializeApp(config); 
-navigator.serviceWorker && navigator.serviceWorker.register('./sw.js').then(function(registration) {
-  console.log('Excellent, registered with scope: ', registration.scope);
-});
+//navigator.serviceWorker && navigator.serviceWorker.register('./sw.js').then(function(registration) {
+//  console.log('Excellent, registered with scope: ', registration.scope);
+//});
 if (hr>=19||hr<6){
     lamp_awsome='<i class="fa fa-lightbulb-o fa-3x" aria-hidden="true" style="color:gold"></i>';
 }
