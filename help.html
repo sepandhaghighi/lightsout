@@ -1,3 +1,4 @@
+<!doctype html>
 <html lang=en-US>
     
     
@@ -23,19 +24,19 @@
     
     
     
-    <body>
-        <div id="particles-js"> </div>
-        <div class="siteWrapper" id="siteWrapper">
-        <h1 id="game_name" style="color:black;">Lights Out Game</h1>
-        <div class="header">
+    <body itemscope itemtype="http://schema.org/WebPage">
+        <div id="particles-js" itemprop="particleSection"> </div>
+        <div class="siteWrapper" id="siteWrapper" itemprop="mainContentOfPage">
+        <h1 id="game_name" style="color:black;" itemprop="siteName">Lights Out Game</h1>
+        <div class="header" itemprop="siteMenu">
             <button onclick="redirect(7);" class="reset" id="game" title="Lightsout Game">Game</button>
             <button onclick="redirect(6);" class="reset" title="Support Game">Support</button>
         </div>
         
-        <div align="center">
+        <div align="center" itemprop="animationSection">
         <img src="images/help.gif" alt="Lights Out Animation" class="help_image">
         </div>
-        <div class="help">
+        <div class="help" itemprop="helpSection">
         <h4><span><i class="fa fa-video-camera" aria-hidden="true"></i>&nbsp;<a href="http://video.lightsout.ir">Tutorial</a>&nbsp;<i class="fa fa-video-camera" aria-hidden="true"></i></span></h4>
         <h2>Lights Out</h2>
             <hr/>
@@ -48,7 +49,7 @@ If a light is on, it must be toggled an odd number of times to be turned off. If
             
         <h2>Hint Table </h2>
             <hr/>
-        <table class="hint_table">
+        <table class="hint_table" itemprop="hintTable">
             <tr>
                 <th >Bottom</th>
                 <th >Top</th>
@@ -96,7 +97,7 @@ If a light is on, it must be toggled an odd number of times to be turned off. If
         <p>Track-4 : Cute - <a href="http://Bensound.com">Bensound.com</a></p>
         <p>Track-5 : Tenderness - <a href="http://Bensound.com">Bensound.com</a></p>
         </div>
-       <div id="login-footer">
+       <div id="login-footer" itemprop="siteFooter">
             <p >&nbsp; Designed With  ❤️ </p>
         </div>
         </div>

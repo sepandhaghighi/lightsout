@@ -26,8 +26,8 @@
 
 
 
-<body>
-    <div class="smartbanner" id="smartabanner">
+<body itemscope itemtype="http://schema.org/WebPage">
+    <div class="smartbanner" id="smartabanner" itemprop="smartbanner">
     <div class="smartbanner-container">
         <p id="smb-close" class="smartbanner-close" onclick="close_banner();">&times;</p>
         <span class="smartbanner-icon"></span>
@@ -41,20 +41,20 @@
         </a>
     </div>
 </div>
-    <div id="particles-js"> </div>
-        <div class="siteWrapper" id="siteWrapper">
+    <div id="particles-js" itemprop="particleSection"> </div>
+        <div class="siteWrapper" id="siteWrapper" itemprop="mainContentOfPage">
             <div class="music_control">
                 <p id="sound_on_off" onclick="audio_control();"><i class="fa fa-volume-off fa-3x" aria-hidden="true"></i></p>
             </div>
-                <h1 id="game_name" class="get_name">Loading ...</h1>
-            <div class="header" id="header" >
+                <h1 id="game_name" class="get_name" itemprop="siteName">Loading ...</h1>
+            <div class="header" id="header" itemprop="siteMenu" >
                 <button onclick="redirect(5);" class="reset" id="help" title="Help Page">Help</button>
                 <button onclick="redirect(6);" class="reset" id="support" title="Support Game">Support</button>
                 <button onclick="redirect(9);" class="reset" id="score_button" title="Score">Score</button>
             </div>
-            <div class="timer" id="timer"><i class="fa fa-clock-o" aria-hidden="true"></i>&nbsp;<span id="time">TI:ME</span>&nbsp;<i class="fa fa-clock-o"
+            <div class="timer" id="timer" itemprop="timer"><i class="fa fa-clock-o" aria-hidden="true"></i>&nbsp;<span id="time">TI:ME</span>&nbsp;<i class="fa fa-clock-o"
                     aria-hidden="true"></i></div>
-            <table class="lightsout" id="lightsout">
+            <table class="lightsout" id="lightsout" itemprop="gameTable">
                 <tr>
                     <td id="1" onclick="reply_click(this.id)"><i class="fa fa-spinner fa-spin fa-3x fa-fw"></i></td>
                     <td id="2" onclick="reply_click(this.id)"><i class="fa fa-spinner fa-spin fa-3x fa-fw"></i></td>
@@ -94,7 +94,7 @@
 
             </table>
 
-            <table class="score" id="score">
+            <table class="score" id="score" itemprop="scoreTable">
                 <tr>
                     <td>Move</td>
                     <td id="move">0</td>
@@ -102,7 +102,7 @@
                     <td id="win">0</td>
                 </tr>
             </table>
-            <div class="button_section">
+            <div class="button_section" itemprop="controlButtonSection">
                 <button onclick="redirect(8);" id="Hint"  class="reset" title="Hint">Hint</button>
                 <button onclick="init(2);" class="reset" id="reset" title="Rearrange">Reset!</button>
                 <button onclick="restart_game();" class="reset" title="Restart Game" id="Restart">Restart</button>
@@ -110,7 +110,7 @@
                 <button onclick="redirect(6);" class="reset" id="support2" title="Support Game">Support</button>
             </div>
 
-            <div id="login-footer">
+            <div id="login-footer" itemprop="siteFooter">
                 <p>&nbsp;Designed With ❤️ &nbsp;&nbsp;</p>
             </div>
         </div>
