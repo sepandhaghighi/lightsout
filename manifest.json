@@ -26,5 +26,8 @@
       "sizes": "32x32",
       "type": "image/png"
 	}
-  ]
+  ],
+  "start_url": "/index.html",
+  "display": "fullscreen",
+  "orientation": "portrait"
 }
