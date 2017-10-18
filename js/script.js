@@ -197,7 +197,7 @@ function getname(){
 local_load();
 swal({
     title: "Hi",
-    text: '<p style="text-align:justify">The game consists of a 5 by 5 grid of lights. When the game starts, a random number or a stored pattern of these lights is switched on. Pressing any of the lights will toggle it and the four adjacent lights. The goal of the puzzle is to switch all the lights off, preferably in as few button presses as possible. After first touch you have 3 minutes to win as many as possible ;-)</p>',
+    text: '<p style="text-align:justify">The game consists of a 5 by 5 grid of lights. When the game starts, a random number or a stored pattern of these lights is switched on. Pressing any of the lights will toggle it and the four adjacent lights. The goal of the puzzle is to switch all the lights off, preferably in as few button presses as possible. After first touch you have 3 minutes to win as many as possible ;-)</p>'+'<table align="center"><tr><td>Reset</td><td>Key(r)</td></tr><tr><td>Hint</td><td>Key(h)</td></tr></table>',
     html: true,
     customClass: 'swal-wide'
 });
@@ -482,3 +482,5 @@ function getMobileOperatingSystem() {
 function close_banner(){
     document.getElementById("smartabanner").style.display="none";
 }
+shortcut.add("h",function(){redirect(8);});
+shortcut.add("r",function(){init(2);});

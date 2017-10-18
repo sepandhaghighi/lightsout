@@ -58,6 +58,14 @@ body{
     top: 25% !important;
     text-align: center;
 }
+.swal-wide table{
+    border-collapse: collapse;
+}
+
+.swal-wide td{
+    padding: auto;
+    text-align: center !important;
+}
 .smartbanner {
     display: none;
     left:0;top:0;
