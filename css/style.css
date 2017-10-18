@@ -198,9 +198,11 @@ body {
     vertical-align: center;
     margin: auto;
     color: #fafafa;
+    font-size: 21px;
 }
-#login-footer p {
-    color: #fafafa;
+#login-footer a{
+    color: #ecf508;
+    font-size: 21px;
 }
 #login-footer {
     background: transparent;
@@ -209,7 +211,7 @@ body {
     text-align: center;
     background-color: #202026;
     position: relative;
-    font-size: 17px;
+    font-size: 14px;
     margin-right: 0px;
     height: auto;
     width: 100%;
