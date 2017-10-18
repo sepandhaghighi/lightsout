@@ -204,6 +204,13 @@ body {
     color: #ecf508;
     font-size: 21px;
 }
+#login-footer a:active{
+    color: #ecf508;
+}
+
+#login-footer a:visited{
+    color: #ecf508;
+}
 #login-footer {
     background: transparent;
     width: 100%;
