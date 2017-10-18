@@ -63,7 +63,8 @@ body{
 }
 
 .swal-wide td{
-    padding: auto;
+    padding-left: 4px;
+    padding-right: 4px;
     text-align: center !important;
 }
 .smartbanner {
