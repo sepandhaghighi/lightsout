@@ -26,6 +26,7 @@ var music_list=["files/bensound-anewbeginning.mp3","files/bensound-happiness.mp3
 var music_random=Math.floor(Math.random()*music_list.length);
 var audio = new Audio(music_list[music_random]);
 var play_status=false;
+var new_record_notif="";
 var player_name_object;
 
 
@@ -411,6 +412,10 @@ function startTimer(duration, display) {
                 //saveToFirebase(player_name,score,total_move,reset_counter);
                 if (best_score<score){
                     best_score=score;
+                    new_record_notif="<h2>New Record!</h2>&nbsp;";
+                }
+                else{
+                    new_record_notif="";
                 }
                 complete_game=complete_game+1;
                 document.getElementById("score_button").innerHTML="SCORE("+best_score.toString()+")";
@@ -420,7 +425,7 @@ function startTimer(duration, display) {
                 }
                 swal({
                     title:"Time's Up",
-                    text: '<table align="center" style="font-size:26px"><tr><td>Score</td><td>'+score.toString()+'</td></tr><tr><td>Reset</td><td>'+reset_counter.toString()+'</td></tr><tr><td>Move</td><td>'+total_move.toString()+'</td></tr><tr><td>Hint</td><td>'+hint_counter.toString()+'</td></tr></table>',
+                    text: new_record_notif+'<table align="center" style="font-size:26px"><tr><td>Score</td><td>'+score.toString()+'</td></tr><tr><td>Reset</td><td>'+reset_counter.toString()+'</td></tr><tr><td>Move</td><td>'+total_move.toString()+'</td></tr><tr><td>Hint</td><td>'+hint_counter.toString()+'</td></tr></table>',
                     html: true,
                     customClass: 'swal-score',
                     imageUrl: "images/timeup.png"
