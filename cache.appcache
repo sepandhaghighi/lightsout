@@ -1,7 +1,7 @@
 CACHE MANIFEST
 
 # Adds the ability to play the game offline.
-# Updated: 2017-10-18 23:58:47.587
+# Updated: 2017-10-19 02:56:17.803
 
 # Main page
 index.html
@@ -29,11 +29,6 @@ images/hurry.png
 images/star.png
 images/sun.png
 images/timeup.png
-files/bensound-anewbeginning.mp3
-files/bensound-happiness.mp3
-files/bensound-tenderness.mp3
-files/bensound-cute.mp3
-files/bensound-buddy.mp3
 manifest.json
 
 # Fonts
@@ -49,6 +44,11 @@ js/app.min.js
 
 
 favicon.ico
+files/bensound-anewbeginning.mp3
+files/bensound-happiness.mp3
+files/bensound-tenderness.mp3
+files/bensound-cute.mp3
+files/bensound-buddy.mp3
 
 NETWORK:
 *
