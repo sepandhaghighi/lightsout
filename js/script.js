@@ -207,6 +207,7 @@ swal({
 }
 function init(flag) {
     first_init = 1;
+    linear_gradient=Math.round(Math.random());
     color = CSS_COLOR_NAMES[Math.floor((Math.random() * CSS_COLOR_NAMES.length))].toLowerCase();
     var i, random_number, random_counter, move, game_name, reset;
     var random_list = [];

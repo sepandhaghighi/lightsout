@@ -1,0 +1,45 @@
+CACHE MANIFEST
+
+# Adds the ability to play the game offline.
+# The following comment needs to be updated whenever a change is made.
+# Run `rake appcache:update` to do so
+# Updated: 2015-10-20T11:14:00-08:00
+
+# Main page
+index.html
+help.html
+donate.html
+404.html
+
+# CSS
+css/awsome/css/font-awesome.min.css
+css/style.min.css
+css/themes/google/google.css
+css/sweetalert.css
+
+
+
+
+# Other resources
+images/favicon/4.png
+images/favicon/1.png
+images/favicon/2.png
+images/favicon/3.png
+manifest.json
+
+# Fonts
+fonts/JuliusSansOne-Regular.ttf
+fonts/Sacramento-Regular.ttf
+
+# JavaScript
+js/sweetalert.min.js
+js/shortcut.js
+js/script.min.js
+js/particles.min.js
+js/app.min.js
+
+
+favicon.ico
+
+NETWORK:
+*
