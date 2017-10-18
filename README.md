@@ -25,6 +25,13 @@
 - [Sepand Haghighi](https://github.com/sepandhaghighi "Sepand Haghighi")
 - [Ali Gholami](https://github.com/aligholamee "Ali Gholami")
 
+## Dependencies
+
+- [SweetAlert](https://sweetalert.js.org/ "SweetAlert")
+- [Particles.js](https://github.com/VincentGarreau/particles.js/ "Particles.js")
+- [Font-Awesome Icon Set](http://fontawesome.io/ "Font-Awesome Icon Set")
+- [AddThis](http://www.addthis.com "AddThis")
+
 ## Contributing
 
 Changes and improvements are more than welcome! Feel free to fork and open a pull request. Please make your changes in a specific branch and request to pull into `gh-pages`! If you can, please make sure the game fully works before sending the PR, as that will help speed up the process.
