@@ -29,6 +29,7 @@ var play_status=false;
 var new_record_notif="";
 var player_name_object;
 var focus_flag=false;
+var smartbanner_flag=0;
 var time=3*60;
 
 
@@ -114,8 +115,15 @@ function local_load(){
             document.getElementById("score_button").style.display="inline";
         }
          else{
+             
              complete_game=0;
          }
+         
+         smartbanner_flag=parseInt(localStorage.getItem("smartflag"));
+          if (isNaN(smartbanner_flag)){
+             smartbanner_flag=0;
+            }
+         
     }
     
     
@@ -175,7 +183,7 @@ function redirect(flag){
     
 }
 function getname(){
-    //getMobileOperatingSystem();
+
    // swal({
  // title: "Enter Your Name",
   //text: "1-10 Character",
@@ -197,6 +205,7 @@ function getname(){
   //player_name_object.innerHTML=player_name;
   //player_name_object.style.color=color;
 local_load();
+getMobileOperatingSystem();
 swal({
     title: "Hi",
     text: '<p style="text-align:justify">The game consists of a 5 by 5 grid of lights. When the game starts, a random number or a stored pattern of these lights is switched on. Pressing any of the lights will toggle it and the four adjacent lights. The goal of the puzzle is to switch all the lights off, preferably in as few button presses as possible. After first touch you have 3 minutes to win as many as possible ;-)</p>'+'<table align="center"><tr><td>Reset</td><td>Key(r)</td></tr><tr><td>Hint</td><td>Key(h)</td></tr></table>',
@@ -481,8 +490,8 @@ function getMobileOperatingSystem() {
     if (/windows phone/i.test(userAgent)) {
     }
 
-    if (/android/i.test(userAgent)) {
-        //document.getElementById("smartabanner").style.display="block";
+    if ((/android/i.test(userAgent)) && (smartbanner_flag < 3)) {
+        document.getElementById("smartabanner").style.display="block";
     }
 
     // iOS detection from: http://stackoverflow.com/a/9039885/177710
@@ -492,6 +501,14 @@ function getMobileOperatingSystem() {
 }
 function close_banner(){
     document.getElementById("smartabanner").style.display="none";
+    smartbanner_flag=smartbanner_flag+1;
+    localStorage.setItem("smartflag",smartbanner_flag);
+}
+
+
+function apkdownload(){
+    smartbanner_flag=3;
+    localStorage.setItem("smartflag",smartbanner_flag);
 }
 shortcut.add("h",function(){redirect(8);});
 shortcut.add("r",function(){init(2);});

@@ -1,7 +1,7 @@
 CACHE MANIFEST
 
 # Adds the ability to play the game offline.
-# Updated: 2017-10-19 16:01:37.007
+# Updated: 2017-10-20 00:22:10.498
 
 # Main page
 index.html
@@ -29,6 +29,7 @@ images/hurry.png
 images/star.png
 images/sun.png
 images/timeup.png
+images/og-icon.png
 manifest.json
 
 # Fonts
