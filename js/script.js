@@ -382,7 +382,18 @@ function restart_game(){
 function(isConfirm){
   if (isConfirm) {
     if (first_move==false){
-    restart_flag=1;
+        if (focus_flag==true){
+            focus_flag=false;
+            overall_move=overall_move-total_move;
+            overall_reset=overall_reset-reset_counter;
+            total_hint_counter=total_hint_counter-hint_counter;
+            time=3*60;
+            restart_config(document.querySelector('#time'));
+        }
+        else{
+            restart_flag=1;
+        }
+    
     }
     else{
             reset = document.getElementById("reset");
