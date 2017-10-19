@@ -365,7 +365,7 @@ function end_game() {
 //    }
 //}
 function restart_game(){
-    if (reset_counter==0&&first_move==true){
+    if (reset_counter==0&&first_move==true&&hint_counter==0){
         swal("Restart???!!!");
     }
     else{
