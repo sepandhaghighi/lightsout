@@ -28,6 +28,8 @@ var audio = new Audio(music_list[music_random]);
 var play_status=false;
 var new_record_notif="";
 var player_name_object;
+var focus_flag=false;
+var time=3*60;
 
 
 audio.onended = function(){
@@ -222,6 +224,8 @@ function init(flag) {
     if (flag == 2) {
         reset_counter = reset_counter + 1;
         overall_reset = overall_reset + 1;
+        overall_move=overall_move-parseInt(move.innerHTML);
+        total_move=total_move-parseInt(move.innerHTML);
         reset.innerHTML = "Reset" + " (" + reset_counter + ")";
     }
     while (random_counter < random_init) {
@@ -248,12 +252,13 @@ function init(flag) {
 function reply_click(e) {
     var input_id, ele, move;
     move = document.getElementById("move");
-    if (first_move==true&&init_flag==false){
+    if ((first_move==true&&init_flag==false)||focus_flag==true){
                 display = document.querySelector('#time');
                 // rythm.stop();
                 // document.getElementById("lightsout").style=null;
-                startTimer(60*3, display);
+                startTimer(time, display);
         first_move=false;
+        focus_flag=false;
     }
     input_id = parseInt(e);
     if (first_init == 1) {
@@ -389,7 +394,11 @@ function startTimer(duration, display) {
     var interval_id = setInterval(function () {
         minutes = parseInt(timer / 60, 10)
         seconds = parseInt(timer % 60, 10);
-
+        if ( !document.hasFocus() ) {
+            focus_flag=true;
+            clearInterval(interval_id);
+            time=timer;
+        }
         minutes = minutes < 10 ? "0" + minutes : minutes;
         seconds = seconds < 10 ? "0" + seconds : seconds;
 
@@ -437,6 +446,7 @@ function startTimer(duration, display) {
                 total_hint_counter=total_hint_counter-hint_counter;
             }
             timer = duration;
+            time=3*60;
             restart_config(display);
             clearInterval(interval_id);
             
