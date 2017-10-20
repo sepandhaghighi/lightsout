@@ -182,6 +182,15 @@ function redirect(flag){
     }
     
 }
+
+function swal_help(){
+    swal({
+    title: "Hi",
+    text: '<p style="text-align:justify">The game consists of a 5 by 5 grid of lights. When the game starts, a random number or a stored pattern of these lights is switched on. Pressing any of the lights will toggle it and the four adjacent lights. The goal of the puzzle is to switch all the lights off, preferably in as few button presses as possible. After first touch you have 3 minutes to win as many as possible ;-)</p>',
+    html: true,
+    customClass: 'swal-wide'
+});
+}
 function getname(){
 
    // swal({
@@ -206,12 +215,7 @@ function getname(){
   //player_name_object.style.color=color;
 local_load();
 getMobileOperatingSystem();
-swal({
-    title: "Hi",
-    text: '<p style="text-align:justify">The game consists of a 5 by 5 grid of lights. When the game starts, a random number or a stored pattern of these lights is switched on. Pressing any of the lights will toggle it and the four adjacent lights. The goal of the puzzle is to switch all the lights off, preferably in as few button presses as possible. After first touch you have 3 minutes to win as many as possible ;-)</p>'+'<table align="center"><tr><td>Reset</td><td>Key(r)</td></tr><tr><td>Hint</td><td>Key(h)</td></tr></table>',
-    html: true,
-    customClass: 'swal-wide'
-});
+swal_help();
 //});
     
         init(1);
@@ -523,3 +527,4 @@ function apkdownload(){
 }
 shortcut.add("h",function(){redirect(8);});
 shortcut.add("r",function(){init(2);});
+shortcut.add("q",function(){swal_help();});
