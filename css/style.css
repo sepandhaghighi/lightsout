@@ -6,6 +6,20 @@
     font-family: "sacramento";
     src: url("../fonts/Sacramento-Regular.ttf");
 }
+.shortcut{
+    right: 0px;
+    border: 1px solid black;
+    float: right;
+    padding: 5px;
+    margin: auto;
+    margin-right: 20px;
+    position: fixed;
+    text-align: center;
+}
+.shortcut p{
+    text-align: center;
+    font-weight: bold;
+}
 #help2,#support2{
     display: none;
 }
@@ -351,6 +365,9 @@ button {
     -webkit-transition: 0.08s ease-in;
 }
 @media all and (max-width: 1024px) {
+    .shortcut{
+        display: none;
+    }
     .lightsout td:hover {
     cursor: pointer;
         opacity: 1;
@@ -439,11 +456,14 @@ button {
 }
 }
 
-@media all and (max-width: 512px) {
+@media all and (max-width: 570px) {
     
     .help {
         width: 300px;
 
+    }
+    .shortcut{
+        display: none;
     }
         .donate_image{
     width: 300px;
