@@ -32,6 +32,7 @@
 - [Font-Awesome Icon Set](http://fontawesome.io/ "Font-Awesome Icon Set")
 - [AddThis](http://www.addthis.com "AddThis")
 - [Shortcut.js](http://openjs.com/scripts/events/keyboard_shortcuts/ "Shortcut.js")
+- [GoNative](https://gonative.io/ "https://gonative.io/")
 
 ## Contributing
 
