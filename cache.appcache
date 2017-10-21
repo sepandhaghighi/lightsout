@@ -1,7 +1,7 @@
 CACHE MANIFEST
 
 # Adds the ability to play the game offline.
-# Updated: 2017-10-20 15:06:47.058
+# Updated: 2017-10-21 23:24:35.660
 
 # Main page
 index.html
@@ -11,6 +11,12 @@ donate.html
 
 # CSS
 css/awsome/css/font-awesome.min.css
+css/awsome/fonts/FontAwesome.otf
+css/awsome/fonts/fontawesome-webfont.eot
+css/awsome/fonts/fontawesome-webfont.svg
+css/awsome/fonts/fontawesome-webfont.ttf
+css/awsome/fonts/fontawesome-webfont.woff
+css/awsome/fonts/fontawesome-webfont.woff2
 css/style.min.css
 css/themes/google/google.css
 css/sweetalert.css
