@@ -1,7 +1,7 @@
 CACHE MANIFEST
 
 # Adds the ability to play the game offline.
-# Updated: 2017-10-21 23:24:35.660
+# Updated: 2017-10-22 02:18:29.744
 
 # Main page
 index.html
@@ -41,6 +41,7 @@ manifest.json
 # Fonts
 fonts/JuliusSansOne-Regular.ttf
 fonts/Sacramento-Regular.ttf
+fonts/Inconsolata.otf
 
 # JavaScript
 js/sweetalert.min.js

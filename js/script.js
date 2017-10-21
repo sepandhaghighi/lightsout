@@ -172,7 +172,7 @@ function redirect(flag){
                     title:"Score!",
                     text: '<table align="center" style="font-size:26px"><tr><td>Best Score</td><td>'+best_score.toString()+'</td></tr><tr><td>Game</td><td>'+complete_game.toString()+'</td></tr><tr><td>Total Move</td><td>'+overall_move.toString()+'</td></tr><tr><td>Total Reset</td><td>'+overall_reset.toString()+'</td></tr><tr><td>Total Hint</td><td>'+total_hint_counter.toString()+'</td></tr></table>',
                     html: true,
-                    customClass: 'swal-score'
+                    customClass: "swal-score"
                     });
             }
                     break;
@@ -188,7 +188,7 @@ function swal_help(){
     title: "Hi",
     text: '<p style="text-align:justify">The game consists of a 5 by 5 grid of lights. When the game starts, a random number or a stored pattern of these lights is switched on. Pressing any of the lights will toggle it and the four adjacent lights. The goal of the puzzle is to switch all the lights off, preferably in as few button presses as possible. After first touch you have 3 minutes to win as many as possible ;-)</p>',
     html: true,
-    customClass: 'swal-wide'
+    customClass: "swal-wide"
 });
 }
 function getname(){
@@ -461,7 +461,7 @@ function startTimer(duration, display) {
                     title:"Time's Up",
                     text: new_record_notif+'<table align="center" style="font-size:26px"><tr><td>Score</td><td>'+score.toString()+'</td></tr><tr><td>Reset</td><td>'+reset_counter.toString()+'</td></tr><tr><td>Move</td><td>'+total_move.toString()+'</td></tr><tr><td>Hint</td><td>'+hint_counter.toString()+'</td></tr></table>',
                     html: true,
-                    customClass: 'swal-score',
+                    customClass: "swal-score",
                     imageUrl: "images/timeup.png"
                     });}
             else{
@@ -528,3 +528,4 @@ function apkdownload(){
 shortcut.add("h",function(){redirect(8);});
 shortcut.add("r",function(){init(2);});
 shortcut.add("q",function(){swal_help();});
+shortcut.add("Ctrl",function(){restart_game();});
