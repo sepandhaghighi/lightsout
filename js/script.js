@@ -428,7 +428,7 @@ function startTimer(duration, display) {
 
         display.textContent = minutes + ":" + seconds;
         no_move_counter+=1;
-        if (timer==(duration/2)){
+        if (timer==90){
             display.style.color="orange";
         }
         else if (timer==60){
