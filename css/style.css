@@ -6,7 +6,16 @@
     font-family: "sacramento";
     src: url("../fonts/Sacramento-Regular.ttf");
 }
+@font-face {
+    font-family: "Inconsolata";
+    src: url("../fonts/Inconsolata.otf");
+}
 
+#time{
+    margin-left: 7px;
+    margin-right: 7px;
+    font-family: "Inconsolata";
+}
 .shortcut{
     right: 0px;
     border: 1px solid black;
@@ -20,6 +29,7 @@
 .shortcut p{
     text-align: center;
     font-weight: bold;
+    
 }
 #help2,#support2{
     display: none;
@@ -304,6 +314,7 @@ td {
 }
 .score td {
     padding: 20px;
+    font-weight: 700;
 }
 .lightsout tr td {
     table-layout: fixed:
