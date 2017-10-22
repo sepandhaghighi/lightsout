@@ -28,7 +28,7 @@ if (hr>=19||hr<6){
     document.getElementById("particles-js").style.backgroundColor=back_link_color;
 }
 
-particlesJS('particles-js',
+particlesJS("particles-js",
   
   {
     "particles": {

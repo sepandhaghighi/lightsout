@@ -317,7 +317,7 @@ td {
     font-weight: 700;
 }
 .lightsout tr td {
-    table-layout: fixed:
+    table-layout: fixed;
     width: 20%;
     height: 20%;
     text-align: center;
