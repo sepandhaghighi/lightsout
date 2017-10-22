@@ -1,46 +1,46 @@
 var CSS_COLOR_NAMES = ["Aqua", "Aquamarine", "Bisque", "Black", "BlanchedAlmond", "Blue", "BlueViolet", "Brown", "BurlyWood", "CadetBlue", "Chartreuse", "Chocolate", "Coral", "CornflowerBlue", "Crimson", "Cyan", "DarkBlue", "DarkCyan", "DarkGoldenRod", "DarkGray", "DarkGrey", "DarkGreen", "DarkKhaki", "DarkMagenta", "DarkOliveGreen", "Darkorange", "DarkOrchid", "DarkRed", "DarkSalmon", "DarkSeaGreen", "DarkSlateBlue", "DarkSlateGray", "DarkSlateGrey", "DarkTurquoise", "DarkViolet", "DeepPink", "DeepSkyBlue", "DimGray", "DimGrey", "DodgerBlue", "FireBrick", "ForestGreen", "Fuchsia", "Gainsboro", "Gold", "GoldenRod", "Gray", "Grey", "Green", "GreenYellow", "HoneyDew", "HotPink", "IndianRed", "Indigo", "Ivory", "Khaki", "Lavender", "LavenderBlush", "LawnGreen", "LemonChiffon", "LightBlue", "LightCoral", "LightCyan", "LightGoldenRodYellow", "LightGray", "LightGrey", "LightGreen", "LightPink", "LightSalmon", "LightSeaGreen", "LightSkyBlue", "LightSlateGray", "LightSlateGrey", "LightSteelBlue", "LightYellow", "Lime", "LimeGreen", "Linen", "Magenta", "Maroon", "MediumAquaMarine", "MediumBlue", "MediumOrchid", "MediumPurple", "MediumSeaGreen", "MediumSlateBlue", "MediumSpringGreen", "MediumTurquoise", "MediumVioletRed", "MidnightBlue", "MintCream", "MistyRose", "Moccasin", "Navy", "OldLace", "Olive", "OliveDrab", "Orange", "OrangeRed", "Orchid", "PaleGoldenRod", "PaleGreen", "PaleTurquoise", "PaleVioletRed", "PapayaWhip", "PeachPuff", "Peru", "Pink", "Plum", "PowderBlue", "Purple", "Red", "RosyBrown", "RoyalBlue", "SaddleBrown", "Salmon", "SandyBrown", "SeaGreen", "SeaShell", "Sienna", "Silver", "SkyBlue", "SlateBlue", "SlateGray", "SlateGrey", "Snow", "SpringGreen", "SteelBlue", "Tan", "Teal", "Thistle", "Tomato", "Turquoise", "Violet", "Wheat", "Yellow", "YellowGreen"];
 var color;
-var reset_counter = 0;
-var lamp_awsome = '<i class="fa fa-lightbulb-o fa-3x" aria-hidden="true"></i>';
+var resetCounter = 0;
+var lampAwsome = '<i class="fa fa-lightbulb-o fa-3x" aria-hidden="true"></i>';
 var spinner = '<i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>';
-var sound_on='<i class="fa fa-volume-up fa-3x" aria-hidden="true" ></i>';
-var sound_off='<i class="fa fa-volume-off fa-3x" aria-hidden="true"></i>'
-var first_init = 0;
-var player_name = null;
+var soundOn='<i class="fa fa-volume-up fa-3x" aria-hidden="true" ></i>';
+var soundOff='<i class="fa fa-volume-off fa-3x" aria-hidden="true"></i>'
+var firstInit = 0;
+var playerName = null;
 var score = 0;
-var best_score=0;
-var first_move = true;
-var init_flag = false;
-var total_move = 0;
-var overall_move=0;
-var restart_flag = 0;
-var overall_reset=0;
-var hint_counter=0;
-var total_hint_counter=0;
-var no_move_counter=0;
-var random_init=1;
-var music_temp=[];
-var complete_game=0;
+var bestScore=0;
+var firstMove = true;
+var initFlag = false;
+var totalMove = 0;
+var overallMove=0;
+var restartFlag = 0;
+var overallReset=0;
+var hintCounter=0;
+var totalHintCounter=0;
+var noMoveCounter=0;
+var randomInit=1;
+var musicTemp=[];
+var completeGame=0;
 var hr = (new Date()).getHours();
-var music_list=["files/bensound-anewbeginning.mp3","files/bensound-happiness.mp3","files/bensound-tenderness.mp3","files/bensound-cute.mp3","files/bensound-buddy.mp3"];
-var music_random=Math.floor(Math.random()*music_list.length);
-var audio = new Audio(music_list[music_random]);
-var play_status=false;
-var new_record_notif="";
-var player_name_object;
-var focus_flag=false;
-var smartbanner_flag=0;
+var musicList=["files/bensound-anewbeginning.mp3","files/bensound-happiness.mp3","files/bensound-tenderness.mp3","files/bensound-cute.mp3","files/bensound-buddy.mp3"];
+var musicRandom=Math.floor(Math.random()*musicList.length);
+var audio = new Audio(musicList[musicRandom]);
+var playStatus=false;
+var newRecordNotif="";
+var playerNameObject;
+var focusFlag=false;
+var smartBannerFlag=0;
 var time=3*60;
 
 
 audio.onended = function(){
-    music_temp.push(music_list.splice(music_random,1));
-    music_random=Math.floor(Math.random()*music_list.length);
-    audio.src=music_list[music_random];
+    musicTemp.push(musicList.splice(musicRandom,1));
+    musicRandom=Math.floor(Math.random()*musicList.length);
+    audio.src=musicList[musicRandom];
     audio.load();
-    if(music_list.length==1){
-       music_list.push.apply(music_list,music_temp);
-        music_temp=[];
+    if(musicList.length==1){
+       musicList.push.apply(musicList,musicTemp);
+        musicTemp=[];
     } 
     audio.play();
 };
@@ -66,18 +66,18 @@ audio.onended = function(){
 //  console.log('Excellent, registered with scope: ', registration.scope);
 //});
 if (hr>=19||hr<6){
-    lamp_awsome='<i class="fa fa-lightbulb-o fa-3x" aria-hidden="true" style="color:gold"></i>';
+    lampAwsome='<i class="fa fa-lightbulb-o fa-3x" aria-hidden="true" style="color:gold"></i>';
 }
 function audio_control(){
-    if (play_status==true){
+    if (playStatus==true){
         audio.pause();
-        play_status=false;
-        document.getElementById("sound_on_off").innerHTML=sound_off;
+        playStatus=false;
+        document.getElementById("soundOnOff").innerHTML=soundOff;
     }
     else{
         audio.play();
-        play_status=true;
-        document.getElementById("sound_on_off").innerHTML=sound_on;
+        playStatus=true;
+        document.getElementById("soundOnOff").innerHTML=soundOn;
     }
 }
 
@@ -93,35 +93,35 @@ function local_save(s,m,r,c,h){
 }
 function local_load(){
      if (typeof(Storage) !== "undefined") {
-        complete_game=parseInt(localStorage.getItem("complete"));
-        if (complete_game){
-            best_score=parseInt(localStorage.getItem("score"));
-            if (best_score==NaN){
-                best_score=0;
+        completeGame=parseInt(localStorage.getItem("complete"));
+        if (completeGame){
+            bestScore=parseInt(localStorage.getItem("score"));
+            if (bestScore==NaN){
+                bestScore=0;
             }
-            overall_move=parseInt(localStorage.getItem("move"));
-            if (isNaN(overall_move)){
-                overall_move=0;
+            overallMove=parseInt(localStorage.getItem("move"));
+            if (isNaN(overallMove)){
+                overallMove=0;
             }
-            overall_reset=parseInt(localStorage.getItem("reset")); 
-            if (isNaN(overall_reset)){
-                overall_reset=0;
+            overallReset=parseInt(localStorage.getItem("reset")); 
+            if (isNaN(overallReset)){
+                overallReset=0;
             }
-            total_hint_counter=parseInt(localStorage.getItem("hint"));
-            if (isNaN(total_hint_counter)){
-                total_hint_counter=0;
+            totalHintCounter=parseInt(localStorage.getItem("hint"));
+            if (isNaN(totalHintCounter)){
+                totalHintCounter=0;
             }
-            document.getElementById("score_button").innerHTML="SCORE("+best_score.toString()+")";
+            document.getElementById("score_button").innerHTML="SCORE("+bestScore.toString()+")";
             document.getElementById("score_button").style.display="inline";
         }
          else{
              
-             complete_game=0;
+             completeGame=0;
          }
          
-         smartbanner_flag=parseInt(localStorage.getItem("smartflag"));
-          if (isNaN(smartbanner_flag)){
-             smartbanner_flag=0;
+         smartBannerFlag=parseInt(localStorage.getItem("smartflag"));
+          if (isNaN(smartBannerFlag)){
+             smartBannerFlag=0;
             }
          
     }
@@ -157,9 +157,9 @@ function redirect(flag){
             window.open("index.html","_self")
             break;
         case 8:
-            hint_counter=hint_counter+1;
-            total_hint_counter=total_hint_counter+1;
-            document.getElementById("Hint").innerHTML = "Hint" + " (" + hint_counter + ")";
+            hintCounter=hintCounter+1;
+            totalHintCounter=totalHintCounter+1;
+            document.getElementById("Hint").innerHTML = "Hint" + " (" + hintCounter + ")";
                         swal({
     title: "Hint",
     text: '<table align="center" style="font-size:26px"><tr style="font-size:31px"><th >Bottom</th><th >Top</th></tr><tr><td>O---O</td><td>OO---</td></tr><tr><td>-O-O-</td><td>O--O-</td></tr><tr><td>OOO--</td><td>-O---</td></tr><tr><td>--OOO</td><td>---O-</td></tr><tr><td>O-OO-</td><td>----O</td></tr><tr><td>-OO-O</td><td>O----</td></tr><tr><td>OO-OO</td><td>--O--</td> </tr></table>',
@@ -167,10 +167,10 @@ function redirect(flag){
 });
             break;
         case 9:
-            if (complete_game>0){
+            if (completeGame>0){
             swal({
                     title:"Score!",
-                    text: '<table align="center" style="font-size:26px"><tr><td>Best Score</td><td>'+best_score.toString()+'</td></tr><tr><td>Game</td><td>'+complete_game.toString()+'</td></tr><tr><td>Total Move</td><td>'+overall_move.toString()+'</td></tr><tr><td>Total Reset</td><td>'+overall_reset.toString()+'</td></tr><tr><td>Total Hint</td><td>'+total_hint_counter.toString()+'</td></tr></table>',
+                    text: '<table align="center" style="font-size:26px"><tr><td>Best Score</td><td>'+bestScore.toString()+'</td></tr><tr><td>Game</td><td>'+completeGame.toString()+'</td></tr><tr><td>Total Move</td><td>'+overallMove.toString()+'</td></tr><tr><td>Total Reset</td><td>'+overallReset.toString()+'</td></tr><tr><td>Total Hint</td><td>'+totalHintCounter.toString()+'</td></tr></table>',
                     html: true,
                     customClass: "swal-score"
                     });
@@ -206,13 +206,13 @@ function getname(){
   //  swal.showInputError("Enter Your Name!");
   //  return false;
  // }
-  //  player_name=inputValue;
+  //  playerName=inputValue;
   //if (inputValue.length>10){
-  //    player_name=player_name.substring(0,10);
+  //    playerName=playerName.substring(0,10);
   //}
-  //player_name_object=document.getElementById("player_name");
-  //player_name_object.innerHTML=player_name;
-  //player_name_object.style.color=color;
+  //playerNameObject=document.getElementById("playerName");
+  //playerNameObject.innerHTML=playerName;
+  //playerNameObject.style.color=color;
 local_load();
 getMobileOperatingSystem();
 swal_help();
@@ -221,27 +221,27 @@ swal_help();
         init(1);
 }
 function init(flag) {
-    first_init = 1;
+    firstInit = 1;
     linear_gradient=Math.round(Math.random());
     color = CSS_COLOR_NAMES[Math.floor((Math.random() * CSS_COLOR_NAMES.length))].toLowerCase();
     var i, random_number, random_counter, move, game_name, reset;
     var random_list = [];
     random_counter = 0;
-    //document.getElementById("player_name").style.color=color;
+    //document.getElementById("playerName").style.color=color;
     game_name = document.getElementById("game_name");
     game_name.style.color = color;
     game_name.innerHTML = "Lights Out Game";
     move = document.getElementById("move");
     reset = document.getElementById("reset");
-    init_flag=true;
+    initFlag=true;
     if (flag == 2) {
-        reset_counter = reset_counter + 1;
-        overall_reset = overall_reset + 1;
-        overall_move=overall_move-parseInt(move.innerHTML);
-        total_move=total_move-parseInt(move.innerHTML);
-        reset.innerHTML = "Reset" + " (" + reset_counter + ")";
+        resetCounter = resetCounter + 1;
+        overallReset = overallReset + 1;
+        overallMove=overallMove-parseInt(move.innerHTML);
+        totalMove=totalMove-parseInt(move.innerHTML);
+        reset.innerHTML = "Reset" + " (" + resetCounter + ")";
     }
-    while (random_counter < random_init) {
+    while (random_counter < randomInit) {
         random_number = Math.floor((Math.random() * 25) + 1);
         if (random_list.indexOf(random_number) < 0) {
             random_list.push(random_number);
@@ -256,7 +256,7 @@ function init(flag) {
         reply_click(random_list[i].toString());
     }
     move.innerHTML = 0;
-    init_flag=false;
+    initFlag=false;
 }
 
 
@@ -265,16 +265,16 @@ function init(flag) {
 function reply_click(e) {
     var input_id, ele, move;
     move = document.getElementById("move");
-    if ((first_move==true&&init_flag==false)||focus_flag==true){
+    if ((firstMove==true&&initFlag==false)||focusFlag==true){
                 display = document.querySelector('#time');
                 // rythm.stop();
                 // document.getElementById("lightsout").style=null;
                 startTimer(time, display);
-        first_move=false;
-        focus_flag=false;
+        firstMove=false;
+        focusFlag=false;
     }
     input_id = parseInt(e);
-    if (first_init == 1) {
+    if (firstInit == 1) {
         if ((input_id + 5) <= 25) {
             toggle(input_id + 5);
         }
@@ -292,16 +292,16 @@ function reply_click(e) {
             toggle(input_id - 1);
             toggle(input_id + 1);
         }
-        if (init_flag==false){
+        if (initFlag==false){
         move.innerHTML = parseInt(move.innerHTML) + 1;
-        total_move=total_move+1;
-        overall_move=overall_move+1;
+        totalMove=totalMove+1;
+        overallMove=overallMove+1;
         }
         toggle(input_id);
 
         end_game();
     }
-    no_move_counter=0;
+    noMoveCounter=0;
 
 }
 
@@ -311,7 +311,7 @@ function toggle(input_id) {
     press_button = document.getElementById(input_id.toString());
     if (press_button.style.backgroundColor != "white") {
         press_button.style.backgroundColor = "white";
-        press_button.innerHTML = lamp_awsome;
+        press_button.innerHTML = lampAwsome;
     }
     else {
         press_button.style.backgroundColor = color;
@@ -333,7 +333,7 @@ function end_game() {
         score=score+1
         win = document.getElementById("win");
         win.innerHTML = parseInt(win.innerHTML) + 1;
-        random_init=Math.min(random_init+1,15);
+        randomInit=Math.min(randomInit+1,15);
         init(1);
     }
 }
@@ -351,12 +351,12 @@ function end_game() {
 //});
 //}
 
-//function saveToFirebase(name,score,total_move,player_reset) {
+//function saveToFirebase(name,score,totalMove,player_reset) {
 //    var scoreObject = {
   //      name: name,
 //        score: score,
 //        reset: player_reset,
-//        move:total_move
+//        move:totalMove
 //    };
 //    try{
 //    firebase.database().ref('subscription-entries').push().set(scoreObject)
@@ -369,7 +369,7 @@ function end_game() {
 //    }
 //}
 function restart_game(){
-    if (reset_counter==0&&first_move==true&&hint_counter==0){
+    if (resetCounter==0&&firstMove==true&&hintCounter==0){
         swal("Restart???!!!");
     }
     else{
@@ -385,17 +385,17 @@ function restart_game(){
 },
 function(isConfirm){
   if (isConfirm) {
-    if (first_move==false){
-        if (focus_flag==true){
-            focus_flag=false;
-            overall_move=overall_move-total_move;
-            overall_reset=overall_reset-reset_counter;
-            total_hint_counter=total_hint_counter-hint_counter;
+    if (firstMove==false){
+        if (focusFlag==true){
+            focusFlag=false;
+            overallMove=overallMove-totalMove;
+            overallReset=overallReset-resetCounter;
+            totalHintCounter=totalHintCounter-hintCounter;
             time=3*60;
             restart_config(document.querySelector('#time'));
         }
         else{
-            restart_flag=1;
+            restartFlag=1;
         }
     
     }
@@ -403,10 +403,10 @@ function(isConfirm){
             reset = document.getElementById("reset");
             reset.innerHTML = "Reset!";
             document.getElementById("Hint").innerHTML = "Hint";
-            overall_reset=overall_reset-reset_counter;
-            total_hint_counter=total_hint_counter-hint_counter;
-            reset_counter=0;
-            hint_counter=0;
+            overallReset=overallReset-resetCounter;
+            totalHintCounter=totalHintCounter-hintCounter;
+            resetCounter=0;
+            hintCounter=0;
     }
   } else {
   }
@@ -419,7 +419,7 @@ function startTimer(duration, display) {
         minutes = parseInt(timer / 60, 10)
         seconds = parseInt(timer % 60, 10);
         if ( !document.hasFocus() ) {
-            focus_flag=true;
+            focusFlag=true;
             clearInterval(interval_id);
             time=timer;
         }
@@ -427,47 +427,47 @@ function startTimer(duration, display) {
         seconds = seconds < 10 ? "0" + seconds : seconds;
 
         display.textContent = minutes + ":" + seconds;
-        no_move_counter+=1;
+        noMoveCounter+=1;
         if (timer==90){
             display.style.color="orange";
         }
         else if (timer==60){
             display.style.color="red";
         }
-        if (no_move_counter>=60&&timer>100){
+        if (noMoveCounter>=60&&timer>100){
             swal({
             title: "Hurry Up!!!",
             imageUrl: "images/hurry.png"
             });
-            no_move_counter=0;
+            noMoveCounter=0;
         }
-        if ((--timer < 0)||(restart_flag==1)) {
-            if (restart_flag==0){
-                //saveToFirebase(player_name,score,total_move,reset_counter);
-                if (best_score<score){
-                    best_score=score;
-                    new_record_notif="<h2>New Record!</h2>&nbsp;";
+        if ((--timer < 0)||(restartFlag==1)) {
+            if (restartFlag==0){
+                //saveToFirebase(playerName,score,totalMove,resetCounter);
+                if (bestScore<score){
+                    bestScore=score;
+                    newRecordNotif="<h2>New Record!</h2>&nbsp;";
                 }
                 else{
-                    new_record_notif="";
+                    newRecordNotif="";
                 }
-                complete_game=complete_game+1;
-                document.getElementById("score_button").innerHTML="SCORE("+best_score.toString()+")";
-                local_save(best_score,overall_move,overall_reset,complete_game,total_hint_counter);
-                if (complete_game==1){
+                completeGame=completeGame+1;
+                document.getElementById("score_button").innerHTML="SCORE("+bestScore.toString()+")";
+                local_save(bestScore,overallMove,overallReset,completeGame,totalHintCounter);
+                if (completeGame==1){
                     document.getElementById("score_button").style.display="inline";
                 }
                 swal({
                     title:"Time's Up",
-                    text: new_record_notif+'<table align="center" style="font-size:26px"><tr><td>Score</td><td>'+score.toString()+'</td></tr><tr><td>Reset</td><td>'+reset_counter.toString()+'</td></tr><tr><td>Move</td><td>'+total_move.toString()+'</td></tr><tr><td>Hint</td><td>'+hint_counter.toString()+'</td></tr></table>',
+                    text: newRecordNotif+'<table align="center" style="font-size:26px"><tr><td>Score</td><td>'+score.toString()+'</td></tr><tr><td>Reset</td><td>'+resetCounter.toString()+'</td></tr><tr><td>Move</td><td>'+totalMove.toString()+'</td></tr><tr><td>Hint</td><td>'+hintCounter.toString()+'</td></tr></table>',
                     html: true,
                     customClass: "swal-score",
                     imageUrl: "images/timeup.png"
                     });}
             else{
-                overall_move=overall_move-total_move;
-                overall_reset=overall_reset-reset_counter;
-                total_hint_counter=total_hint_counter-hint_counter;
+                overallMove=overallMove-totalMove;
+                overallReset=overallReset-resetCounter;
+                totalHintCounter=totalHintCounter-hintCounter;
             }
             timer = duration;
             time=3*60;
@@ -480,8 +480,8 @@ function startTimer(duration, display) {
 
 function restart_config(display){
     display.textContent = "TI" + ":" + "ME";
-    total_move=0;
-    random_init=1;
+    totalMove=0;
+    randomInit=1;
     display.style.color="black";
     win = document.getElementById("win");
             win.innerHTML = 0;
@@ -489,10 +489,10 @@ function restart_config(display){
     reset = document.getElementById("reset");
             reset.innerHTML = "Reset!";
             document.getElementById("Hint").innerHTML = "Hint";
-            hint_counter=0;
-            reset_counter=0;
-     first_move=true;
-            restart_flag=0;
+            hintCounter=0;
+            resetCounter=0;
+     firstMove=true;
+            restartFlag=0;
     init(1);
     
 }
@@ -505,7 +505,7 @@ function getMobileOperatingSystem() {
     if (/windows phone/i.test(userAgent)) {
     }
 
-    if ((/android/i.test(userAgent)) && (smartbanner_flag < 3)) {
+    if ((/android/i.test(userAgent)) && (smartBannerFlag < 3)) {
         document.getElementById("smartabanner").style.display="block";
     }
 
@@ -516,14 +516,14 @@ function getMobileOperatingSystem() {
 }
 function close_banner(){
     document.getElementById("smartabanner").style.display="none";
-    smartbanner_flag=smartbanner_flag+1;
-    localStorage.setItem("smartflag",smartbanner_flag);
+    smartBannerFlag=smartBannerFlag+1;
+    localStorage.setItem("smartflag",smartBannerFlag);
 }
 
 
 function apkdownload(){
-    smartbanner_flag=3;
-    localStorage.setItem("smartflag",smartbanner_flag);
+    smartBannerFlag=3;
+    localStorage.setItem("smartflag",smartBannerFlag);
 }
 shortcut.add("h",function(){redirect(8);});
 shortcut.add("r",function(){init(2);});

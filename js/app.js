@@ -10,10 +10,10 @@ particlesJS.load('particles-js', 'particles.json', function() {
 */
 
 /* Otherwise just put the config content (json): */
-var shape_control="images/sun.png";
+var shapeControl="images/sun.png";
 var size=35;
 var hr = (new Date()).getHours(); 
-var back_link_color="#ffffff";
+var backLinkColor="#ffffff";
 function detectmob() {
    if(window.innerWidth <= 1024) {
      return true;
@@ -22,10 +22,10 @@ function detectmob() {
    }
 }
 if (hr>=19||hr<6){
-    shape_control="images/star.png";
+    shapeControl="images/star.png";
     size=15;
-    back_link_color="#9f9999"
-    document.getElementById("particles-js").style.backgroundColor=back_link_color;
+    backLinkColor="#9f9999"
+    document.getElementById("particles-js").style.backgroundColor=backLinkColor;
 }
 
 particlesJS("particles-js",
@@ -52,7 +52,7 @@ particlesJS("particles-js",
           "nb_sides": 5
         },
         "image": {
-          "src": shape_control,
+          "src": shapeControl,
           "width": 35,
           "height": 35
         }
@@ -80,7 +80,7 @@ particlesJS("particles-js",
       "line_linked": {
         "enable": true,
         "distance": 150,
-        "color": back_link_color,
+        "color": backLinkColor,
         "opacity": 0.4,
         "width": 1
       },
