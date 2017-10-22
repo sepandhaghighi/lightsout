@@ -1,7 +1,6 @@
 {
   "name": "Lights Out Game",
   "short_name": "Lights Out",
-  "display": "minimal-ui",
   "start_url": "/",
   "theme_color": "#673ab6",
   "background_color": "#111111",
