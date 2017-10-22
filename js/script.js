@@ -72,12 +72,12 @@ function audio_control(){
     if (playStatus==true){
         audio.pause();
         playStatus=false;
-        document.getElementById("soundOnOff").innerHTML=soundOff;
+        document.getElementById("sound_on_off").innerHTML=soundOff;
     }
     else{
         audio.play();
         playStatus=true;
-        document.getElementById("soundOnOff").innerHTML=soundOn;
+        document.getElementById("sound_on_off").innerHTML=soundOn;
     }
 }
 
@@ -210,7 +210,7 @@ function getname(){
   //if (inputValue.length>10){
   //    playerName=playerName.substring(0,10);
   //}
-  //playerNameObject=document.getElementById("playerName");
+  //playerNameObject=document.getElementById("player_name");
   //playerNameObject.innerHTML=playerName;
   //playerNameObject.style.color=color;
 local_load();
@@ -227,7 +227,7 @@ function init(flag) {
     var i, random_number, random_counter, move, game_name, reset;
     var random_list = [];
     random_counter = 0;
-    //document.getElementById("playerName").style.color=color;
+    //document.getElementById("player_name").style.color=color;
     game_name = document.getElementById("game_name");
     game_name.style.color = color;
     game_name.innerHTML = "Lights Out Game";
