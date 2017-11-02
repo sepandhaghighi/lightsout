@@ -1,7 +1,7 @@
 CACHE MANIFEST
 
 # Adds the ability to play the game offline.
-# Updated: 2017-10-22 02:18:29.744
+# Updated: 2017-11-02 13:13:09.044
 
 # Main page
 index.html
@@ -9,20 +9,43 @@ help.html
 donate.html
 404.html
 
+# LESS
+css/awsome/less/animated.less
+css/awsome/less/bordered-pulled.less
+css/awsome/less/core.less
+css/awsome/less/fixed-width.less
+css/awsome/less/font-awesome.less
+css/awsome/less/icons.less
+css/awsome/less/larger.less
+css/awsome/less/list.less
+css/awsome/less/mixins.less
+css/awsome/less/path.less
+css/awsome/less/rotated-flipped.less
+css/awsome/less/screen-reader.less
+css/awsome/less/stacked.less
+css/awsome/less/variables.less
+
+#SCSS
+css/awsome/scss/_animated.scss
+css/awsome/scss/_bordered-pulled.scss
+css/awsome/scss/_core.scss
+css/awsome/scss/_fixed-width.scss
+css/awsome/scss/_icons.scss
+css/awsome/scss/_larger.scss
+css/awsome/scss/_list.scss
+css/awsome/scss/_mixins.scss
+css/awsome/scss/_path.scss
+css/awsome/scss/_rotated-flipped.scss
+css/awsome/scss/_screen-reader.scss
+css/awsome/scss/_stacked.scss
+css/awsome/scss/_variables.scss
+css/awsome/scss/font-awesome.scss
+
 # CSS
 css/awsome/css/font-awesome.min.css
-css/awsome/fonts/FontAwesome.otf
-css/awsome/fonts/fontawesome-webfont.eot
-css/awsome/fonts/fontawesome-webfont.svg
-css/awsome/fonts/fontawesome-webfont.ttf
-css/awsome/fonts/fontawesome-webfont.woff
-css/awsome/fonts/fontawesome-webfont.woff2
 css/style.min.css
 css/themes/google/google.css
 css/sweetalert.css
-
-
-
 
 # Other resources
 images/favicon/4.png
@@ -42,6 +65,12 @@ manifest.json
 fonts/JuliusSansOne-Regular.ttf
 fonts/Sacramento-Regular.ttf
 fonts/Inconsolata.otf
+css/awsome/fonts/FontAwesome.otf
+css/awsome/fonts/fontawesome-webfont.eot
+css/awsome/fonts/fontawesome-webfont.svg
+css/awsome/fonts/fontawesome-webfont.ttf
+css/awsome/fonts/fontawesome-webfont.woff
+css/awsome/fonts/fontawesome-webfont.woff2
 
 # JavaScript
 js/sweetalert.min.js
