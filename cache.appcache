@@ -1,7 +1,7 @@
 CACHE MANIFEST
 
 # Adds the ability to play the game offline.
-# Updated: 2017-11-02 13:13:09.044
+# Updated: 2017-11-02 13:19:02.655
 
 # Main page
 index.html
@@ -26,19 +26,6 @@ css/awsome/less/stacked.less
 css/awsome/less/variables.less
 
 #SCSS
-css/awsome/scss/_animated.scss
-css/awsome/scss/_bordered-pulled.scss
-css/awsome/scss/_core.scss
-css/awsome/scss/_fixed-width.scss
-css/awsome/scss/_icons.scss
-css/awsome/scss/_larger.scss
-css/awsome/scss/_list.scss
-css/awsome/scss/_mixins.scss
-css/awsome/scss/_path.scss
-css/awsome/scss/_rotated-flipped.scss
-css/awsome/scss/_screen-reader.scss
-css/awsome/scss/_stacked.scss
-css/awsome/scss/_variables.scss
 css/awsome/scss/font-awesome.scss
 
 # CSS
