@@ -11,6 +11,11 @@
     src: url("../fonts/Inconsolata.otf");
 }
 
+.adv-banner{
+    float: left;
+    position: fixed;
+    margin-left: 5px;
+}
 #time{
     margin-left: 7px;
     margin-right: 7px;
