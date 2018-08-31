@@ -1,7 +1,7 @@
 CACHE MANIFEST
 
 # Adds the ability to play the game offline.
-# Updated: 2018-08-31 14:31:39.682
+# Updated: 2018-08-31 14:41:58.294
 
 # Main page
 index.html
@@ -72,3 +72,11 @@ favicon.ico
 
 NETWORK:
 *
+
+FALLBACK:
+/css/awsome/fonts/FontAwesome.otf  css/awsome/fonts/FontAwesome.otf
+/css/awsome/fonts/fontawesome-webfont.eot css/awsome/fonts/fontawesome-webfont.eot
+/css/awsome/fonts/fontawesome-webfont.svg css/awsome/fonts/fontawesome-webfont.svg
+/css/awsome/fonts/fontawesome-webfont.ttf css/awsome/fonts/fontawesome-webfont.ttf
+/css/awsome/fonts/fontawesome-webfont.woff css/awsome/fonts/fontawesome-webfont.woff
+/css/awsome/fonts/fontawesome-webfont.woff2 css/awsome/fonts/fontawesome-webfont.woff2
