@@ -23,7 +23,7 @@
 ## Contributors
 
 - [Sepand Haghighi](https://github.com/sepandhaghighi "Sepand Haghighi")
-- [Ali Gholami](https://github.com/aligholamee "Ali Gholami")
+- [Ali Gholami](https://github.com/hexpheus "Ali Gholami")
 
 ## Dependencies
 
