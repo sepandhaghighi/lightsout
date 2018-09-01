@@ -52,5 +52,5 @@ If you do like our game and we hope that you do, can you please support us? Our 
 
 
 				
-<a href="https://www.lightsout.ir/donate.html" target="__blank"><img src="http://www.lightsout.ir/images/Donate-Button.png" height="90px" width="270px" alt="Lights Out Donation"></a>
+<a href="https://www.lightsout.ir/donate.html" target="_blank"><img src="http://www.lightsout.ir/images/Donate-Button.png" height="90px" width="270px" alt="Lights Out Donation"></a>
 
