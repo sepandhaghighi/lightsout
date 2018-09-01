@@ -42,17 +42,15 @@
 
 Changes and improvements are more than welcome! Feel free to fork and open a pull request. Please make your changes in a specific branch and request to pull into `master`! If you can, please make sure the game fully works before sending the PR, as that will help speed up the process.
 
-# Donations
+## Issues & Bug Reports			
 
-If you do like our game and we hope that you do, can you please support us? Our game is not and is never going to be working for profit. We need the money just so we can continue doing what we do ;-) .				
+Just fill an issue and describe it. We'll check it ASAP!
 
-<h3>Bitcoin :</h3>					
+## Donations
 
-```1XGr9qbZjBpUQJJSB6WtgBQbDTgrhPLPA```			
+If you do like our game and we hope that you do, can you please support us? Our game is not and is never going to be working for profit. We need the money just so we can continue doing what we do ;-) .			
 
 
-
-<h3>Payping (For Iranian citizens) :</h3>
-
-<a href="http://www.payping.net/sepandhaghighi" target="__blank"><img src="http://www.qpage.ir/images/payping.png" height=100px width=100px></a>
+				
+<a href="https://www.lightsout.ir/donate.html" target="__blank"><img src="http://www.lightsout.ir/images/Donate-Button.png" alt="Lights Out Donation"></a>
 
