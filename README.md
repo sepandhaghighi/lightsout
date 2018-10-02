@@ -21,7 +21,9 @@
 </p>
 <p align="center">
 <a  href="http://www.lightsout.ir"><img src="images/playbutton.png"></a>
-</p>
+</p>			
+
+
 ## Contributors
 
 - [Sepand Haghighi](https://github.com/sepandhaghighi "Sepand Haghighi")
