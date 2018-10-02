@@ -19,7 +19,9 @@
 <p align="center">
    Simple Game Just For Fun :bowtie::see_no_evil:
 </p>
-
+<p align="center">
+<a  href="http://www.lightsout.ir"><img src="images/playbutton.png"></a>
+</p>
 ## Contributors
 
 - [Sepand Haghighi](https://github.com/sepandhaghighi "Sepand Haghighi")
