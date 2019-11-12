@@ -45,26 +45,6 @@ audio.onended = function(){
     audio.play();
 };
 
-// var rythm = new Rythm();
-    // rythm.setMusic("files/rythmD.mp3");
-// rythm.addRythm('lightsout', 'pulse', 0, 10, {
-              // min: 0.7,
-             //  max: 1.4
-            // })
-   //  rythm.start();
-
-//var config = {
-  //  apiKey: "AIzaSyCpXbAwzFbnVtsL-YS1K80fWB1puHYuSxY",
-//    authDomain: "lightsout-d1728.firebaseapp.com",
-  //  databaseURL: "https://lightsout-d1728.firebaseio.com",
-//    projectId: "lightsout-d1728",
-  //  storageBucket: "lightsout-d1728.appspot.com",
-//    messagingSenderId: "778988693702"
-//  };
-//firebase.initializeApp(config); 
-//navigator.serviceWorker && navigator.serviceWorker.register('./sw.js').then(function(registration) {
-//  console.log('Excellent, registered with scope: ', registration.scope);
-//});
 if (hr>=19||hr<6){
     lampAwsome='<i class="fa fa-lightbulb-o fa-3x" aria-hidden="true" style="color:gold"></i>';
 }
@@ -192,34 +172,13 @@ function swal_help(){
 });
 }
 function getname(){
-
-   // swal({
- // title: "Enter Your Name",
-  //text: "1-10 Character",
-  //type: "input",
-  //closeOnConfirm: false,
-  //animation: "slide-from-top",
- // inputPlaceholder: "Player Name"
-//},
-//function(inputValue){
- // if (inputValue === "") {
-  //  swal.showInputError("Enter Your Name!");
-  //  return false;
- // }
-  //  playerName=inputValue;
-  //if (inputValue.length>10){
-  //    playerName=playerName.substring(0,10);
-  //}
-  //playerNameObject=document.getElementById("player_name");
-  //playerNameObject.innerHTML=playerName;
-  //playerNameObject.style.color=color;
 local_load();
 getMobileOperatingSystem();
 swal_help();
-//});
     
-        init(1);
+init(1);
 }
+
 function init(flag) {
     firstInit = 1;
     linear_gradient=Math.round(Math.random());
@@ -227,7 +186,6 @@ function init(flag) {
     var i, random_number, random_counter, move, game_name, reset;
     var random_list = [];
     random_counter = 0;
-    //document.getElementById("player_name").style.color=color;
     game_name = document.getElementById("game_name");
     game_name.style.color = color;
     game_name.innerHTML = "Lights Out Game";
@@ -267,8 +225,6 @@ function reply_click(e) {
     move = document.getElementById("move");
     if ((firstMove==true&&initFlag==false)||focusFlag==true){
                 display = document.querySelector('#time');
-                // rythm.stop();
-                // document.getElementById("lightsout").style=null;
                 startTimer(time, display);
         firstMove=false;
         focusFlag=false;
@@ -337,37 +293,7 @@ function end_game() {
         init(1);
     }
 }
-//function get_data(){
-  //  var leadsRef = firebase.database().ref('subscription-entries').orderByChild("score").limitToLast(10); 
-//    var counter = 0;
-//leadsRef.on('value', function(snapshot) {
-  //  snapshot.forEach(function(childSnapshot) {
-    //  var name = childSnapshot.val().name;
-    //  var score= childSnapshot.val().score;
-    //  document.getElementById("N"+(10-counter).toString()).innerHTML=name;
-    //  document.getElementById("S"+(10-counter).toString()).innerHTML=score;
-    // counter=counter+1;
-//    });
-//});
-//}
 
-//function saveToFirebase(name,score,totalMove,player_reset) {
-//    var scoreObject = {
-  //      name: name,
-//        score: score,
-//        reset: player_reset,
-//        move:totalMove
-//    };
-//    try{
-//    firebase.database().ref('subscription-entries').push().set(scoreObject)
-//        .then(function(snapshot) {
-//        }, function(error) {
-//            console.log('error' + error);
-//        });
-//    }
-//    catch(e){
-//    }
-//}
 function restart_game(){
     if (resetCounter==0&&firstMove==true&&hintCounter==0){
         swal("Restart???!!!");
