@@ -111,7 +111,7 @@ function local_load(){
 function redirect(flag){
     switch(flag){
         case 1:
-            window.open("https://saythanks.io/to/lightsout");
+            window.open("https://github.com/sepandhaghighi/lightsout");
             break;
         case 2:
             swal({
@@ -157,7 +157,7 @@ function redirect(flag){
             }
                     break;
         default:
-            window.open("https://saythanks.io/to/lightsout");
+            window.open("https://github.com/sepandhaghighi/lightsout");
             
     }
     
