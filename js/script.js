@@ -122,7 +122,7 @@ function redirect(flag){
             });
             break;
         case 3:
-            window.open("https://beerpay.io/sepandhaghighi/lightsout");
+            window.open("mailto:info@lightsout.ir");
             break;
         case 4:
             window.open("https://www.payping.ir/sepandhaghighi");
