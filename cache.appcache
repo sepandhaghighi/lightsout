@@ -1,7 +1,7 @@
 CACHE MANIFEST
 
 # Adds the ability to play the game offline.
-# Updated: 2019-11-12 14:10:23.765
+# Updated: 2019-11-12 14:16:34.923
 
 # Main page
 index.html
@@ -64,7 +64,7 @@ js/sweetalert.min.js
 js/shortcut.js
 js/script.js
 js/particles.min.js
-js/app.min.js
+js/app.js
 
 
 favicon.ico
