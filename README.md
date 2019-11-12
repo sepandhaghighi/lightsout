@@ -30,12 +30,25 @@
 
 ## Dependencies
 
+### Code
+
 - [SweetAlert](https://sweetalert.js.org/ "SweetAlert")
 - [Particles.js](https://github.com/VincentGarreau/particles.js/ "Particles.js")
 - [Font-Awesome Icon Set](http://fontawesome.io/ "Font-Awesome Icon Set")
 - [AddThis](http://www.addthis.com "AddThis")
 - [Shortcut.js](http://openjs.com/scripts/events/keyboard_shortcuts/ "Shortcut.js")
 - [GoNative](https://gonative.io/ "https://gonative.io/")
+
+### Music
+- Track-1 : A New Beginning - [Bensound.com](https://www.bensound.com/bensound-music/bensound-anewbeginning.mp3)
+
+- Track-2 : Happiness - [Bensound.com](https://www.bensound.com/bensound-music/bensound-happiness.mp3)
+
+- Track-3 : Buddy - [Bensound.com](https://www.bensound.com/bensound-music/bensound-buddy.mp3)
+
+- Track-4 : Cute - [Bensound.com](https://www.bensound.com/bensound-music/bensound-cute.mp3)
+
+- Track-5 : Tenderness - [Bensound.com](https://www.bensound.com/bensound-music/bensound-tenderness.mp3)
 
 <a href="https://www.netlify.com">
   <img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg"/>
