@@ -51,7 +51,7 @@ self.addEventListener('install', e => {
         '/images/star.png',
         '/images/sun.png',
         '/images/hurry.png',
-        '/images/timeup.png'
+        '/images/timeup.png',
         '/images/og-icon.png',
         '/manifest.json',
         '/fonts/JuliusSansOne-Regular.ttf',
