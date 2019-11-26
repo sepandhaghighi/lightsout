@@ -1,5 +1,5 @@
 <!doctype html>
-<html manifest="cache.appcache">
+<html>
 <head>
     <link href="css/awsome/css/font-awesome.min.css" rel=stylesheet>
     <link href="css/style.css" rel=stylesheet type="text/css">
@@ -154,5 +154,12 @@ ga('send', 'pageview');
 </script>
 <!-- End Google Analytics -->
 </body>
-
+<script>
+ if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('service-worker.js')
+      .then(function(reg){
+     }).catch(function(err) {
+    });
+ }
+</script>
 </html>
