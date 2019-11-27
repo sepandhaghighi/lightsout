@@ -37,6 +37,6 @@
       "type": "image/png"
 	}
   ],
-  "display": "standalone",
+  "display": "fullscreen",
   "orientation": "portrait"
 }
