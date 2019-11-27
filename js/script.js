@@ -173,7 +173,6 @@ function swal_help(){
 }
 function getname(){
 local_load();
-getMobileOperatingSystem();
 swal_help();
     
 init(1);
@@ -451,6 +450,7 @@ function apkdownload(){
     smartBannerFlag=3;
     localStorage.setItem("smartflag",smartBannerFlag);
 }
+
 shortcut.add("h",function(){redirect(8);});
 shortcut.add("r",function(){init(2);});
 shortcut.add("q",function(){swal_help();});
