@@ -3,7 +3,7 @@
   "short_name": "Lights Out",
   "start_url": "/",
   "scope": "/",
-  "theme_color": "#673ab6",
+  "theme_color": "#cce587",
   "background_color": "#ffffff",
   "icons": [
     {
