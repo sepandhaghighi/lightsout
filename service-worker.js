@@ -1,4 +1,4 @@
-const version = "0.0.9";
+const version = "0.1.0";
 const cacheName = 'lightsout-'+version;
 
 function clearCache(){
