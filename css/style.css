@@ -11,6 +11,10 @@
     src: url("../fonts/Inconsolata.otf");
 }
 
+html,body{
+height: 100%;
+}
+
 .adv-banner{
     float: left;
     position: fixed;
