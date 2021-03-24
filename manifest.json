@@ -35,6 +35,21 @@
 	  "src": "images/favicon/4.png",
       "sizes": "32x32",
       "type": "image/png"
+	},
+    {
+	  "src": "images/favicon/7.png",
+      "sizes": "152x152",
+      "type": "image/png"
+	},
+    {
+	  "src": "images/favicon/8.png",
+      "sizes": "180x180",
+      "type": "image/png"
+	},
+    {
+	  "src": "images/favicon/9.png",
+      "sizes": "167x167",
+      "type": "image/png"
 	}
   ],
   "display": "fullscreen",
