@@ -212,7 +212,7 @@ def version_update_handler(addr_dict):
 if __name__=="__main__":
     tprint("Lightsout Script")
     line()
-    addr_dict = {"service-worker.js": SERVICE_WORKER_ADDR}
+    addr_dict = {"service-worker.js": SERVICE_WORKER_ADDR, "script.js": JS_ADDR}
     user_input = input(MENU_TEMPLATE)
     if "1" in user_input:
         current_version(addr_dict)
