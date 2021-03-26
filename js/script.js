@@ -188,7 +188,7 @@ function init(flag) {
     random_counter = 0;
     game_name = document.getElementById("game_name");
     game_name.style.color = color;
-    game_name.innerHTML = "Lights Out Game";
+    game_name.innerHTML = "Lights Out Game (v"+version+")";
     move = document.getElementById("move");
     reset = document.getElementById("reset");
     initFlag=true;
