@@ -1,4 +1,4 @@
-const version = "0.1.0";
+const version = "0.1.1";
 const cacheName = 'lightsout-'+version;
 
 function clearCache(){
@@ -40,6 +40,9 @@ self.addEventListener('install', e => {
         '/css/style.css',
         '/css/themes/google/google.css',
         '/css/sweetalert.css',
+        '/images/favicon/9.png',
+        '/images/favicon/8.png',
+        '/images/favicon/7.png',
         '/images/favicon/6.png',
         '/images/favicon/5.png',
         '/images/favicon/4.png',
