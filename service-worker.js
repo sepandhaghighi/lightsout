@@ -1,4 +1,4 @@
-const version = "0.1.1";
+const version = "0.1.2";
 const cacheName = 'lightsout-'+version;
 
 function clearCache(){
@@ -37,7 +37,7 @@ self.addEventListener('install', e => {
         '/css/awsome/less/variables.less',
         '/css/awsome/scss/font-awesome.scss',
         '/css/awsome/css/font-awesome.min.css',
-        '/css/style.css',
+        '/css/style.min.css',
         '/css/themes/google/google.css',
         '/css/sweetalert.css',
         '/images/favicon/9.png',
@@ -68,7 +68,7 @@ self.addEventListener('install', e => {
         '/css/awsome/fonts/fontawesome-webfont.woff2',
         '/js/sweetalert.min.js',
         '/js/shortcut.js',
-        '/js/script.js',
+        '/js/script.min.js',
         '/js/particles.min.js',
         '/js/app.js',
         '/favicon.ico'
