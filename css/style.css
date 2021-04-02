@@ -65,7 +65,6 @@ background-color: rgba(204, 229, 135, 0.94) !important;
 
 }
 .swal-score td{
-    padding: auto;
     text-align: center !important;
 }
 .swal-score table{
@@ -211,7 +210,6 @@ body{
 .help_image{
     text-align: center;
     margin: auto;
-    padding: auto;
     width: 550px;
     height: 550px;
     
@@ -340,7 +338,6 @@ td {
     width: 80%;
     margin: auto;
     text-align: justify;
-    font-size-adjust: auto;
     font-size: 32px;
     hyphens: auto;
     
@@ -402,9 +399,6 @@ button {
     .swal-bitcoin p{
         font-size: 13px !important;
     }
-    .sweet-alert p{
-        font-size-adjust: auto !important;
-    }
     #saythanks{
         margin-bottom: 93px;
     }
@@ -446,7 +440,6 @@ button {
     }
     #login-footer p {
         margin: auto;
-        padding: auto;
     }
     h1 {
         font-size: 37px;
